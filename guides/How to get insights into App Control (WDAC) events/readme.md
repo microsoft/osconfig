@@ -8,6 +8,7 @@
 | v1.0|2024-04| first Version, publish DCR and Workbook |
 | v1.1|2024-09| Upgraded Visualizations for File events. Updated Documentation|
 | v1.2|2025-01| Upgraded workbook to handle SHA1 & SHA256 Hashes|
+| v1.3|2025-06| Updated workbook to do raw CSV export align columns with AppControl Wizard
 
 <br />
 
@@ -87,7 +88,7 @@ You can deploy the workbook by clicking on the buttons below:<br />
   - Correlated events in graphic view
   - Export events
       - Visualization in Excel
-      - Ingestion in WDAC Wizard
+      - Ingestion in AppControl Wizard
   
   To view and analyze your data in LA, follow these steps:
   - Go to your Azure Monitor Workbooks section in the Azure portal
