@@ -49,9 +49,6 @@
                 },
                 {
                   "$ref": "#/$defs/registry"
-                },
-                {
-                  "$ref": "#/$defs/include"
                 }
               ]
             },
