@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "resource": {
+      "type": "object",
+      "allOf": [
+        {
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/audit"
+            },
+            {
+              "$ref": "#/$defs/include"
+            },
+            {
+              "$ref": "#/$defs/csp"
+            },
+            {
+              "$ref": "#/$defs/registry"
+            }
+          ]
+        }
+      ],
+      "required": [
+        "type",
+        "properties"
+      ]
+    },
+    "audit": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "Microsoft.OSConfig/Audit"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "resource": {
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/csp"
+                },
+                {
+                  "$ref": "#/$defs/registry"
+                }
+              ]
+            },
+            "schema": {
+              "$ref": "http://json-schema.org/draft-07/schema#"
+            }
+          },
+          "required": [
+            "resource",
+            "schema"
+          ]
+        }
+      }
+    },
+    "include": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "Microsoft.OSConfig/Include"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "file"
+          ]
+        }
+      }
+    },
+    "csp": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "Microsoft.Windows/CSP"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "path": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "get": {
+                      "type": "string"
+                    },
+                    "set": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "get",
+                    "set"
+                  ]
+                }
+              ]
+            },
+            "type": {
+              "enum": [
+                "string",
+                "boolean",
+                "integer",
+                "array"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "path",
+            "type"
+          ]
+        }
+      }
+    },
+    "registry": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "Microsoft.Windows/Registry"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "type": {
+              "enum": [
+                "REG_SZ",
+                "REG_BINARY",
+                "REG_DWORD",
+                "REG_MULTI_SZ"
+              ]
+            }
+          },
+          "required": [
+            "key",
+            "value",
+            "type"
+          ]
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "resources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/resource"
+      }
+    }
+  },
+  "required": [
+    "resources"
+  ]
+}
