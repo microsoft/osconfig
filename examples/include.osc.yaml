@@ -3,4 +3,4 @@ $schema: https://aka.ms/osc/schemas/prerelease/document.json
 resources:
   type: Microsoft.OSConfig/Include
   properties:
-    file: ./examples/registry.osc.yaml
+    path: ./examples/registry.osc.yaml
