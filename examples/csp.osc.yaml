@@ -1,0 +1,9 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+- name: RequirePlatformSecurityFeatures
+  type: Microsoft.Windows/CSP
+  properties:
+    path: ./Vendor/MSFT/Policy/Config/DeviceGuard/RequirePlatformSecurityFeatures
+    type: integer
+    value: 1

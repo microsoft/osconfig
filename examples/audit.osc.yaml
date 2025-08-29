@@ -1,0 +1,15 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+- name: Ensure that UEFI Memory Attribute Table (MAT) is required
+  type: Microsoft.OSConfig/Audit
+  properties:
+    resource:
+      type: Microsoft.Windows/Registry
+      properties:
+        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
+        value: HVCIMATRequired
+        type: REG_DWORD
+        data: 1
+    schema:
+      const: 1
