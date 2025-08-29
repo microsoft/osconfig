@@ -1,0 +1,10 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+- name: RequireMicrosoftSignedBootChain
+  type: Microsoft.Windows/Registry
+  properties:
+    key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
+    value: HVCIMATRequired
+    type: REG_DWORD
+    data: 1
