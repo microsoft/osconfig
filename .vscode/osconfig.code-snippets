@@ -1,0 +1,60 @@
+{
+    "Microsoft.OSConfig/Audit": {
+		"scope": "json",
+		"prefix": ["audit", "Microsoft.OSConfig/Audit"],
+		"body": [
+			"{",
+			"\t\"type\": \"Microsoft.OSConfig/Audit\",",
+			"\t\"properties\": {",
+			"\t\t\"resource\": $1,",
+			"\t\t\"schema\": {",
+			"\t\t\t$2",
+			"\t\t}",
+			"\t}",
+			"}$0"
+		],
+	},
+	"Microsoft.Windows/CSP": {
+		"scope": "json",
+		"prefix": ["CSP", "Microsoft.Windows/CSP"],
+		"body": [
+			"{",
+			"\t\"name\": \"$1\",",
+			"\t\"type\": \"Microsoft.Windows/CSP\",",
+			"\t\"properties\": {",
+			"\t\t\"name\": \"./Vendor/MSFT/$2\",",
+			"\t\t\"path\": \"$3\",",
+			"\t\t\"type\": \"${4|string,boolean,integer,array|}\"",
+			"\t}",
+			"}$0",
+		],
+	},
+	"Microsoft.Windows/Registry": {
+		"scope": "json",
+		"prefix": ["registry", "Windows Registry", "Microsoft.Windows/Registry"],
+		"body": [
+			"{",
+			"\t\"name\": \"$1\",",
+			"\t\"type\": \"Microsoft.Windows/Registry\",",
+			"\t\"properties\": {",
+			"\t\t\"key\": \"$2\",",
+			"\t\t\"value\": \"$3\",",
+			"\t\t\"type\": \"${4|REG_SZ,REG_BINARY,REG_DWORD,REG_MULTI_SZ|}\"",
+			"\t}",
+			"}$0",
+		],
+	},
+	"Microsoft.Windows/Include": {
+		"scope": "json",
+		"prefix": ["include", "Microsoft.Windows/Include"],
+		"body": [
+			"{",
+			"\t\"name\": \"$1\",",
+			"\t\"type\": \"Microsoft.Windows/Include\",",
+			"\t\"properties\": {",
+			"\t\t\"file\": \"$2\"",
+			"\t}",
+			"}$0",
+		],
+	},
+}
