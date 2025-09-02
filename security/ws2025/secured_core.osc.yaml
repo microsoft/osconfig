@@ -1,0 +1,30 @@
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+- name: ConfigureSystemGuardLaunch
+  type: Microsoft.Windows/CSP
+  properties:
+    name: ./Vendor/MSFT/Policy
+    path:
+      get: Result/DeviceGuard/ConfigureSystemGuardLaunch
+      set: Config/DeviceGuard/ConfigureSystemGuardLaunch
+    type: integer
+    value: 1
+- name: EnableVirtualizationBasedSecurity
+  type: Microsoft.Windows/CSP
+  properties:
+    name: ./Vendor/MSFT/Policy
+    path:
+      get: Result/DeviceGuard/EnableVirtualizationBasedSecurity
+      set: Config/DeviceGuard/EnableVirtualizationBasedSecurity
+    type: integer
+    value: 1
+- name: HypervisorEnforcedCodeIntegrity
+  type: Microsoft.Windows/CSP
+  properties:
+    name: ./Vendor/MSFT/Policy
+    path:
+      get: Result/VirtualizationBasedTechnology/HypervisorEnforcedCodeIntegrity
+      set: Config/VirtualizationBasedTechnology/HypervisorEnforcedCodeIntegrity
+    type: integer
+    value: 2
+
