@@ -1,0 +1,2942 @@
+{
+  "ConfigureSystemGuardLaunch": {
+    "scope": "json",
+    "prefix": "ConfigureSystemGuardLaunch",
+    "description": "Secured-Core SystemGuard (DRTM)",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:ConfigureSystemGuardLaunch}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/DeviceGuard/ConfigureSystemGuardLaunch\",",
+      "\t\t\t\"set\": \"Config/DeviceGuard/ConfigureSystemGuardLaunch\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":2},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "EnableVirtualizationBasedSecurity": {
+    "scope": "json",
+    "prefix": "EnableVirtualizationBasedSecurity",
+    "description": "Secured-Core Virtualization Based Security (VBS)",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:EnableVirtualizationBasedSecurity}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/DeviceGuard/EnableVirtualizationBasedSecurity\",",
+      "\t\t\t\"set\": \"Config/DeviceGuard/EnableVirtualizationBasedSecurity\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "HypervisorEnforcedCodeIntegrity": {
+    "scope": "json",
+    "prefix": "HypervisorEnforcedCodeIntegrity",
+    "description": "Secured-Core Hypervisor-protected Code Integrity (HVCI)",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:HypervisorEnforcedCodeIntegrity}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/VirtualizationBasedTechnology/HypervisorEnforcedCodeIntegrity\",",
+      "\t\t\t\"set\": \"Config/VirtualizationBasedTechnology/HypervisorEnforcedCodeIntegrity\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":2},",
+      "\t\t\"value\": ${2:2}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AllowAnonymousSIDOrNameTranslation": {
+    "scope": "json",
+    "prefix": "AllowAnonymousSIDOrNameTranslation",
+    "description": "Network access: Allow anonymous SID/Name translation",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AllowAnonymousSIDOrNameTranslation}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_AllowAnonymousSIDOrNameTranslation\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_AllowAnonymousSIDOrNameTranslation\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AllowedToFormatAndEjectRemovableMedia": {
+    "scope": "json",
+    "prefix": "AllowedToFormatAndEjectRemovableMedia",
+    "description": "Devices: Allowed to format and eject removable media",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AllowedToFormatAndEjectRemovableMedia}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Devices_AllowedToFormatAndEjectRemovableMedia\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Devices_AllowedToFormatAndEjectRemovableMedia\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:\"0\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AllowLocalSystemNULLSessionFallback": {
+    "scope": "json",
+    "prefix": "AllowLocalSystemNULLSessionFallback",
+    "description": "Network security: Allow LocalSystem NULL session fallback",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AllowLocalSystemNULLSessionFallback}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkSecurity_AllowLocalSystemNULLSessionFallback\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkSecurity_AllowLocalSystemNULLSessionFallback\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AllowLocalSystemToUseComputerIdentityForNTLM": {
+    "scope": "json",
+    "prefix": "AllowLocalSystemToUseComputerIdentityForNTLM",
+    "description": "Network security: Allow Local System to use computer identity for NTLM",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AllowLocalSystemToUseComputerIdentityForNTLM}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkSecurity_AllowLocalSystemToUseComputerIdentityForNTLM\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkSecurity_AllowLocalSystemToUseComputerIdentityForNTLM\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AllowSystemToBeShutDownWithoutHavingToLogOn": {
+    "scope": "json",
+    "prefix": "AllowSystemToBeShutDownWithoutHavingToLogOn",
+    "description": "Shutdown: Allow system to be shut down without having to log on",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AllowSystemToBeShutDownWithoutHavingToLogOn}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Shutdown_AllowSystemToBeShutDownWithoutHavingToLogOn\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Shutdown_AllowSystemToBeShutDownWithoutHavingToLogOn\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AllowUIAccessApplicationsToPromptForElevation": {
+    "scope": "json",
+    "prefix": "AllowUIAccessApplicationsToPromptForElevation",
+    "description": "User Account Control: Allow UIAccess applications to prompt for elevation without using the secure desktop",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AllowUIAccessApplicationsToPromptForElevation}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_AllowUIAccessApplicationsToPromptForElevation\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_AllowUIAccessApplicationsToPromptForElevation\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AmountOfIdleTimeRequiredBeforeSuspendingSession": {
+    "scope": "json",
+    "prefix": "AmountOfIdleTimeRequiredBeforeSuspendingSession",
+    "description": "Microsoft network server: Amount of idle time required before suspending session",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AmountOfIdleTimeRequiredBeforeSuspendingSession}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_AmountOfIdleTimeRequiredBeforeSuspendingSession\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_AmountOfIdleTimeRequiredBeforeSuspendingSession\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":1,\"maximum\":15},",
+      "\t\t\"value\": ${2:15}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "ApplicationManagementMSIAllowUserControlOverInstall": {
+    "scope": "json",
+    "prefix": "ApplicationManagementMSIAllowUserControlOverInstall",
+    "description": "Allow user control over installs",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:ApplicationManagementMSIAllowUserControlOverInstall}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/ApplicationManagement/MSIAllowUserControlOverInstall\",",
+      "\t\t\t\"set\": \"Config/ApplicationManagement/MSIAllowUserControlOverInstall\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "ApplicationManagementMSIAlwaysInstallWithElevatedPrivileges": {
+    "scope": "json",
+    "prefix": "ApplicationManagementMSIAlwaysInstallWithElevatedPrivileges",
+    "description": "Always install with elevated privileges",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:ApplicationManagementMSIAlwaysInstallWithElevatedPrivileges}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges\",",
+      "\t\t\t\"set\": \"Config/ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditAccountLockout": {
+    "scope": "json",
+    "prefix": "AuditAccountLockout",
+    "description": "Audit Account Lockout",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditAccountLockout}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/AccountLogonLogoff_AuditAccountLockout\",",
+      "\t\t\t\"set\": \"Config/Audit/AccountLogonLogoff_AuditAccountLockout\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:2}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditAuthenticationPolicyChange": {
+    "scope": "json",
+    "prefix": "AuditAuthenticationPolicyChange",
+    "description": "Audit Authentication Policy Change",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditAuthenticationPolicyChange}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/PolicyChange_AuditAuthenticationPolicyChange\",",
+      "\t\t\t\"set\": \"Config/Audit/PolicyChange_AuditAuthenticationPolicyChange\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditAuthorizationPolicyChange": {
+    "scope": "json",
+    "prefix": "AuditAuthorizationPolicyChange",
+    "description": "Audit Authorization Policy Change",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditAuthorizationPolicyChange}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/PolicyChange_AuditAuthorizationPolicyChange\",",
+      "\t\t\t\"set\": \"Config/Audit/PolicyChange_AuditAuthorizationPolicyChange\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditBackupAndRestorePrivilege": {
+    "scope": "json",
+    "prefix": "AuditBackupAndRestorePrivilege",
+    "description": "Audit: Audit the use of Backup and Restore privilege",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditBackupAndRestorePrivilege}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Audit_AuditTheUseOfBackupAndRestoreprivilege\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Audit_AuditTheUseOfBackupAndRestoreprivilege\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\",\"metatype\":\"base64\",\"oneOf\":[{\"const\":\"MDA=\"},{\"const\":\"MQ==\"}]},",
+      "\t\t\"value\": ${2:\"MDA=\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditOtherPolicyChangeEvents": {
+    "scope": "json",
+    "prefix": "AuditOtherPolicyChangeEvents",
+    "description": "Audit events generated by other security policy changes that are not audited in the policy change category",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditOtherPolicyChangeEvents}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/PolicyChange_AuditOtherPolicyChangeEvents\",",
+      "\t\t\t\"set\": \"Config/Audit/PolicyChange_AuditOtherPolicyChangeEvents\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:2}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditCredentialValidation": {
+    "scope": "json",
+    "prefix": "AuditCredentialValidation",
+    "description": "Audit Credential Validation",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditCredentialValidation}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/AccountLogon_AuditCredentialValidation\",",
+      "\t\t\t\"set\": \"Config/Audit/AccountLogon_AuditCredentialValidation\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:3}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditDetailedFileShare": {
+    "scope": "json",
+    "prefix": "AuditDetailedFileShare",
+    "description": "Audit Detailed File Share",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditDetailedFileShare}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/ObjectAccess_AuditDetailedFileShare\",",
+      "\t\t\t\"set\": \"Config/Audit/ObjectAccess_AuditDetailedFileShare\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:2}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditFileShare": {
+    "scope": "json",
+    "prefix": "AuditFileShare",
+    "description": "Audit File Share",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditFileShare}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/ObjectAccess_AuditFileShare\",",
+      "\t\t\t\"set\": \"Config/Audit/ObjectAccess_AuditFileShare\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:3}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditGroupMembership": {
+    "scope": "json",
+    "prefix": "AuditGroupMembership",
+    "description": "Audit Group Membership",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditGroupMembership}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/AccountLogonLogoff_AuditGroupMembership\",",
+      "\t\t\t\"set\": \"Config/Audit/AccountLogonLogoff_AuditGroupMembership\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditIPsecDriver": {
+    "scope": "json",
+    "prefix": "AuditIPsecDriver",
+    "description": "Audit IPsec Driver",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditIPsecDriver}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/System_AuditIPsecDriver\",",
+      "\t\t\t\"set\": \"Config/Audit/System_AuditIPsecDriver\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:3}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditLogoff": {
+    "scope": "json",
+    "prefix": "AuditLogoff",
+    "description": "Audit Logoff",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditLogoff}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/AccountLogonLogoff_AuditLogoff\",",
+      "\t\t\t\"set\": \"Config/Audit/AccountLogonLogoff_AuditLogoff\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditLogon": {
+    "scope": "json",
+    "prefix": "AuditLogon",
+    "description": "Audit Logon",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditLogon}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/AccountLogonLogoff_AuditLogon\",",
+      "\t\t\t\"set\": \"Config/Audit/AccountLogonLogoff_AuditLogon\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:3}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditMPSSVCRuleLevelPolicyChange": {
+    "scope": "json",
+    "prefix": "AuditMPSSVCRuleLevelPolicyChange",
+    "description": "Audit MPSSVC Rule-Level Policy Change",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditMPSSVCRuleLevelPolicyChange}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/PolicyChange_AuditMPSSVCRuleLevelPolicyChange\",",
+      "\t\t\t\"set\": \"Config/Audit/PolicyChange_AuditMPSSVCRuleLevelPolicyChange\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:3}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditOtherLogonLogoffEvents": {
+    "scope": "json",
+    "prefix": "AuditOtherLogonLogoffEvents",
+    "description": "Audit Other Logon/Logoff Events",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditOtherLogonLogoffEvents}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/AccountLogonLogoff_AuditOtherLogonLogoffEvents\",",
+      "\t\t\t\"set\": \"Config/Audit/AccountLogonLogoff_AuditOtherLogonLogoffEvents\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:3}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditOtherObjectAccessEvents": {
+    "scope": "json",
+    "prefix": "AuditOtherObjectAccessEvents",
+    "description": "Audit Other Object Access Events",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditOtherObjectAccessEvents}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/ObjectAccess_AuditOtherObjectAccessEvents\",",
+      "\t\t\t\"set\": \"Config/Audit/ObjectAccess_AuditOtherObjectAccessEvents\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:3}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditOtherSystemEvents": {
+    "scope": "json",
+    "prefix": "AuditOtherSystemEvents",
+    "description": "Audit Other System Events",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditOtherSystemEvents}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/System_AuditOtherSystemEvents\",",
+      "\t\t\t\"set\": \"Config/Audit/System_AuditOtherSystemEvents\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:3}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditPnPExternalDevice": {
+    "scope": "json",
+    "prefix": "AuditPnPExternalDevice",
+    "description": "Audit when plug and play detects an external device",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditPnPExternalDevice}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/DetailedTracking_AuditPNPActivity\",",
+      "\t\t\t\"set\": \"Config/Audit/DetailedTracking_AuditPNPActivity\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditPolicyChange": {
+    "scope": "json",
+    "prefix": "AuditPolicyChange",
+    "description": "Audit Policy Change",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditPolicyChange}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/PolicyChange_AuditPolicyChange\",",
+      "\t\t\t\"set\": \"Config/Audit/PolicyChange_AuditPolicyChange\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:3}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditProcessCreatedOrStarted": {
+    "scope": "json",
+    "prefix": "AuditProcessCreatedOrStarted",
+    "description": "Audit events generated when a process is created or starts",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditProcessCreatedOrStarted}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/DetailedTracking_AuditProcessCreation\",",
+      "\t\t\t\"set\": \"Config/Audit/DetailedTracking_AuditProcessCreation\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditRemovableStorage": {
+    "scope": "json",
+    "prefix": "AuditRemovableStorage",
+    "description": "Audit Removable Storage",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditRemovableStorage}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/ObjectAccess_AuditRemovableStorage\",",
+      "\t\t\t\"set\": \"Config/Audit/ObjectAccess_AuditRemovableStorage\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:3}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditSecurityGroupManagement": {
+    "scope": "json",
+    "prefix": "AuditSecurityGroupManagement",
+    "description": "Audit Security Group Management",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditSecurityGroupManagement}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/AccountManagement_AuditSecurityGroupManagement\",",
+      "\t\t\t\"set\": \"Config/Audit/AccountManagement_AuditSecurityGroupManagement\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditSecurityStateChange": {
+    "scope": "json",
+    "prefix": "AuditSecurityStateChange",
+    "description": "Audit Security State Change",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditSecurityStateChange}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/System_AuditSecurityStateChange\",",
+      "\t\t\t\"set\": \"Config/Audit/System_AuditSecurityStateChange\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditSecuritySystemExtension": {
+    "scope": "json",
+    "prefix": "AuditSecuritySystemExtension",
+    "description": "Audit Security System Extension",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditSecuritySystemExtension}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/System_AuditSecuritySystemExtension\",",
+      "\t\t\t\"set\": \"Config/Audit/System_AuditSecuritySystemExtension\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditSensitivePrivilegeUse": {
+    "scope": "json",
+    "prefix": "AuditSensitivePrivilegeUse",
+    "description": "Audit Sensitive Privilege Use",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditSensitivePrivilegeUse}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/PrivilegeUse_AuditSensitivePrivilegeUse\",",
+      "\t\t\t\"set\": \"Config/Audit/PrivilegeUse_AuditSensitivePrivilegeUse\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:3}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditSpecialLogon": {
+    "scope": "json",
+    "prefix": "AuditSpecialLogon",
+    "description": "Audit Special Logon",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditSpecialLogon}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/AccountLogonLogoff_AuditSpecialLogon\",",
+      "\t\t\t\"set\": \"Config/Audit/AccountLogonLogoff_AuditSpecialLogon\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditSystemIntegrity": {
+    "scope": "json",
+    "prefix": "AuditSystemIntegrity",
+    "description": "Audit System Integrity",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditSystemIntegrity}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/System_AuditSystemIntegrity\",",
+      "\t\t\t\"set\": \"Config/Audit/System_AuditSystemIntegrity\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:3}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "AuditUserAccountManagement": {
+    "scope": "json",
+    "prefix": "AuditUserAccountManagement",
+    "description": "Audit User Account Management",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:AuditUserAccountManagement}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Audit/AccountManagement_AuditUserAccountManagement\",",
+      "\t\t\t\"set\": \"Config/Audit/AccountManagement_AuditUserAccountManagement\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"value\": ${2:3}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "BehaviorOfTheElevationPromptForAdministrators": {
+    "scope": "json",
+    "prefix": "BehaviorOfTheElevationPromptForAdministrators",
+    "description": "User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:BehaviorOfTheElevationPromptForAdministrators}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForAdministrators\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForAdministrators\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":5},",
+      "\t\t\"value\": ${2:2}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "BehaviorOfTheElevationPromptForStandardUsers": {
+    "scope": "json",
+    "prefix": "BehaviorOfTheElevationPromptForStandardUsers",
+    "description": "User Account Control: Behavior of the elevation prompt for standard users",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:BehaviorOfTheElevationPromptForStandardUsers}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForStandardUsers\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForStandardUsers\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "ClearVirtualMemoryPageFile": {
+    "scope": "json",
+    "prefix": "ClearVirtualMemoryPageFile",
+    "description": "Shutdown: Clear virtual memory pagefile",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:ClearVirtualMemoryPageFile}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Shutdown_ClearVirtualMemoryPageFile\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Shutdown_ClearVirtualMemoryPageFile\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DetectApplicationInstallationsAndPromptForElevation": {
+    "scope": "json",
+    "prefix": "DetectApplicationInstallationsAndPromptForElevation",
+    "description": "User Account Control: Detect application installations and prompt for elevation",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DetectApplicationInstallationsAndPromptForElevation}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_DetectApplicationInstallationsAndPromptForElevation\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_DetectApplicationInstallationsAndPromptForElevation\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DeviceGuardRequirePlatformSecurityFeatures": {
+    "scope": "json",
+    "prefix": "DeviceGuardRequirePlatformSecurityFeatures",
+    "description": "Secured-Core Require Platform Security (Secure Boot, DMA)",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DeviceGuardRequirePlatformSecurityFeatures}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/DeviceGuard/RequirePlatformSecurityFeatures\",",
+      "\t\t\t\"set\": \"Config/DeviceGuard/RequirePlatformSecurityFeatures\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"enum\":[1,3]},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DeviceLockAccountLockoutPolicy": {
+    "scope": "json",
+    "prefix": "DeviceLockAccountLockoutPolicy",
+    "description": "Account lockout policy",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DeviceLockAccountLockoutPolicy}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/DeviceLock/AccountLockoutPolicy\",",
+      "\t\t\t\"set\": \"Config/DeviceLock/AccountLockoutPolicy\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\",\"allOf\":[{\"pattern\":\"ResetAccountLockoutCounterAfter:[1][5-9]|[2-9]\\\\d|[1-9]\\\\d{2,}\"},{\"pattern\":\"AccountLockoutDuration:[1][5-9]|[2-9]\\\\d|[1-9]\\\\d{2,}\"},{\"pattern\":\"AccountLockoutThreshold:[1-3]\"}]},",
+      "\t\t\"value\": ${2:\"AccountLockoutDuration:15, AccountLockoutThreshold:3, ResetAccountLockoutCounterAfter:15\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DeviceLockClearTextPassword": {
+    "scope": "json",
+    "prefix": "DeviceLockClearTextPassword",
+    "description": "Store passwords using reversible encryption",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DeviceLockClearTextPassword}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/DeviceLock/ClearTextPassword\",",
+      "\t\t\t\"set\": \"Config/DeviceLock/ClearTextPassword\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DeviceLockMaximumPasswordAge": {
+    "scope": "json",
+    "prefix": "DeviceLockMaximumPasswordAge",
+    "description": "Maximum password age",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DeviceLockMaximumPasswordAge}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/DeviceLock/MaximumPasswordAge\",",
+      "\t\t\t\"set\": \"Config/DeviceLock/MaximumPasswordAge\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":1,\"maximum\":999},",
+      "\t\t\"value\": ${2:42}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DeviceLockMinDevicePasswordLength": {
+    "scope": "json",
+    "prefix": "DeviceLockMinDevicePasswordLength",
+    "description": "Minimum password length",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DeviceLockMinDevicePasswordLength}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/DeviceLock/MinDevicePasswordLength\",",
+      "\t\t\t\"set\": \"Config/DeviceLock/MinDevicePasswordLength\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":7,\"maximum\":99},",
+      "\t\t\"value\": ${2:14}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DeviceLockMinimumPasswordAge": {
+    "scope": "json",
+    "prefix": "DeviceLockMinimumPasswordAge",
+    "description": "Minimum password age",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DeviceLockMinimumPasswordAge}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/DeviceLock/MinimumPasswordAge\",",
+      "\t\t\t\"set\": \"Config/DeviceLock/MinimumPasswordAge\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":1,\"maximum\":998},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DeviceLockPasswordComplexity": {
+    "scope": "json",
+    "prefix": "DeviceLockPasswordComplexity",
+    "description": "Password must meet complexity requirements",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DeviceLockPasswordComplexity}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/DeviceLock/PasswordComplexity\",",
+      "\t\t\t\"set\": \"Config/DeviceLock/PasswordComplexity\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DeviceLockPasswordHistorySize": {
+    "scope": "json",
+    "prefix": "DeviceLockPasswordHistorySize",
+    "description": "Enforce password history",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DeviceLockPasswordHistorySize}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/DeviceLock/PasswordHistorySize\",",
+      "\t\t\t\"set\": \"Config/DeviceLock/PasswordHistorySize\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":24},",
+      "\t\t\"value\": ${2:24}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DigitallyEncryptOrSignSecureChannelDataAlways": {
+    "scope": "json",
+    "prefix": "DigitallyEncryptOrSignSecureChannelDataAlways",
+    "description": "Domain member: Digitally encrypt or sign secure channel data (always)",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DigitallyEncryptOrSignSecureChannelDataAlways}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/DomainMember_DigitallyEncryptOrSignSecureChannelDataAlways\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/DomainMember_DigitallyEncryptOrSignSecureChannelDataAlways\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DigitallyEncryptSecureChannelDataWhenPossible": {
+    "scope": "json",
+    "prefix": "DigitallyEncryptSecureChannelDataWhenPossible",
+    "description": "Domain member: Digitally encrypt secure channel data (when possible)",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DigitallyEncryptSecureChannelDataWhenPossible}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/DomainMember_DigitallyEncryptSecureChannelDataWhenPossible\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/DomainMember_DigitallyEncryptSecureChannelDataWhenPossible\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DigitallySignCommunicationsAlwaysClient": {
+    "scope": "json",
+    "prefix": "DigitallySignCommunicationsAlwaysClient",
+    "description": "Microsoft network client: Digitally sign communications (always)",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DigitallySignCommunicationsAlwaysClient}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_DigitallySignCommunicationsAlways\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_DigitallySignCommunicationsAlways\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DigitallySignCommunicationsAlwaysServer": {
+    "scope": "json",
+    "prefix": "DigitallySignCommunicationsAlwaysServer",
+    "description": "Microsoft network server: Digitally sign communications (always)",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DigitallySignCommunicationsAlwaysServer}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DigitallySignCommunicationsAlways\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DigitallySignCommunicationsAlways\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DigitallySignCommunicationsIfClientAgrees": {
+    "scope": "json",
+    "prefix": "DigitallySignCommunicationsIfClientAgrees",
+    "description": "Microsoft network server: Digitally sign communications (if client agrees)",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DigitallySignCommunicationsIfClientAgrees}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DigitallySignCommunicationsIfClientAgrees\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DigitallySignCommunicationsIfClientAgrees\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DigitallySignCommunicationsIfServerAgrees": {
+    "scope": "json",
+    "prefix": "DigitallySignCommunicationsIfServerAgrees",
+    "description": "Microsoft network client: Digitally sign communications (if server agrees)",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DigitallySignCommunicationsIfServerAgrees}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_DigitallySignCommunicationsIfServerAgrees\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_DigitallySignCommunicationsIfServerAgrees\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DigitallySignSecureChannelDataWhenPossible": {
+    "scope": "json",
+    "prefix": "DigitallySignSecureChannelDataWhenPossible",
+    "description": "Domain member: Digitally sign secure channel data (when possible)",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DigitallySignSecureChannelDataWhenPossible}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/DomainMember_DigitallySignSecureChannelDataWhenPossible\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/DomainMember_DigitallySignSecureChannelDataWhenPossible\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DisableLocalAccountPasswordChanges": {
+    "scope": "json",
+    "prefix": "DisableLocalAccountPasswordChanges",
+    "description": "Domain member: Disable machine account password changes",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DisableLocalAccountPasswordChanges}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/DomainMember_DisableMachineAccountPasswordChanges\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/DomainMember_DisableMachineAccountPasswordChanges\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DisconnectClientsWhenLogonHoursExpire": {
+    "scope": "json",
+    "prefix": "DisconnectClientsWhenLogonHoursExpire",
+    "description": "Microsoft network server: Disconnect clients when logon hours expire",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DisconnectClientsWhenLogonHoursExpire}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DisconnectClientsWhenLogonHoursExpire\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DisconnectClientsWhenLogonHoursExpire\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DmaGuardDeviceEnumerationPolicy": {
+    "scope": "json",
+    "prefix": "DmaGuardDeviceEnumerationPolicy",
+    "description": "Enumeration policy for external devices incompatible with Kernel DMA Protection",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DmaGuardDeviceEnumerationPolicy}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/DmaGuard/DeviceEnumerationPolicy\",",
+      "\t\t\t\"set\": \"Config/DmaGuard/DeviceEnumerationPolicy\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":2},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DoNotAllowAnonymousEnumerationOfSAMAccounts": {
+    "scope": "json",
+    "prefix": "DoNotAllowAnonymousEnumerationOfSAMAccounts",
+    "description": "Network access: Do not allow anonymous enumeration of SAM accounts",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DoNotAllowAnonymousEnumerationOfSAMAccounts}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSAMAccounts\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSAMAccounts\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DoNotAllowAnonymousEnumerationOfSamAccountsAndShares": {
+    "scope": "json",
+    "prefix": "DoNotAllowAnonymousEnumerationOfSamAccountsAndShares",
+    "description": "Network access: Do not allow anonymous enumeration of SAM accounts and shares",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DoNotAllowAnonymousEnumerationOfSamAccountsAndShares}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DoNotDisplayLastSignedIn": {
+    "scope": "json",
+    "prefix": "DoNotDisplayLastSignedIn",
+    "description": "Interactive logon: Do not display last user name",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DoNotDisplayLastSignedIn}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/InteractiveLogon_DoNotDisplayLastSignedIn\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/InteractiveLogon_DoNotDisplayLastSignedIn\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "DoNotRequireCTRLALTDEL": {
+    "scope": "json",
+    "prefix": "DoNotRequireCTRLALTDEL",
+    "description": "Interactive logon: Do not require CTRL+ALT+DEL",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:DoNotRequireCTRLALTDEL}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/InteractiveLogon_DoNotRequireCTRLALTDEL\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/InteractiveLogon_DoNotRequireCTRLALTDEL\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "EnableGuestAccountStatus": {
+    "scope": "json",
+    "prefix": "EnableGuestAccountStatus",
+    "description": "Accounts: Guest account status",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:EnableGuestAccountStatus}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Accounts_EnableGuestAccountStatus\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Accounts_EnableGuestAccountStatus\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "ExperienceAllowWindowsConsumerFeatures": {
+    "scope": "json",
+    "prefix": "ExperienceAllowWindowsConsumerFeatures",
+    "description": "Turn off Microsoft consumer experiences",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:ExperienceAllowWindowsConsumerFeatures}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Experience/AllowWindowsConsumerFeatures\",",
+      "\t\t\t\"set\": \"Config/Experience/AllowWindowsConsumerFeatures\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "ExperienceDisableConsumerAccountStateContent": {
+    "scope": "json",
+    "prefix": "ExperienceDisableConsumerAccountStateContent",
+    "description": "Turn off cloud consumer account state content",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:ExperienceDisableConsumerAccountStateContent}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Experience/DisableConsumerAccountStateContent\",",
+      "\t\t\t\"set\": \"Config/Experience/DisableConsumerAccountStateContent\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "ForceAuditPolicySubcategorySettingsToOverrideAuditPolicyCategorySettings": {
+    "scope": "json",
+    "prefix": "ForceAuditPolicySubcategorySettingsToOverrideAuditPolicyCategorySettings",
+    "description": "Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:ForceAuditPolicySubcategorySettingsToOverrideAuditPolicyCategorySettings}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Audit_ForceAuditPolicySubcategorySettingsToOverrideAuditPolicyCategorySettings\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Audit_ForceAuditPolicySubcategorySettingsToOverrideAuditPolicyCategorySettings\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "ImpersonateClient": {
+    "scope": "json",
+    "prefix": "ImpersonateClient",
+    "description": "Impersonate a client after authentication",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:ImpersonateClient}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/ImpersonateClient\",",
+      "\t\t\t\"set\": \"Config/UserRights/ImpersonateClient\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-6\",\"*S-1-5-19\",\"*S-1-5-20\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "LANManagerAuthenticationLevel": {
+    "scope": "json",
+    "prefix": "LANManagerAuthenticationLevel",
+    "description": "Network security: LAN Manager authentication level",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:LANManagerAuthenticationLevel}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkSecurity_LANManagerAuthenticationLevel\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkSecurity_LANManagerAuthenticationLevel\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":5},",
+      "\t\t\"value\": ${2:5}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "LanmanWorkstationEnableInsecureGuestLogons": {
+    "scope": "json",
+    "prefix": "LanmanWorkstationEnableInsecureGuestLogons",
+    "description": "Enable insecure guest logons",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:LanmanWorkstationEnableInsecureGuestLogons}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LanmanWorkstation/EnableInsecureGuestLogons\",",
+      "\t\t\t\"set\": \"Config/LanmanWorkstation/EnableInsecureGuestLogons\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "LDAPClientSigningRequirements": {
+    "scope": "json",
+    "prefix": "LDAPClientSigningRequirements",
+    "description": "Network security: LDAP client signing requirements",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:LDAPClientSigningRequirements}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkSecurity_LDAPClientSigningRequirements\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkSecurity_LDAPClientSigningRequirements\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":2},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "LetEveryonePermissionsApplyToAnonymousUsers": {
+    "scope": "json",
+    "prefix": "LetEveryonePermissionsApplyToAnonymousUsers",
+    "description": "Network access: Let Everyone permissions apply to anonymous users",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:LetEveryonePermissionsApplyToAnonymousUsers}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_LetEveryonePermissionsApplyToAnonymousUsers\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_LetEveryonePermissionsApplyToAnonymousUsers\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly": {
+    "scope": "json",
+    "prefix": "LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly",
+    "description": "Accounts: Limit local account use of blank passwords to console logon only",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "MachineInactivityLimit": {
+    "scope": "json",
+    "prefix": "MachineInactivityLimit",
+    "description": "Interactive logon: Machine inactivity limit",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:MachineInactivityLimit}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/InteractiveLogon_MachineInactivityLimit\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/InteractiveLogon_MachineInactivityLimit\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":900},",
+      "\t\t\"value\": ${2:900}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "MaximumMachineAccountPasswordAge": {
+    "scope": "json",
+    "prefix": "MaximumMachineAccountPasswordAge",
+    "description": "Domain member: Maximum machine account password age",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:MaximumMachineAccountPasswordAge}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/DomainMember_MaximumMachineAccountPasswordAge\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/DomainMember_MaximumMachineAccountPasswordAge\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":30,\"maximum\":10000},",
+      "\t\t\"value\": ${2:30}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "MinimumSessionSecurityForNTLMSSPBasedClients": {
+    "scope": "json",
+    "prefix": "MinimumSessionSecurityForNTLMSSPBasedClients",
+    "description": "Network security: Minimum session security for NTLM SSP based (including secure RPC) clients",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:MinimumSessionSecurityForNTLMSSPBasedClients}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedClients\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedClients\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\"},",
+      "\t\t\"value\": ${2:537395200}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "MinimumSessionSecurityForNTLMSSPBasedServers": {
+    "scope": "json",
+    "prefix": "MinimumSessionSecurityForNTLMSSPBasedServers",
+    "description": "Network security: Minimum session security for NTLM SSP based (including secure RPC) servers",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:MinimumSessionSecurityForNTLMSSPBasedServers}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedServers\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedServers\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\"},",
+      "\t\t\"value\": ${2:537395200}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "NetworkSecurityForceLogoffWhenLogonHoursExpire": {
+    "scope": "json",
+    "prefix": "NetworkSecurityForceLogoffWhenLogonHoursExpire",
+    "description": "Network security: Force logoff when logon hours expire",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:NetworkSecurityForceLogoffWhenLogonHoursExpire}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkSecurity_ForceLogoffWhenLogonHoursExpire\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkSecurity_ForceLogoffWhenLogonHoursExpire\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations": {
+    "scope": "json",
+    "prefix": "OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations",
+    "description": "User Account Control: Only elevate UIAccess applications that are installed in secure locations",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "OverrideMinimumEnabledDTLSVersionClient": {
+    "scope": "json",
+    "prefix": "OverrideMinimumEnabledDTLSVersionClient",
+    "description": "Override Minimum Enabled DTLS Version Client",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:OverrideMinimumEnabledDTLSVersionClient}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Cryptography/OverrideMinimumEnabledDTLSVersionClient\",",
+      "\t\t\t\"set\": \"Config/Cryptography/OverrideMinimumEnabledDTLSVersionClient\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\",\"oneOf\":[{\"const\":\"1.0\"},{\"const\":\"1.1\"},{\"const\":\"1.2\"}]},",
+      "\t\t\"value\": ${2:\"1.2\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "OverrideMinimumEnabledDTLSVersionServer": {
+    "scope": "json",
+    "prefix": "OverrideMinimumEnabledDTLSVersionServer",
+    "description": "Override Minimum Enabled DTLS Version Server",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:OverrideMinimumEnabledDTLSVersionServer}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Cryptography/OverrideMinimumEnabledDTLSVersionServer\",",
+      "\t\t\t\"set\": \"Config/Cryptography/OverrideMinimumEnabledDTLSVersionServer\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\",\"oneOf\":[{\"const\":\"1.0\"},{\"const\":\"1.1\"},{\"const\":\"1.2\"}]},",
+      "\t\t\"value\": ${2:\"1.2\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "OverrideMinimumEnabledTLSVersionClient": {
+    "scope": "json",
+    "prefix": "OverrideMinimumEnabledTLSVersionClient",
+    "description": "Override Minimum Enabled TLS Version Client",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:OverrideMinimumEnabledTLSVersionClient}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Cryptography/OverrideMinimumEnabledTLSVersionClient\",",
+      "\t\t\t\"set\": \"Config/Cryptography/OverrideMinimumEnabledTLSVersionClient\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\",\"oneOf\":[{\"const\":\"1.1\"},{\"const\":\"1.1\"},{\"const\":\"1.2\"},{\"const\":\"1.3\"}]},",
+      "\t\t\"value\": ${2:\"1.2\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "OverrideMinimumEnabledTLSVersionServer": {
+    "scope": "json",
+    "prefix": "OverrideMinimumEnabledTLSVersionServer",
+    "description": "Override Minimum Enabled TLS Version Server",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:OverrideMinimumEnabledTLSVersionServer}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Cryptography/OverrideMinimumEnabledTLSVersionServer\",",
+      "\t\t\t\"set\": \"Config/Cryptography/OverrideMinimumEnabledTLSVersionServer\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\",\"oneOf\":[{\"const\":\"1.1\"},{\"const\":\"1.1\"},{\"const\":\"1.2\"},{\"const\":\"1.3\"}]},",
+      "\t\t\"value\": ${2:\"1.2\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters": {
+    "scope": "json",
+    "prefix": "PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters",
+    "description": "Devices: Prevent users from installing printer drivers",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Devices_PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Devices_PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "PrivacyAllowInputPersonalization": {
+    "scope": "json",
+    "prefix": "PrivacyAllowInputPersonalization",
+    "description": "Allow Input Personalization",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:PrivacyAllowInputPersonalization}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Privacy/AllowInputPersonalization\",",
+      "\t\t\t\"set\": \"Config/Privacy/AllowInputPersonalization\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "PromptUserToChangePasswordBeforeExpiration": {
+    "scope": "json",
+    "prefix": "PromptUserToChangePasswordBeforeExpiration",
+    "description": "Interactive logon: Prompt user to change password before expiration",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:PromptUserToChangePasswordBeforeExpiration}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/InteractiveLogon_PromptUserToChangePasswordBeforeExpiration\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/InteractiveLogon_PromptUserToChangePasswordBeforeExpiration\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":5,\"maximum\":14},",
+      "\t\t\"value\": ${2:14}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "RecoveryConsoleAllowFloppyCopyAndAllDrives": {
+    "scope": "json",
+    "prefix": "RecoveryConsoleAllowFloppyCopyAndAllDrives",
+    "description": "Recovery console: Allow floppy copy and access to all drives and all folders",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:RecoveryConsoleAllowFloppyCopyAndAllDrives}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/RecoveryConsole_AllowFloppyCopyAndAccessToAllDrivesAndAllFolders\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/RecoveryConsole_AllowFloppyCopyAndAccessToAllDrivesAndAllFolders\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "RemotelyAccessibleRegistryPaths": {
+    "scope": "json",
+    "prefix": "RemotelyAccessibleRegistryPaths",
+    "description": "Network access: Remotely accessible registry paths",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:RemotelyAccessibleRegistryPaths}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_RemotelyAccessibleRegistryPaths\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_RemotelyAccessibleRegistryPaths\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"metatype\":\"multistring\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"System\\\\CurrentControlSet\\\\Control\\\\ProductOptions\",\"System\\\\CurrentControlSet\\\\Control\\\\Server Applications\",\"Software\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "RemotelyAccessibleRegistryPathsAndSubpaths": {
+    "scope": "json",
+    "prefix": "RemotelyAccessibleRegistryPathsAndSubpaths",
+    "description": "Network access: Remotely accessible registry paths and sub-paths",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:RemotelyAccessibleRegistryPathsAndSubpaths}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_RemotelyAccessibleRegistryPathsAndSubpaths\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_RemotelyAccessibleRegistryPathsAndSubpaths\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"metatype\":\"multistring\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"System\\\\CurrentControlSet\\\\Control\\\\Print\\\\Printers\",\"System\\\\CurrentControlSet\\\\Services\\\\Eventlog\",\"Software\\\\Microsoft\\\\OLAP Server\",\"Software\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Print\",\"Software\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Windows\",\"System\\\\CurrentControlSet\\\\Control\\\\ContentIndex\",\"System\\\\CurrentControlSet\\\\Control\\\\Terminal Server\",\"System\\\\CurrentControlSet\\\\Control\\\\Terminal Server\\\\UserConfig\",\"System\\\\CurrentControlSet\\\\Control\\\\Terminal Server\\\\DefaultUserConfiguration\",\"Software\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Perflib\",\"System\\\\CurrentControlSet\\\\Services\\\\SysmonLog\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "RenameAdministratorAccount": {
+    "scope": "json",
+    "prefix": "RenameAdministratorAccount",
+    "description": "Accounts: Rename administrator account",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:RenameAdministratorAccount}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Accounts_RenameAdministratorAccount\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Accounts_RenameAdministratorAccount\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"value\": $2",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "RenameGuestAccount": {
+    "scope": "json",
+    "prefix": "RenameGuestAccount",
+    "description": "Accounts: Rename guest account",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:RenameGuestAccount}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Accounts_RenameGuestAccount\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Accounts_RenameGuestAccount\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"value\": $2",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "RequireCaseInsensitivityForNonWindowsSubsystems": {
+    "scope": "json",
+    "prefix": "RequireCaseInsensitivityForNonWindowsSubsystems",
+    "description": "System objects: Require case insensitivity for non-Windows subsystems",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:RequireCaseInsensitivityForNonWindowsSubsystems}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/SystemObjects_RequireCaseInsensitivityForNonWindowsSubsystems\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/SystemObjects_RequireCaseInsensitivityForNonWindowsSubsystems\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "RequireStrongSessionKey": {
+    "scope": "json",
+    "prefix": "RequireStrongSessionKey",
+    "description": "Domain member: Require strong (Windows 2000 or later) session key",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:RequireStrongSessionKey}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/DomainMember_RequireStrongSessionKey\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/DomainMember_RequireStrongSessionKey\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "RestrictAnonymousAccessToNamedPipesAndShares": {
+    "scope": "json",
+    "prefix": "RestrictAnonymousAccessToNamedPipesAndShares",
+    "description": "Network access: Restrict anonymous access to Named Pipes and Shares",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:RestrictAnonymousAccessToNamedPipesAndShares}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_RestrictAnonymousAccessToNamedPipesAndShares\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_RestrictAnonymousAccessToNamedPipesAndShares\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "RestrictClientsAllowedToMakeRemoteCallsToSAM": {
+    "scope": "json",
+    "prefix": "RestrictClientsAllowedToMakeRemoteCallsToSAM",
+    "description": "Network access: Restrict clients allowed to make remote calls to SAM",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:RestrictClientsAllowedToMakeRemoteCallsToSAM}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"value\": ${2:\"O:BAG:BAD:(A;;RC;;;BA)\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "RunAllAdministratorsInAdminApprovalMode": {
+    "scope": "json",
+    "prefix": "RunAllAdministratorsInAdminApprovalMode",
+    "description": "User Account Control: Run all administrators in Admin Approval Mode",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:RunAllAdministratorsInAdminApprovalMode}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_RunAllAdministratorsInAdminApprovalMode\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_RunAllAdministratorsInAdminApprovalMode\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "SendUnencryptedPasswordToThirdPartySMBServers": {
+    "scope": "json",
+    "prefix": "SendUnencryptedPasswordToThirdPartySMBServers",
+    "description": "Microsoft network client: Send unencrypted password to third-party SMB servers",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:SendUnencryptedPasswordToThirdPartySMBServers}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_SendUnencryptedPasswordToThirdPartySMBServers\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_SendUnencryptedPasswordToThirdPartySMBServers\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "ServerSPNTargetNameValidationLevel": {
+    "scope": "json",
+    "prefix": "ServerSPNTargetNameValidationLevel",
+    "description": "Microsoft network server: Server SPN target name validation level",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:ServerSPNTargetNameValidationLevel}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_ServerSPNTargetNameValidationLevel\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_ServerSPNTargetNameValidationLevel\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "SharesThatCanBeAccessedAnonymously": {
+    "scope": "json",
+    "prefix": "SharesThatCanBeAccessedAnonymously",
+    "description": "Network access: Shares that can be accessed anonymously",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:SharesThatCanBeAccessedAnonymously}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_SharesThatCanBeAccessedAnonymously\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_SharesThatCanBeAccessedAnonymously\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"metatype\":\"multistring\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "SharingAndSecurityModelForLocalAccounts": {
+    "scope": "json",
+    "prefix": "SharingAndSecurityModelForLocalAccounts",
+    "description": "Network access: Sharing and security model for local accounts",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:SharingAndSecurityModelForLocalAccounts}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_SharingAndSecurityModelForLocalAccounts\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_SharingAndSecurityModelForLocalAccounts\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "ShutdownSystemImmediatelyIfUnableToLogSecurityAudits": {
+    "scope": "json",
+    "prefix": "ShutdownSystemImmediatelyIfUnableToLogSecurityAudits",
+    "description": "Audit: Shut down system immediately if unable to log security audits",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:ShutdownSystemImmediatelyIfUnableToLogSecurityAudits}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Audit_ShutdownSystemImmediatelyIfUnableToLogSecurityAudits\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Audit_ShutdownSystemImmediatelyIfUnableToLogSecurityAudits\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:0}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "SmartCardRemovalBehavior": {
+    "scope": "json",
+    "prefix": "SmartCardRemovalBehavior",
+    "description": "Interactive logon: Smart card removal behavior",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:SmartCardRemovalBehavior}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/InteractiveLogon_SmartCardRemovalBehavior\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/InteractiveLogon_SmartCardRemovalBehavior\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\",\"minimum\":1,\"maximum\":2},",
+      "\t\t\"value\": ${2:\"1\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "StrengthenDefaultPermissionsOfInternalSystemObjects": {
+    "scope": "json",
+    "prefix": "StrengthenDefaultPermissionsOfInternalSystemObjects",
+    "description": "System objects: Strengthen default permissions of internal system objects (e.g. Symbolic Links)",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:StrengthenDefaultPermissionsOfInternalSystemObjects}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/SystemObjects_StrengthenDefaultPermissionsOfInternalSystemObjects\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/SystemObjects_StrengthenDefaultPermissionsOfInternalSystemObjects\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "SwitchToTheSecureDesktopWhenPromptingForElevation": {
+    "scope": "json",
+    "prefix": "SwitchToTheSecureDesktopWhenPromptingForElevation",
+    "description": "User Account Control: Switch to the secure desktop when prompting for elevation",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:SwitchToTheSecureDesktopWhenPromptingForElevation}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_SwitchToTheSecureDesktopWhenPromptingForElevation\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_SwitchToTheSecureDesktopWhenPromptingForElevation\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UseAdminApprovalMode": {
+    "scope": "json",
+    "prefix": "UseAdminApprovalMode",
+    "description": "User Account Control: Admin Approval Mode for the Built-in Administrator account",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UseAdminApprovalMode}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_UseAdminApprovalMode\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_UseAdminApprovalMode\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsAccessCredentialManagerAsTrustedCaller": {
+    "scope": "json",
+    "prefix": "UserRightsAccessCredentialManagerAsTrustedCaller",
+    "description": "Access Credential Manager as a trusted caller",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsAccessCredentialManagerAsTrustedCaller}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/AccessCredentialManagerAsTrustedCaller\",",
+      "\t\t\t\"set\": \"Config/UserRights/AccessCredentialManagerAsTrustedCaller\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"value\": ${2:\"\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsAccessFromNetwork": {
+    "scope": "json",
+    "prefix": "UserRightsAccessFromNetwork",
+    "description": "Access this computer from the network",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsAccessFromNetwork}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/AccessFromNetwork\",",
+      "\t\t\t\"set\": \"Config/UserRights/AccessFromNetwork\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-11\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsActAsPartOfTheOperatingSystem": {
+    "scope": "json",
+    "prefix": "UserRightsActAsPartOfTheOperatingSystem",
+    "description": "Act as part of the operating system",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsActAsPartOfTheOperatingSystem}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/ActAsPartOfTheOperatingSystem\",",
+      "\t\t\t\"set\": \"Config/UserRights/ActAsPartOfTheOperatingSystem\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"value\": ${2:\"\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsAdjustMemoryQuotasForProcess": {
+    "scope": "json",
+    "prefix": "UserRightsAdjustMemoryQuotasForProcess",
+    "description": "Adjust memory quotas for a process",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsAdjustMemoryQuotasForProcess}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/AdjustMemoryQuotasForProcess\",",
+      "\t\t\t\"set\": \"Config/UserRights/AdjustMemoryQuotasForProcess\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-19\",\"*S-1-5-20\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsAllowLocalLogOn": {
+    "scope": "json",
+    "prefix": "UserRightsAllowLocalLogOn",
+    "description": "Allow log on locally",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsAllowLocalLogOn}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/AllowLocalLogOn\",",
+      "\t\t\t\"set\": \"Config/UserRights/AllowLocalLogOn\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsAllowLogOnThroughRemoteDesktop": {
+    "scope": "json",
+    "prefix": "UserRightsAllowLogOnThroughRemoteDesktop",
+    "description": "Allow log on through Remote Desktop Services",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsAllowLogOnThroughRemoteDesktop}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/AllowLogOnThroughRemoteDesktop\",",
+      "\t\t\t\"set\": \"Config/UserRights/AllowLogOnThroughRemoteDesktop\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-32-555\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsBackupFilesAndDirectories": {
+    "scope": "json",
+    "prefix": "UserRightsBackupFilesAndDirectories",
+    "description": "Back up files and directories",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsBackupFilesAndDirectories}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/BackupFilesAndDirectories\",",
+      "\t\t\t\"set\": \"Config/UserRights/BackupFilesAndDirectories\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsBypassTraverseChecking": {
+    "scope": "json",
+    "prefix": "UserRightsBypassTraverseChecking",
+    "description": "Bypass traverse checking",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsBypassTraverseChecking}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/BypassTraverseChecking\",",
+      "\t\t\t\"set\": \"Config/UserRights/BypassTraverseChecking\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-11\",\"*S-1-5-32-551\",\"*S-1-5-19\",\"*S-1-5-20\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsChangeSystemTime": {
+    "scope": "json",
+    "prefix": "UserRightsChangeSystemTime",
+    "description": "Change the system time",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsChangeSystemTime}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/ChangeSystemTime\",",
+      "\t\t\t\"set\": \"Config/UserRights/ChangeSystemTime\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-19\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsChangeTimeZone": {
+    "scope": "json",
+    "prefix": "UserRightsChangeTimeZone",
+    "description": "Change the time zone",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsChangeTimeZone}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/ChangeTimeZone\",",
+      "\t\t\t\"set\": \"Config/UserRights/ChangeTimeZone\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-19\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsCreateGlobalObjects": {
+    "scope": "json",
+    "prefix": "UserRightsCreateGlobalObjects",
+    "description": "Create global objects",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsCreateGlobalObjects}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/CreateGlobalObjects\",",
+      "\t\t\t\"set\": \"Config/UserRights/CreateGlobalObjects\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-6\",\"*S-1-5-19\",\"*S-1-5-20\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsCreatePageFile": {
+    "scope": "json",
+    "prefix": "UserRightsCreatePageFile",
+    "description": "Create a pagefile",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsCreatePageFile}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/CreatePageFile\",",
+      "\t\t\t\"set\": \"Config/UserRights/CreatePageFile\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsCreatePermanentSharedObjects": {
+    "scope": "json",
+    "prefix": "UserRightsCreatePermanentSharedObjects",
+    "description": "Create permanent shared objects",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsCreatePermanentSharedObjects}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/CreatePermanentSharedObjects\",",
+      "\t\t\t\"set\": \"Config/UserRights/CreatePermanentSharedObjects\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"value\": ${2:\"\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsCreateSymbolicLinks": {
+    "scope": "json",
+    "prefix": "UserRightsCreateSymbolicLinks",
+    "description": "Create symbolic links",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsCreateSymbolicLinks}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/CreateSymbolicLinks\",",
+      "\t\t\t\"set\": \"Config/UserRights/CreateSymbolicLinks\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-83-0\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsCreateToken": {
+    "scope": "json",
+    "prefix": "UserRightsCreateToken",
+    "description": "Create a token object",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsCreateToken}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/CreateToken\",",
+      "\t\t\t\"set\": \"Config/UserRights/CreateToken\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"value\": ${2:\"\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsDebugPrograms": {
+    "scope": "json",
+    "prefix": "UserRightsDebugPrograms",
+    "description": "Debug programs",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsDebugPrograms}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/DebugPrograms\",",
+      "\t\t\t\"set\": \"Config/UserRights/DebugPrograms\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsDenyAccessFromNetwork": {
+    "scope": "json",
+    "prefix": "UserRightsDenyAccessFromNetwork",
+    "description": "Deny access to this computer from the network",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsDenyAccessFromNetwork}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/DenyAccessFromNetwork\",",
+      "\t\t\t\"set\": \"Config/UserRights/DenyAccessFromNetwork\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-546\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsDenyLocalLogOn": {
+    "scope": "json",
+    "prefix": "UserRightsDenyLocalLogOn",
+    "description": "Deny log on locally",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsDenyLocalLogOn}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/DenyLocalLogOn\",",
+      "\t\t\t\"set\": \"Config/UserRights/DenyLocalLogOn\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-546\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsDenyLogOnAsBatchJob": {
+    "scope": "json",
+    "prefix": "UserRightsDenyLogOnAsBatchJob",
+    "description": "Deny log on as a batch job",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsDenyLogOnAsBatchJob}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/DenyLogOnAsBatchJob\",",
+      "\t\t\t\"set\": \"Config/UserRights/DenyLogOnAsBatchJob\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-546\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsDenyLogOnAsService": {
+    "scope": "json",
+    "prefix": "UserRightsDenyLogOnAsService",
+    "description": "Deny log on as a service",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsDenyLogOnAsService}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/DenyLogOnAsService\",",
+      "\t\t\t\"set\": \"Config/UserRights/DenyLogOnAsService\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-546\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsDenyRemoteDesktopServicesLogOn": {
+    "scope": "json",
+    "prefix": "UserRightsDenyRemoteDesktopServicesLogOn",
+    "description": "Deny log on through Remote Desktop Services",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsDenyRemoteDesktopServicesLogOn}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/DenyRemoteDesktopServicesLogOn\",",
+      "\t\t\t\"set\": \"Config/UserRights/DenyRemoteDesktopServicesLogOn\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-546\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsEnableDelegation": {
+    "scope": "json",
+    "prefix": "UserRightsEnableDelegation",
+    "description": "Enable computer and user accounts to be trusted for delegation",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsEnableDelegation}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/EnableDelegation\",",
+      "\t\t\t\"set\": \"Config/UserRights/EnableDelegation\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"value\": ${2:\"\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsGenerateSecurityAudits": {
+    "scope": "json",
+    "prefix": "UserRightsGenerateSecurityAudits",
+    "description": "Generate security audits",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsGenerateSecurityAudits}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/GenerateSecurityAudits\",",
+      "\t\t\t\"set\": \"Config/UserRights/GenerateSecurityAudits\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"*S-1-5-19\",\"*S-1-5-20\",\"*S-1-5-82-3006700770-424185619-1745488364-794895919-4004696415\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsIncreaseProcessWorkingSet": {
+    "scope": "json",
+    "prefix": "UserRightsIncreaseProcessWorkingSet",
+    "description": "Increase a process working set",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsIncreaseProcessWorkingSet}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/IncreaseProcessWorkingSet\",",
+      "\t\t\t\"set\": \"Config/UserRights/IncreaseProcessWorkingSet\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-19\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsIncreaseSchedulingPriority": {
+    "scope": "json",
+    "prefix": "UserRightsIncreaseSchedulingPriority",
+    "description": "Increase scheduling priority",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsIncreaseSchedulingPriority}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/IncreaseSchedulingPriority\",",
+      "\t\t\t\"set\": \"Config/UserRights/IncreaseSchedulingPriority\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsLoadUnloadDeviceDrivers": {
+    "scope": "json",
+    "prefix": "UserRightsLoadUnloadDeviceDrivers",
+    "description": "Load and unload device drivers",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsLoadUnloadDeviceDrivers}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/LoadUnloadDeviceDrivers\",",
+      "\t\t\t\"set\": \"Config/UserRights/LoadUnloadDeviceDrivers\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsLockMemory": {
+    "scope": "json",
+    "prefix": "UserRightsLockMemory",
+    "description": "Lock pages in memory",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsLockMemory}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/LockMemory\",",
+      "\t\t\t\"set\": \"Config/UserRights/LockMemory\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"value\": ${2:\"\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsManageAuditingAndSecurityLog": {
+    "scope": "json",
+    "prefix": "UserRightsManageAuditingAndSecurityLog",
+    "description": "Manage auditing and security log",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsManageAuditingAndSecurityLog}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/ManageAuditingAndSecurityLog\",",
+      "\t\t\t\"set\": \"Config/UserRights/ManageAuditingAndSecurityLog\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsManageVolume": {
+    "scope": "json",
+    "prefix": "UserRightsManageVolume",
+    "description": "Perform volume maintenance tasks",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsManageVolume}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/ManageVolume\",",
+      "\t\t\t\"set\": \"Config/UserRights/ManageVolume\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsModifyFirmwareEnvironment": {
+    "scope": "json",
+    "prefix": "UserRightsModifyFirmwareEnvironment",
+    "description": "Modify firmware environment values",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsModifyFirmwareEnvironment}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/ModifyFirmwareEnvironment\",",
+      "\t\t\t\"set\": \"Config/UserRights/ModifyFirmwareEnvironment\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsModifyObjectLabel": {
+    "scope": "json",
+    "prefix": "UserRightsModifyObjectLabel",
+    "description": "Modify an object label",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsModifyObjectLabel}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/ModifyObjectLabel\",",
+      "\t\t\t\"set\": \"Config/UserRights/ModifyObjectLabel\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"value\": ${2:\"\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsProfileSingleProcess": {
+    "scope": "json",
+    "prefix": "UserRightsProfileSingleProcess",
+    "description": "Profile single process",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsProfileSingleProcess}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/ProfileSingleProcess\",",
+      "\t\t\t\"set\": \"Config/UserRights/ProfileSingleProcess\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsProfileSystemPerformance": {
+    "scope": "json",
+    "prefix": "UserRightsProfileSystemPerformance",
+    "description": "Profile system performance",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsProfileSystemPerformance}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/ProfileSystemPerformance\",",
+      "\t\t\t\"set\": \"Config/UserRights/ProfileSystemPerformance\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-80-3139157870-2983391045-3678747466-658725712-1809340420\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsRemoteShutdown": {
+    "scope": "json",
+    "prefix": "UserRightsRemoteShutdown",
+    "description": "Force shutdown from a remote system",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsRemoteShutdown}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/RemoteShutdown\",",
+      "\t\t\t\"set\": \"Config/UserRights/RemoteShutdown\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsReplaceProcessLevelToken": {
+    "scope": "json",
+    "prefix": "UserRightsReplaceProcessLevelToken",
+    "description": "Replace a process level token",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsReplaceProcessLevelToken}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/ReplaceProcessLevelToken\",",
+      "\t\t\t\"set\": \"Config/UserRights/ReplaceProcessLevelToken\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:[\"*S-1-5-19\",\"*S-1-5-20\"]}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsRestoreFilesAndDirectories": {
+    "scope": "json",
+    "prefix": "UserRightsRestoreFilesAndDirectories",
+    "description": "Restore files and directories",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsRestoreFilesAndDirectories}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/RestoreFilesAndDirectories\",",
+      "\t\t\t\"set\": \"Config/UserRights/RestoreFilesAndDirectories\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsShutDownTheSystem": {
+    "scope": "json",
+    "prefix": "UserRightsShutDownTheSystem",
+    "description": "Shut down the system",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsShutDownTheSystem}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/ShutDownTheSystem\",",
+      "\t\t\t\"set\": \"Config/UserRights/ShutDownTheSystem\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "UserRightsTakeOwnership": {
+    "scope": "json",
+    "prefix": "UserRightsTakeOwnership",
+    "description": "Take ownership of files or other objects",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:UserRightsTakeOwnership}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/UserRights/TakeOwnership\",",
+      "\t\t\t\"set\": \"Config/UserRights/TakeOwnership\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "VirtualizeFileAndRegistryWriteFailuresToPerUserLocations": {
+    "scope": "json",
+    "prefix": "VirtualizeFileAndRegistryWriteFailuresToPerUserLocations",
+    "description": "User Account Control: Virtualize file and registry write failures to per-user locations",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:VirtualizeFileAndRegistryWriteFailuresToPerUserLocations}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations\",",
+      "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"value\": ${2:1}",
+      "\t}",
+      "}$0"
+    ]
+  },
+  "CryptographyForceStrongKeyProtection": {
+    "scope": "json",
+    "prefix": "CryptographyForceStrongKeyProtection",
+    "description": "System Cryptography: Force strong key protection for user keys stored on the computer",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:CryptographyForceStrongKeyProtection}\",",
+      "\t\"type\": \"Microsoft.Windows/CSP\",",
+      "\t\"properties\": {",
+      "\t\t\"name\": \"./Vendor/MSFT/Policy\",",
+      "\t\t\"path\": {",
+      "\t\t\t\"get\": \"Result/Cryptography/ConfigureSystemCryptographyForceStrongKeyProtection\",",
+      "\t\t\t\"set\": \"Config/Cryptography/ConfigureSystemCryptographyForceStrongKeyProtection\"",
+      "\t\t},",
+      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":1,\"maximum\":2},",
+      "\t\t\"value\": ${2:2}",
+      "\t}",
+      "}$0"
+    ]
+  }
+}
