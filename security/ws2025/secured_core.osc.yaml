@@ -3,28 +3,19 @@ resources:
 - name: ConfigureSystemGuardLaunch
   type: Microsoft.Windows/CSP
   properties:
-    name: ./Vendor/MSFT/Policy
-    path:
-      get: Result/DeviceGuard/ConfigureSystemGuardLaunch
-      set: Config/DeviceGuard/ConfigureSystemGuardLaunch
+    path: ./Vendor/MSFT/Policy/Config/DeviceGuard/ConfigureSystemGuardLaunch
     type: integer
     value: 1
 - name: EnableVirtualizationBasedSecurity
   type: Microsoft.Windows/CSP
   properties:
-    name: ./Vendor/MSFT/Policy
-    path:
-      get: Result/DeviceGuard/EnableVirtualizationBasedSecurity
-      set: Config/DeviceGuard/EnableVirtualizationBasedSecurity
+    path: ./Vendor/MSFT/Policy/Config/DeviceGuard/EnableVirtualizationBasedSecurity
     type: integer
     value: 1
 - name: HypervisorEnforcedCodeIntegrity
   type: Microsoft.Windows/CSP
   properties:
-    name: ./Vendor/MSFT/Policy
-    path:
-      get: Result/VirtualizationBasedTechnology/HypervisorEnforcedCodeIntegrity
-      set: Config/VirtualizationBasedTechnology/HypervisorEnforcedCodeIntegrity
+    path: ./Vendor/MSFT/Policy/Config/VirtualizationBasedTechnology/HypervisorEnforcedCodeIntegrity
     type: integer
     value: 2
 
