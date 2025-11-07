@@ -7,3 +7,15 @@ resources:
     value: bar
     type: REG_DWORD
     data: 42
+- name: Audit bar for compliance
+  type: Microsoft.OSConfig/Audit
+  properties:
+    resource:
+      type: Microsoft.Windows/Registry
+      properties:
+        key: HKEY_LOCAL_MACHINE\SOFTWARE\foo
+        value: bar
+        type: REG_DWORD
+        data: 42
+    schema:
+      const: 1  
