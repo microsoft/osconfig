@@ -1,9 +1,9 @@
 $schema: https://aka.ms/osc/schemas/prerelease/document.json
 resources:
-- name: Foo
+- name: bar_under_foo
   type: Microsoft.Windows/Registry
   properties:
-    key: HKEY_LOCAL_MACHINE\SOFTWARE\
-    value: foo
+    key: HKEY_LOCAL_MACHINE\SOFTWARE\foo
+    value: bar
     type: REG_DWORD
-    data: 1
+    data: 42
