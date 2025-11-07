@@ -1,1 +1,9 @@
-
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+- name: Foo
+  type: Microsoft.Windows/Registry
+  properties:
+    key: HKEY_LOCAL_MACHINE\SOFTWARE\
+    value: foo
+    type: REG_DWORD
+    data: 1
