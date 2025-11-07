@@ -7,7 +7,7 @@ resources:
     value: bar
     type: REG_DWORD
     data: 42
-- name: Audit bar for compliance
+- name: Bar must be compliant
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
