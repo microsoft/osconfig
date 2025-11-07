@@ -16,6 +16,5 @@ resources:
         key: HKEY_LOCAL_MACHINE\SOFTWARE\foo
         value: bar
         type: REG_DWORD
-        data: 42
     schema:
-      const: 1  
+      const: 42 
