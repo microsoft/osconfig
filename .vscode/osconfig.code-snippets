@@ -1,10 +1,10 @@
 {
-    "Microsoft.OSConfig/Audit": {
+    "Microsoft.OSConfig/Test": {
 		"scope": "json",
-		"prefix": ["audit", "Microsoft.OSConfig/Audit"],
+		"prefix": ["audit", "Microsoft.OSConfig/Test"],
 		"body": [
 			"{",
-			"\t\"type\": \"Microsoft.OSConfig/Audit\",",
+			"\t\"type\": \"Microsoft.OSConfig/Test\",",
 			"\t\"properties\": {",
 			"\t\t\"resource\": $1,",
 			"\t\t\"schema\": {",

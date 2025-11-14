@@ -2,7 +2,7 @@
 $schema: https://aka.ms/osc/schemas/prerelease/document.json
 resources:
 - name: Access Credential Manager as a trusted caller
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -13,7 +13,7 @@ resources:
     schema:
       maxItems: 0
 - name: Access this computer from the network
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -27,7 +27,7 @@ resources:
         - '*S-1-5-32-544'
         - '*S-1-5-11'
 - name: Account lockout policy
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -41,7 +41,7 @@ resources:
       - pattern: AccountLockoutDuration:[1][5-9]|[2-9]\d|[1-9]\d{2,}
       - pattern: AccountLockoutThreshold:[1-3]
 - name: 'Accounts: Guest account status'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -52,7 +52,7 @@ resources:
     schema:
       const: 0
 - name: 'Accounts: Limit local account use of blank passwords to console logon only'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -65,7 +65,7 @@ resources:
       - const: 1
       - const:
 - name: 'Accounts: Rename administrator account'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -77,7 +77,7 @@ resources:
       not:
         const: Administrator
 - name: 'Accounts: Rename guest account'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -89,7 +89,7 @@ resources:
       not:
         const: Guest
 - name: Act as part of the operating system
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -100,7 +100,7 @@ resources:
     schema:
       maxItems: 0
 - name: Adjust memory quotas for a process
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -115,7 +115,7 @@ resources:
         - '*S-1-5-19'
         - '*S-1-5-20'
 - name: Allow Custom SSPs and APs to be loaded into LSASS
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -127,7 +127,7 @@ resources:
     schema:
       const: 1
 - name: Allow Diagnostic Data
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -140,7 +140,7 @@ resources:
       minimum: 0
       maximum: 1
 - name: Allow indexing of encrypted files
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -154,7 +154,7 @@ resources:
       - const: 0
       - const:
 - name: Allow Input Personalization
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -165,7 +165,7 @@ resources:
     schema:
       const: 0
 - name: Allow log on locally
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -178,7 +178,7 @@ resources:
         enum:
         - '*S-1-5-32-544'
 - name: Allow log on through Remote Desktop Services
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -192,7 +192,7 @@ resources:
         - '*S-1-5-32-544'
         - '*S-1-5-32-555'
 - name: Allow Microsoft accounts to be optional
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -204,7 +204,7 @@ resources:
     schema:
       const: 1
 - name: Allow remote server management through WinRM
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -216,7 +216,7 @@ resources:
     schema:
       const: 1
 - name: Allow remote server management through WinRM-IPv4Filter
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -228,7 +228,7 @@ resources:
     schema:
       const: '*'
 - name: Allow remote server management through WinRM-IPv6Filter
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -240,7 +240,7 @@ resources:
     schema:
       const: '*'
 - name: Allow user control over installs
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -253,7 +253,7 @@ resources:
       - const: 0
       - const:
 - name: Always install with elevated privileges
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -266,7 +266,7 @@ resources:
       - const: 0
       - const:
 - name: Always prompt for password upon connection
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -278,7 +278,7 @@ resources:
     schema:
       const: 1
 - name: Application Identity
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -290,7 +290,7 @@ resources:
     schema:
       const: 2
 - name: 'Application: Control Event Log behavior when the log file reaches its maximum size'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -304,7 +304,7 @@ resources:
       - const: "0"
       - const:
 - name: 'Application: Specify the maximum log file size (KB)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -316,7 +316,7 @@ resources:
     schema:
       minimum: 32768
 - name: Apply UAC restrictions to local accounts on network logons
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -328,7 +328,7 @@ resources:
     schema:
       const: 0
 - name: Audit Account Lockout
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -341,7 +341,7 @@ resources:
       - 2
       - 3
 - name: Audit Authentication Policy Change
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -354,7 +354,7 @@ resources:
       - 1
       - 3
 - name: Audit Authorization Policy Change
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -367,7 +367,7 @@ resources:
       - 1
       - 3
 - name: Audit client does not support encryption
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -379,7 +379,7 @@ resources:
     schema:
       const: 1
 - name: Audit client does not support signing
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -391,7 +391,7 @@ resources:
     schema:
       const: 1
 - name: Audit Credential Validation
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -402,7 +402,7 @@ resources:
     schema:
       const: 3
 - name: Audit Detailed File Share
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -415,7 +415,7 @@ resources:
       - 2
       - 3
 - name: Audit events generated by other security policy changes that are not audited in the policy change category
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -428,7 +428,7 @@ resources:
       - 2
       - 3
 - name: Audit events generated when a process is created or starts
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -439,7 +439,7 @@ resources:
     schema:
       const: 1
 - name: Audit File Share
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -450,7 +450,7 @@ resources:
     schema:
       const: 3
 - name: Audit Group Membership
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -463,7 +463,7 @@ resources:
       - 1
       - 3
 - name: Audit insecure guest logon
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -475,7 +475,7 @@ resources:
     schema:
       const: 1
 - name: Audit IPsec Driver
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -486,7 +486,7 @@ resources:
     schema:
       const: 3
 - name: Audit Logoff
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -499,7 +499,7 @@ resources:
       - 1
       - 3
 - name: Audit Logon
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -510,7 +510,7 @@ resources:
     schema:
       const: 3
 - name: Audit MPSSVC Rule-Level Policy Change
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -521,7 +521,7 @@ resources:
     schema:
       const: 3
 - name: Audit Other Logon/Logoff Events
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -532,7 +532,7 @@ resources:
     schema:
       const: 3
 - name: Audit Other Object Access Events
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -543,7 +543,7 @@ resources:
     schema:
       const: 3
 - name: Audit Other System Events
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -554,7 +554,7 @@ resources:
     schema:
       const: 3
 - name: Audit Policy Change
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -567,7 +567,7 @@ resources:
       - 1
       - 3
 - name: Audit Removable Storage
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -578,7 +578,7 @@ resources:
     schema:
       const: 3
 - name: Audit Security Group Management
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -591,7 +591,7 @@ resources:
       - 1
       - 3
 - name: Audit Security State Change
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -604,7 +604,7 @@ resources:
       - 1
       - 3
 - name: Audit Security System Extension
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -617,7 +617,7 @@ resources:
       - 1
       - 3
 - name: Audit Sensitive Privilege Use
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -628,7 +628,7 @@ resources:
     schema:
       const: 3
 - name: Audit server does not support encryption
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -640,7 +640,7 @@ resources:
     schema:
       const: 1
 - name: Audit server does not support signing
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -652,7 +652,7 @@ resources:
     schema:
       const: 1
 - name: Audit Special Logon
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -665,7 +665,7 @@ resources:
       - 1
       - 3
 - name: Audit System Integrity
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -676,7 +676,7 @@ resources:
     schema:
       const: 3
 - name: Audit the use of Backup and Restore privilege
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -687,7 +687,7 @@ resources:
     schema:
       const: MDA=
 - name: Audit User Account Management
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -698,7 +698,7 @@ resources:
     schema:
       const: 3
 - name: Audit when plug and play detects an external device
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -709,7 +709,7 @@ resources:
     schema:
       const: 1
 - name: 'Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -720,7 +720,7 @@ resources:
     schema:
       const: 1
 - name: 'Audit: Shut down system immediately if unable to log security audits'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -733,7 +733,7 @@ resources:
       - const: 0
       - const:
 - name: Back up files and directories
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -747,7 +747,7 @@ resources:
         - '*S-1-5-32-544'
       unevaluatedItems: false
 - name: Block abuse of exploited vulnerable signed drivers
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -759,7 +759,7 @@ resources:
     schema:
       const: 1
 - name: Block Adobe Reader from creating child processes
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -771,7 +771,7 @@ resources:
     schema:
       const: 0
 - name: Block all consumer Microsoft account user authentication
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -783,7 +783,7 @@ resources:
     schema:
       const: 1
 - name: Block all Office applications from creating child processes
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -795,7 +795,7 @@ resources:
     schema:
       const: 0
 - name: Block credential stealing from the Windows local security authority subsystem (lsass.exe)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -807,7 +807,7 @@ resources:
     schema:
       const: 1
 - name: Block executable content from email client and webmail
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -819,7 +819,7 @@ resources:
     schema:
       const: 0
 - name: Block executable files from running unless they meet a prevalence, age, or trusted list criterion
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -831,7 +831,7 @@ resources:
     schema:
       const: 1
 - name: Block execution of potentially obfuscated scripts
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -843,7 +843,7 @@ resources:
     schema:
       const: 1
 - name: Block JavaScript or VBScript from launching downloaded executable content
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -855,7 +855,7 @@ resources:
     schema:
       const: 1
 - name: Block NetBIOS-based discovery for domain controller location
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -867,7 +867,7 @@ resources:
     schema:
       const: 1
 - name: Block NTLM (LM NTLM NTLMv2)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -880,7 +880,7 @@ resources:
       minimum: 0
       maximum: 1
 - name: Block NTLM Server Exception List
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -894,7 +894,7 @@ resources:
       - maxItems: 0
       - const:
 - name: Block Office applications from creating executable content
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -906,7 +906,7 @@ resources:
     schema:
       const: 0
 - name: Block Office applications from injecting code into other processes
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -918,7 +918,7 @@ resources:
     schema:
       const: 0
 - name: Block Office communication application from creating child processes
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -930,7 +930,7 @@ resources:
     schema:
       const: 0
 - name: Block persistence through WMI event subscription (File and folder exclusions not supported)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -942,7 +942,7 @@ resources:
     schema:
       const: 2
 - name: Block process creations originating from PSExec and WMI commands
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -954,7 +954,7 @@ resources:
     schema:
       const: 2
 - name: Block rebooting machine in Safe Mode (preview)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -966,7 +966,7 @@ resources:
     schema:
       const: 2
 - name: Block untrusted and unsigned processes that run from USB
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -978,7 +978,7 @@ resources:
     schema:
       const: 1
 - name: Block use of copied or impersonated system tools (preview)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -990,7 +990,7 @@ resources:
     schema:
       const: 2
 - name: Block user from showing account details on sign-in
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1002,7 +1002,7 @@ resources:
     schema:
       const: 1
 - name: Block Webshell creation for Servers
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1014,7 +1014,7 @@ resources:
     schema:
       const: 1
 - name: Block Win32 API calls from Office macros
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1026,7 +1026,7 @@ resources:
     schema:
       const: 0
 - name: Boot-Start Driver Initialization Policy
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1042,7 +1042,7 @@ resources:
       - const: 3
       - const:
 - name: Bypass traverse checking
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1059,7 +1059,7 @@ resources:
         - '*S-1-5-19'
         - '*S-1-5-20'
 - name: Change the system time
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1074,7 +1074,7 @@ resources:
         - '*S-1-5-32-549'
         - '*S-1-5-19'
 - name: Change the time zone
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1088,7 +1088,7 @@ resources:
         - '*S-1-5-32-544'
         - '*S-1-5-19'
 - name: Configure Attack Surface Reduction rules
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1100,7 +1100,7 @@ resources:
     schema:
       const: 1
 - name: Configure detection for potentially unwanted applications
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1112,7 +1112,7 @@ resources:
     schema:
       const: 2
 - name: Configure enhanced anti-spoofing
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1124,7 +1124,7 @@ resources:
     schema:
       const: 1
 - name: Configure hash algorithms for certificate logon (KDC)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1136,7 +1136,7 @@ resources:
     schema:
       const: 1
 - name: Configure hash algorithms for certificate logon (KDC) - SHA1
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1148,7 +1148,7 @@ resources:
     schema:
       const: 1
 - name: Configure hash algorithms for certificate logon (KDC) - SHA256
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1160,7 +1160,7 @@ resources:
     schema:
       const: 1
 - name: Configure hash algorithms for certificate logon (KDC) - SHA384
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1172,7 +1172,7 @@ resources:
     schema:
       const: 1
 - name: Configure hash algorithms for certificate logon (KDC) - SHA512
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1184,7 +1184,7 @@ resources:
     schema:
       const: 1
 - name: Configure hash algorithms for certificate logon (Kerberos)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1196,7 +1196,7 @@ resources:
     schema:
       const: 1
 - name: Configure hash algorithms for certificate logon (Kerberos) - SHA1
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1208,7 +1208,7 @@ resources:
     schema:
       const: 1
 - name: Configure hash algorithms for certificate logon (Kerberos) - SHA256
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1220,7 +1220,7 @@ resources:
     schema:
       const: 1
 - name: Configure hash algorithms for certificate logon (Kerberos) - SHA384
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1232,7 +1232,7 @@ resources:
     schema:
       const: 1
 - name: Configure hash algorithms for certificate logon (Kerberos) - SHA512
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1244,7 +1244,7 @@ resources:
     schema:
       const: 1
 - name: Configure local setting override for reporting to Microsoft MAPS
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1256,7 +1256,7 @@ resources:
     schema:
       const: 0
 - name: Configure NetBIOS settings
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1268,7 +1268,7 @@ resources:
     schema:
       const: 0
 - name: Configure Offer Remote Assistance
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1282,7 +1282,7 @@ resources:
       - const: 0
       - const:
 - name: Configure real-time protection and Security Intelligence Updates during OOBE
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1294,7 +1294,7 @@ resources:
     schema:
       const: 1
 - name: 'Configure registry policy processing: Do not apply during periodic background processing'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1306,7 +1306,7 @@ resources:
     schema:
       const: 0
 - name: 'Configure registry policy processing: Process even if the Group Policy objects have not changed'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1318,7 +1318,7 @@ resources:
     schema:
       const: 0
 - name: Configure SAM change password RPC methods policy
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1330,7 +1330,7 @@ resources:
     schema:
       const: 1
 - name: Configure scheduled task times randomization window
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1343,7 +1343,7 @@ resources:
       minimum: 1
       maximum: 4
 - name: Configure SMB v1 client driver
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1355,7 +1355,7 @@ resources:
     schema:
       const: 4
 - name: Configure Solicited Remote Assistance
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1367,7 +1367,7 @@ resources:
     schema:
       const: 0
 - name: Configure the 'Block at First Sight' feature
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1379,7 +1379,7 @@ resources:
     schema:
       const: 0
 - name: Configure Windows Defender SmartScreen
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1391,7 +1391,7 @@ resources:
     schema:
       const: 1
 - name: Configure Windows Defender SmartScreen - Warn and Prevent bypass (Added)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1403,7 +1403,7 @@ resources:
     schema:
       const: Block
 - name: Continue experiences on this device
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1415,7 +1415,7 @@ resources:
     schema:
       const: 0
 - name: Control whether exclusions are visible to local users
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1427,7 +1427,7 @@ resources:
     schema:
       const: 1
 - name: Control whether or not exclusions are visible to Local Admins
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1439,7 +1439,7 @@ resources:
     schema:
       const: 1
 - name: Convert warn verdict to block
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1451,7 +1451,7 @@ resources:
     schema:
       const: 0
 - name: Create a pagefile
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1465,7 +1465,7 @@ resources:
         - '*S-1-5-32-544'
       unevaluatedItems: false
 - name: Create a token object
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1476,7 +1476,7 @@ resources:
     schema:
       maxItems: 0
 - name: Create global objects
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1492,7 +1492,7 @@ resources:
         - '*S-1-5-19'
         - '*S-1-5-20'
 - name: Create permanent shared objects
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1503,7 +1503,7 @@ resources:
     schema:
       maxItems: 0
 - name: Create symbolic links
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1517,7 +1517,7 @@ resources:
         - '*S-1-5-32-544'
         - '*S-1-5-83-0'
 - name: Debug programs
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1531,7 +1531,7 @@ resources:
         - '*S-1-5-32-544'
       unevaluatedItems: false
 - name: 'Delivery Optimization: Download Mode Methods'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1548,7 +1548,7 @@ resources:
       - 99
       - 100
 - name: Deny access to this computer from the network
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1561,7 +1561,7 @@ resources:
       - contains:
           const: '*S-1-5-32-546'
 - name: Deny log on as a batch job
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1574,7 +1574,7 @@ resources:
       - contains:
           const: '*S-1-5-32-546'
 - name: Deny log on as a service
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1587,7 +1587,7 @@ resources:
       - contains:
           const: '*S-1-5-32-546'
 - name: Deny log on locally
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1600,7 +1600,7 @@ resources:
       - contains:
           const: '*S-1-5-32-546'
 - name: Deny log on through Remote Desktop Services
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1613,7 +1613,7 @@ resources:
       - contains:
           const: '*S-1-5-32-546'
 - name: Detect change from default RDP port
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1625,7 +1625,7 @@ resources:
     schema:
       const: 3389
 - name: 'Devices: Allowed to format and eject removable media'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1638,7 +1638,7 @@ resources:
       - const: "0"
       - const: ""
 - name: 'Devices: Prevent users from installing printer drivers'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1651,7 +1651,7 @@ resources:
       - const: 1
       - const:
 - name: Disable SMB v1 client (remove dependency on LanmanWorkstation)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1667,7 +1667,7 @@ resources:
         - MRxSmb20
         - NSI
 - name: Disable SMB v1 server
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1681,7 +1681,7 @@ resources:
       - const: 0
       - const:
 - name: Disable Windows Search Service
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1693,7 +1693,7 @@ resources:
     schema:
       const: 4
 - name: Disallow Autoplay for non-volume devices
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1705,7 +1705,7 @@ resources:
     schema:
       const: 1
 - name: Do not allow drive redirection
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1717,7 +1717,7 @@ resources:
     schema:
       const: 1
 - name: Do not allow passwords to be saved
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1729,7 +1729,7 @@ resources:
     schema:
       const: 1
 - name: Do not delete temp folders upon exit
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1741,7 +1741,7 @@ resources:
     schema:
       const: 1
 - name: Do not display network selection UI
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1753,7 +1753,7 @@ resources:
     schema:
       const: 1
 - name: Do not display the password reveal button
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1765,7 +1765,7 @@ resources:
     schema:
       const: 1
 - name: Do not enumerate connected users on domain-joined computers
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1777,7 +1777,7 @@ resources:
     schema:
       const: 1
 - name: Do not show feedback notifications
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1789,7 +1789,7 @@ resources:
     schema:
       const: 1
 - name: Do not use temporary folders per session
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1801,7 +1801,7 @@ resources:
     schema:
       const: 1
 - name: 'Domain member: Digitally encrypt or sign secure channel data (always)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1812,7 +1812,7 @@ resources:
     schema:
       const: 1
 - name: 'Domain member: Digitally encrypt secure channel data (when possible)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1823,7 +1823,7 @@ resources:
     schema:
       const: 1
 - name: 'Domain member: Digitally sign secure channel data (when possible)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1834,7 +1834,7 @@ resources:
     schema:
       const: 1
 - name: 'Domain member: Disable machine account password changes'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1845,7 +1845,7 @@ resources:
     schema:
       const: 0
 - name: 'Domain member: Maximum machine account password age'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1856,7 +1856,7 @@ resources:
     schema:
       const: 30
 - name: 'Domain member: Require strong (Windows 2000 or later) session key'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1867,7 +1867,7 @@ resources:
     schema:
       const: 1
 - name: Enable authentication rate limiter
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1881,7 +1881,7 @@ resources:
       - const: 1
       - const:
 - name: Enable authentication rate limiter (Delay Timeout)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1894,7 +1894,7 @@ resources:
       minimum: 2000
       maximum: 5000
 - name: Enable computer and user accounts to be trusted for delegation
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1905,7 +1905,7 @@ resources:
     schema:
       maxItems: 0
 - name: Enable insecure guest logons
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -1916,7 +1916,7 @@ resources:
     schema:
       const: 0
 - name: Enable LSA PPL Protection
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1929,7 +1929,7 @@ resources:
       minimum: 1
       maximum: 2
 - name: Enable remote mailslots (Lanman Server)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1941,7 +1941,7 @@ resources:
     schema:
       const: 0
 - name: Enable remote mailslots (Lanman Workstation)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1953,7 +1953,7 @@ resources:
     schema:
       const: 0
 - name: Enable RPC Endpoint Mapper Client Authentication
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1965,7 +1965,7 @@ resources:
     schema:
       const: 1
 - name: Enable Structured Exception Handling Overwrite Protection (SEHOP)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1977,7 +1977,7 @@ resources:
     schema:
       const: 0
 - name: Enable Windows NTP Client
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -1988,7 +1988,7 @@ resources:
         data:
     schema:
 - name: Encryption Oracle Remediation for CredSSP protocol
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2000,7 +2000,7 @@ resources:
     schema:
       const: 0
 - name: Enforce password history
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2011,7 +2011,7 @@ resources:
     schema:
       const: 24
 - name: Enumerate administrator accounts on elevation
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2025,7 +2025,7 @@ resources:
       - const: 0
       - const:
 - name: Enumerate local users on domain-joined computers
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2037,7 +2037,7 @@ resources:
     schema:
       const: 0
 - name: Enumeration policy for external devices incompatible with Kernel DMA Protection
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2050,7 +2050,7 @@ resources:
       - 0
       - 1
 - name: Force shutdown from a remote system
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2064,7 +2064,7 @@ resources:
         - '*S-1-5-32-544'
       unevaluatedItems: false
 - name: Generate security audits
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2079,7 +2079,7 @@ resources:
         - '*S-1-5-20'
         - '*S-1-5-82-3006700770-424185619-1745488364-794895919-4004696415'
 - name: Hardened UNC Paths - NETLOGON
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2095,7 +2095,7 @@ resources:
       - contains:
           const: RequireIntegrity=1
 - name: Hardened UNC Paths - SYSVOL
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2111,7 +2111,7 @@ resources:
       - contains:
           const: RequireIntegrity=1
 - name: Impersonate a client after authentication
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2127,7 +2127,7 @@ resources:
         - '*S-1-5-19'
         - '*S-1-5-20'
 - name: Include command line in process creation events
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2139,7 +2139,7 @@ resources:
     schema:
       const: 1
 - name: Increase a process working set
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2153,7 +2153,7 @@ resources:
         - '*S-1-5-32-544'
         - '*S-1-5-19'
 - name: Increase scheduling priority
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2167,7 +2167,7 @@ resources:
         - '*S-1-5-32-544'
         - '*S-1-5-90-0'
 - name: 'Interactive logon: Do not display last user name'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2178,7 +2178,7 @@ resources:
     schema:
       const: 1
 - name: 'Interactive logon: Do not require CTRL+ALT+DEL'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2191,7 +2191,7 @@ resources:
       - const: 0
       - const:
 - name: 'Interactive logon: Machine inactivity limit'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2203,7 +2203,7 @@ resources:
       minimum: 1
       maximum: 900
 - name: 'Interactive logon: Message text for users attempting to log on'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2218,7 +2218,7 @@ resources:
         - const: ""
         - const:
 - name: 'Interactive logon: Message title for users attempting to log on'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2233,7 +2233,7 @@ resources:
         - const: ""
         - const:
 - name: 'Interactive Logon: Number of previous logons to cache (in case Domain Controller is not available)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2246,7 +2246,7 @@ resources:
       minimum: 0
       maximum: 4
 - name: 'Interactive logon: Prompt user to change password before expiration'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2258,7 +2258,7 @@ resources:
       minimum: 5
       maximum: 14
 - name: 'Interactive logon: Smart card removal behavior'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2269,7 +2269,7 @@ resources:
     schema:
       const: 1
 - name: Join Microsoft MAPS
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2281,7 +2281,7 @@ resources:
     schema:
       const: 2
 - name: Limits print driver installation to Administrators
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2293,7 +2293,7 @@ resources:
     schema:
       const: 1
 - name: Load and unload device drivers
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2306,7 +2306,7 @@ resources:
         enum:
         - '*S-1-5-32-544'
 - name: Lock pages in memory
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2317,7 +2317,7 @@ resources:
     schema:
       maxItems: 0
 - name: Manage auditing and security log
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2331,7 +2331,7 @@ resources:
         - '*S-1-5-32-544'
       unevaluatedItems: false
 - name: Mandate the minimum version of SMB Client
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2346,7 +2346,7 @@ resources:
       - 770
       - 785
 - name: Mandate the minimum version of SMB Server
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2361,7 +2361,7 @@ resources:
       - 770
       - 785
 - name: Maximum password age
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2373,7 +2373,7 @@ resources:
       minimum: 1
       maximum: 60
 - name: 'Microsoft network client: Digitally sign communications (always)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2384,7 +2384,7 @@ resources:
     schema:
       const: 1
 - name: 'Microsoft network client: Digitally sign communications (if server agrees)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2395,7 +2395,7 @@ resources:
     schema:
       const: 1
 - name: 'Microsoft network client: Send unencrypted password to third-party SMB servers'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2408,7 +2408,7 @@ resources:
       - const: 0
       - const:
 - name: 'Microsoft network server: Amount of idle time required before suspending session'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2420,7 +2420,7 @@ resources:
       minimum: 1
       maximum: 15
 - name: 'Microsoft network server: Digitally sign communications (always)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2431,7 +2431,7 @@ resources:
     schema:
       const: 1
 - name: 'Microsoft network server: Digitally sign communications (if client agrees)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2442,7 +2442,7 @@ resources:
     schema:
       const: 1
 - name: 'Microsoft network server: Disconnect clients when logon hours expire'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2453,7 +2453,7 @@ resources:
     schema:
       const: 1
 - name: 'Microsoft network server: Server SPN target name validation level'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2464,7 +2464,7 @@ resources:
     schema:
       const: 1
 - name: Minimize the number of simultaneous connections to the Internet or a Windows Domain
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2476,7 +2476,7 @@ resources:
     schema:
       const: 3
 - name: Minimum password age
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2487,7 +2487,7 @@ resources:
     schema:
       minimum: 1
 - name: Minimum password length
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2498,7 +2498,7 @@ resources:
     schema:
       minimum: 14
 - name: Modify an object label
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2509,7 +2509,7 @@ resources:
     schema:
       maxItems: 0
 - name: Modify firmware environment values
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2523,7 +2523,7 @@ resources:
         - '*S-1-5-32-544'
       unevaluatedItems: false
 - name: 'MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2535,7 +2535,7 @@ resources:
     schema:
       const: 2
 - name: 'MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2547,7 +2547,7 @@ resources:
     schema:
       const: 2
 - name: 'MSS: (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2559,7 +2559,7 @@ resources:
     schema:
       const: 0
 - name: 'MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2571,7 +2571,7 @@ resources:
     schema:
       const: 1
 - name: 'MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2583,7 +2583,7 @@ resources:
     schema:
       const: 1
 - name: 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2596,7 +2596,7 @@ resources:
       minimum: 50
       maximum: 90
 - name: NetBT NodeType configuration
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2608,7 +2608,7 @@ resources:
     schema:
       const: 2
 - name: 'Network access: Allow anonymous SID/Name translation'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2619,7 +2619,7 @@ resources:
     schema:
       const: 0
 - name: 'Network access: Do not allow anonymous enumeration of SAM accounts'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2632,7 +2632,7 @@ resources:
       - const: 1
       - const:
 - name: 'Network access: Do not allow anonymous enumeration of SAM accounts and shares'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2643,7 +2643,7 @@ resources:
     schema:
       const: 1
 - name: 'Network access: Let Everyone permissions apply to anonymous users'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2656,7 +2656,7 @@ resources:
       - const: 0
       - const:
 - name: 'Network access: Remotely accessible registry paths'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2676,7 +2676,7 @@ resources:
         uniqueItems: true
       - maxItems: 0
 - name: 'Network access: Remotely accessible registry paths and sub-paths'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2704,7 +2704,7 @@ resources:
         uniqueItems: true
       - maxItems: 0
 - name: 'Network access: Restrict anonymous access to Named Pipes and Shares'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2717,7 +2717,7 @@ resources:
       - const: 1
       - const:
 - name: 'Network access: Restrict clients allowed to make remote calls to SAM'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2730,7 +2730,7 @@ resources:
       - const: O:BAG:BAD:(A;;RC;;;BA)
       - const: ""
 - name: 'Network access: Shares that can be accessed anonymously'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2743,7 +2743,7 @@ resources:
       - maxItems: 0
       - const:
 - name: 'Network access: Sharing and security model for local accounts'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2756,7 +2756,7 @@ resources:
       - const: 0
       - const:
 - name: 'Network security: Allow Local System to use computer identity for NTLM'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2767,7 +2767,7 @@ resources:
     schema:
       const: 1
 - name: 'Network security: Allow LocalSystem NULL session fallback'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2780,7 +2780,7 @@ resources:
       - const: 0
       - const:
 - name: 'Network Security: Allow PKU2U authentication requests to this computer to use online identities'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2792,7 +2792,7 @@ resources:
     schema:
       const: 1
 - name: 'Network Security: Configure encryption types allowed for Kerberos'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2807,7 +2807,7 @@ resources:
       - 2147483632
       - 2147483640
 - name: 'Network security: Force logoff when logon hours expire'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2818,7 +2818,7 @@ resources:
     schema:
       const: 1
 - name: 'Network security: LAN Manager authentication level'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2829,7 +2829,7 @@ resources:
     schema:
       const: 5
 - name: 'Network security: LDAP client signing requirements'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2841,7 +2841,7 @@ resources:
       minimum: 1
       maximum: 2
 - name: 'Network security: Minimum session security for NTLM SSP based (including secure RPC) clients'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2852,7 +2852,7 @@ resources:
     schema:
       const: 537395200
 - name: 'Network security: Minimum session security for NTLM SSP based (including secure RPC) servers'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2863,7 +2863,7 @@ resources:
     schema:
       const: 537395200
 - name: Override Minimum Enabled DTLS Version Client
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2874,7 +2874,7 @@ resources:
     schema:
       const: "1.2"
 - name: Override Minimum Enabled DTLS Version Server
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2885,7 +2885,7 @@ resources:
     schema:
       const: "1.2"
 - name: Override Minimum Enabled TLS Version Client
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2898,7 +2898,7 @@ resources:
       - const: "1.2"
       - const: "1.3"
 - name: Override Minimum Enabled TLS Version Server
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2911,7 +2911,7 @@ resources:
       - const: "1.2"
       - const: "1.3"
 - name: Password must meet complexity requirements
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2922,7 +2922,7 @@ resources:
     schema:
       const: 1
 - name: Perform volume maintenance tasks
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -2936,7 +2936,7 @@ resources:
         - '*S-1-5-32-544'
       unevaluatedItems: false
 - name: Prevent device metadata retrieval from the Internet
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2948,7 +2948,7 @@ resources:
     schema:
       const: 1
 - name: Prevent downloading of enclosures
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2960,7 +2960,7 @@ resources:
     schema:
       const: 1
 - name: Prevent enabling lock screen camera
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2972,7 +2972,7 @@ resources:
     schema:
       const: 1
 - name: Prevent enabling lock screen slide show
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2984,7 +2984,7 @@ resources:
     schema:
       const: 1
 - name: Prevent users from modifying settings
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -2996,7 +2996,7 @@ resources:
     schema:
       const: 1
 - name: Profile single process
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3010,7 +3010,7 @@ resources:
         - '*S-1-5-32-544'
       unevaluatedItems: false
 - name: Profile system performance
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3024,7 +3024,7 @@ resources:
         - '*S-1-5-32-544'
         - '*S-1-5-80-3139157870-2983391045-3678747466-658725712-1809340420'
 - name: Prohibit installation and configuration of Network Bridge on your DNS domain network
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3036,7 +3036,7 @@ resources:
     schema:
       const: 0
 - name: Prohibit use of Internet Connection Sharing on your DNS domain network
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3048,7 +3048,7 @@ resources:
     schema:
       const: 0
 - name: 'Recovery console: Allow floppy copy and access to all drives and all folders'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3059,7 +3059,7 @@ resources:
     schema:
       const: 0
 - name: Remote host allows delegation of non-exportable credentials
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3071,7 +3071,7 @@ resources:
     schema:
       const: 1
 - name: Remote management (WinRM) Allow Basic authentication
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3085,7 +3085,7 @@ resources:
       - const: 0
       - const:
 - name: Remote management (WinRM) Allow Basic authentication - Service
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3097,7 +3097,7 @@ resources:
     schema:
       const: 0
 - name: Remote management (WinRM) Allow unencrypted traffic
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3111,7 +3111,7 @@ resources:
       - const: 0
       - const:
 - name: Remote management (WinRM) Allow unencrypted traffic - Service
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3123,7 +3123,7 @@ resources:
     schema:
       const: 0
 - name: Remote management (WinRM) Disallow Digest authentication
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3135,7 +3135,7 @@ resources:
     schema:
       const: 0
 - name: Remote management (WinRM) Disallow WinRM from storing RunAs credentials
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3147,7 +3147,7 @@ resources:
     schema:
       const: 1
 - name: Replace a process level token
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3161,7 +3161,7 @@ resources:
         - '*S-1-5-19'
         - '*S-1-5-20'
 - name: Require Encryption
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3174,7 +3174,7 @@ resources:
       minimum: 0
       maximum: 1
 - name: Require secure RPC communication
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3186,7 +3186,7 @@ resources:
     schema:
       const: 1
 - name: Require user authentication for remote connections by using Network Level Authentication
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3198,7 +3198,7 @@ resources:
     schema:
       const: 1
 - name: Restore files and directories
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3212,7 +3212,7 @@ resources:
         - '*S-1-5-32-544'
       unevaluatedItems: false
 - name: Restrict Unauthenticated RPC clients
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3224,7 +3224,7 @@ resources:
     schema:
       const: 1
 - name: Scan all downloaded files and attachments
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3236,7 +3236,7 @@ resources:
     schema:
       const: 0
 - name: Scan excluded files and directories during quick scans
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3248,7 +3248,7 @@ resources:
     schema:
       const: 1
 - name: Scan removable drives
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3260,7 +3260,7 @@ resources:
     schema:
       const: 0
 - name: Secured-Core Hypervisor-protected Code Integrity (HVCI)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3272,7 +3272,7 @@ resources:
       minimum: 1
       maximum: 2
 - name: Secured-Core Require MicrosoftSignedBootChain
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3284,7 +3284,7 @@ resources:
     schema:
       const: 1
 - name: Secured-Core Require Platform Security (Secure Boot, DMA)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3297,7 +3297,7 @@ resources:
       - 1
       - 3
 - name: Secured-Core Require UEFI Memory Attribute Table
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3309,7 +3309,7 @@ resources:
     schema:
       const: 1
 - name: Secured-Core SystemGuard (DRTM)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3320,7 +3320,7 @@ resources:
     schema:
       const: 1
 - name: Secured-Core Virtualization Based Security (VBS)
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3331,7 +3331,7 @@ resources:
     schema:
       const: 1
 - name: 'Security: Control Event Log behavior when the log file reaches its maximum size'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3345,7 +3345,7 @@ resources:
       - const: "0"
       - const:
 - name: 'Security: Specify the maximum log file size (KB)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3357,7 +3357,7 @@ resources:
     schema:
       minimum: 196608
 - name: Select cloud protection level
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3372,7 +3372,7 @@ resources:
       - 4
       - 6
 - name: Select the channel for Microsoft Defender daily security intelligence updates
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3384,7 +3384,7 @@ resources:
     schema:
       const: 5
 - name: Select the channel for Microsoft Defender monthly engine updates
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3398,7 +3398,7 @@ resources:
       - 5
       - 6
 - name: Select the channel for Microsoft Defender monthly platform updates
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3412,7 +3412,7 @@ resources:
       - 5
       - 6
 - name: Send file samples when further analysis is required
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3426,7 +3426,7 @@ resources:
       - 1
       - 3
 - name: Set client connection encryption level
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3439,7 +3439,7 @@ resources:
       minimum: 3
       maximum: 4
 - name: Set the default behavior for AutoRun
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3451,7 +3451,7 @@ resources:
     schema:
       const: 1
 - name: 'Setup: Control Event Log behavior when the log file reaches its maximum size'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3465,7 +3465,7 @@ resources:
       - const: "0"
       - const:
 - name: 'Setup: Specify the maximum log file size (KB)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3477,7 +3477,7 @@ resources:
     schema:
       minimum: 32768
 - name: Shut down the system
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3491,7 +3491,7 @@ resources:
         - '*S-1-5-32-544'
       unevaluatedItems: false
 - name: 'Shutdown: Allow system to be shut down without having to log on'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3504,7 +3504,7 @@ resources:
       - const: 0
       - const:
 - name: 'Shutdown: Clear virtual memory pagefile'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3517,7 +3517,7 @@ resources:
       - const: 0
       - const:
 - name: Sign-in and lock last interactive user automatically after a restart
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3529,7 +3529,7 @@ resources:
     schema:
       const: 1
 - name: Sign-in last interactive user automatically after a system-initiated restart
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3541,7 +3541,7 @@ resources:
     schema:
       const: 1
 - name: SSL Cryptography Cipher suites
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3564,7 +3564,7 @@ resources:
         - TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
         - TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
 - name: SSL Cryptography EccCurves
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3579,7 +3579,7 @@ resources:
         - NistP256
         - NistP384
 - name: Store passwords using reversible encryption
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3590,7 +3590,7 @@ resources:
     schema:
       const: 0
 - name: 'System Cryptography: Force strong key protection for user keys stored on the computer'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3601,7 +3601,7 @@ resources:
     schema:
       const: 2
 - name: 'System objects: Require case insensitivity for non-Windows subsystems'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3614,7 +3614,7 @@ resources:
       - const: 1
       - const:
 - name: 'System objects: Strengthen default permissions of internal system objects (e.g. Symbolic Links)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3625,7 +3625,7 @@ resources:
     schema:
       const: 1
 - name: System Policies NtfsEncryptPagingFile
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3637,7 +3637,7 @@ resources:
     schema:
       const: 1
 - name: System Services Afd DisableAddressSharing
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3649,7 +3649,7 @@ resources:
     schema:
       const: 1
 - name: 'System settings: Use Certificate Rules on Windows Executables for Software Restriction Policies'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3661,7 +3661,7 @@ resources:
     schema:
       const: 1
 - name: 'System: Control Event Log behavior when the log file reaches its maximum size'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3675,7 +3675,7 @@ resources:
       - const: "0"
       - const:
 - name: 'System: Specify the maximum log file size (KB)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3687,7 +3687,7 @@ resources:
     schema:
       minimum: 32768
 - name: Take ownership of files or other objects
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3701,7 +3701,7 @@ resources:
         - '*S-1-5-32-544'
       unevaluatedItems: false
 - name: This setting controls datagram processing for Network Protection is enabled on Server
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3713,7 +3713,7 @@ resources:
     schema:
       const: 0
 - name: This setting controls whether Network Protection is allows to be configured into block or Audit mode on Windows Server
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3725,7 +3725,7 @@ resources:
     schema:
       const: 1
 - name: Turn off app notifications on the lock screen
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3737,7 +3737,7 @@ resources:
     schema:
       const: 1
 - name: Turn off Auto Exclusions
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3749,7 +3749,7 @@ resources:
     schema:
       const: 0
 - name: Turn off Autoplay
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3761,7 +3761,7 @@ resources:
     schema:
       const: 255
 - name: Turn off background refresh of Group Policy
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3773,7 +3773,7 @@ resources:
     schema:
       const: 0
 - name: Turn off cloud consumer account state content
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3784,7 +3784,7 @@ resources:
     schema:
       const: 1
 - name: Turn off Data Execution Prevention for Explorer
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3798,7 +3798,7 @@ resources:
       - const: 0
       - const:
 - name: Turn off downloading of print drivers over HTTP
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3810,7 +3810,7 @@ resources:
     schema:
       const: 1
 - name: Turn off heap termination on corruption
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3824,7 +3824,7 @@ resources:
       - const: 0
       - const:
 - name: Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3836,7 +3836,7 @@ resources:
     schema:
       const: 1
 - name: Turn off Inventory Collector
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3848,7 +3848,7 @@ resources:
     schema:
       const: 1
 - name: Turn off Microsoft consumer experiences
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -3861,7 +3861,7 @@ resources:
       - const: 1
       - const:
 - name: Turn off Microsoft Defender AntiVirus
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3873,7 +3873,7 @@ resources:
     schema:
       const: 0
 - name: Turn off multicast name resolution
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3885,7 +3885,7 @@ resources:
     schema:
       const: 0
 - name: Turn off printing over HTTP
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3897,7 +3897,7 @@ resources:
     schema:
       const: 1
 - name: Turn off real-time protection
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3909,7 +3909,7 @@ resources:
     schema:
       const: 0
 - name: Turn off routine remediation
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3921,7 +3921,7 @@ resources:
     schema:
       const: 0
 - name: Turn off shell protocol protected mode
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3935,7 +3935,7 @@ resources:
       - const: 0
       - const:
 - name: Turn on behavior monitoring
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3947,7 +3947,7 @@ resources:
     schema:
       const: 0
 - name: Turn on convenience PIN sign-in
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3961,7 +3961,7 @@ resources:
       - const: 0
       - const:
 - name: Turn on CredentialGuard
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3974,7 +3974,7 @@ resources:
       minimum: 1
       maximum: 2
 - name: Turn on e-mail scanning
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3986,7 +3986,7 @@ resources:
     schema:
       const: 0
 - name: Turn on PowerShell Script Block Logging
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -3998,7 +3998,7 @@ resources:
     schema:
       const: 1
 - name: Turn on PowerShell Transcription
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4010,7 +4010,7 @@ resources:
     schema:
       const: 0
 - name: Turn on scan after security intelligence update
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4022,7 +4022,7 @@ resources:
     schema:
       const: 0
 - name: Turn on script scanning
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4034,7 +4034,7 @@ resources:
     schema:
       const: 0
 - name: Turn On Virtualization Based Security | KernelShadowStackLaunch
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4047,7 +4047,7 @@ resources:
       minimum: 1
       maximum: 2
 - name: Use advanced protection against ransomware
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4059,7 +4059,7 @@ resources:
     schema:
       const: 1
 - name: 'User Account Control: Admin Approval Mode for the Built-in Administrator account'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -4070,7 +4070,7 @@ resources:
     schema:
       const: 1
 - name: 'User Account Control: Allow UIAccess applications to prompt for elevation without using the secure desktop'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -4081,7 +4081,7 @@ resources:
     schema:
       const: 0
 - name: 'User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -4093,7 +4093,7 @@ resources:
       minimum: 1
       maximum: 2
 - name: 'User Account Control: Behavior of the elevation prompt for standard users'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -4104,7 +4104,7 @@ resources:
     schema:
       const: 0
 - name: 'User Account Control: Detect application installations and prompt for elevation'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -4115,7 +4115,7 @@ resources:
     schema:
       const: 1
 - name: 'User Account Control: Only elevate UIAccess applications that are installed in secure locations'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -4126,7 +4126,7 @@ resources:
     schema:
       const: 1
 - name: 'User Account Control: Run all administrators in Admin Approval Mode'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -4137,7 +4137,7 @@ resources:
     schema:
       const: 1
 - name: 'User Account Control: Switch to the secure desktop when prompting for elevation'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -4148,7 +4148,7 @@ resources:
     schema:
       const: 1
 - name: 'User Account Control: Virtualize file and registry write failures to per-user locations'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/CSP
@@ -4159,7 +4159,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Domain: Allow unicast response'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4171,7 +4171,7 @@ resources:
     schema:
       const: 0
 - name: 'Windows Firewall: Domain: Firewall state'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4183,7 +4183,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Domain: Inbound connections'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4195,7 +4195,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Domain: Logging: Log dropped packets'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4207,7 +4207,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Domain: Logging: Log successful connections'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4219,7 +4219,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Domain: Logging: Name'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4231,7 +4231,7 @@ resources:
     schema:
       pattern: .log
 - name: 'Windows Firewall: Domain: Logging: Size limit (KB)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4243,7 +4243,7 @@ resources:
     schema:
       minimum: 16384
 - name: 'Windows Firewall: Domain: Outbound connections'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4255,7 +4255,7 @@ resources:
     schema:
       const: 0
 - name: 'Windows Firewall: Domain: Settings: Apply local connection security rules'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4267,7 +4267,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Domain: Settings: Apply local firewall rules'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4281,7 +4281,7 @@ resources:
       - const: 1
       - const:
 - name: 'Windows Firewall: Domain: Settings: Display a notification'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4293,7 +4293,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Private: Allow unicast response'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4305,7 +4305,7 @@ resources:
     schema:
       const: 0
 - name: 'Windows Firewall: Private: Firewall state'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4317,7 +4317,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Private: Inbound connections'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4329,7 +4329,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Private: Logging: Log dropped packets'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4341,7 +4341,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Private: Logging: Log successful connections'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4353,7 +4353,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Private: Logging: Name'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4365,7 +4365,7 @@ resources:
     schema:
       pattern: .log
 - name: 'Windows Firewall: Private: Logging: Size limit (KB)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4377,7 +4377,7 @@ resources:
     schema:
       minimum: 16384
 - name: 'Windows Firewall: Private: Outbound connections'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4389,7 +4389,7 @@ resources:
     schema:
       const: 0
 - name: 'Windows Firewall: Private: Settings: Apply local connection security rules'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4401,7 +4401,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Private: Settings: Apply local firewall rules'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4413,7 +4413,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Private: Settings: Display a notification'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4425,7 +4425,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Public: Allow unicast response'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4437,7 +4437,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Public: Firewall state'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4449,7 +4449,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Public: Inbound connections'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4461,7 +4461,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Public: Logging: Log dropped packets'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4473,7 +4473,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Public: Logging: Log successful connections'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4485,7 +4485,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Public: Logging: Name'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4497,7 +4497,7 @@ resources:
     schema:
       pattern: .log
 - name: 'Windows Firewall: Public: Logging: Size limit (KB)'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4509,7 +4509,7 @@ resources:
     schema:
       minimum: 16384
 - name: 'Windows Firewall: Public: Outbound connections'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4521,7 +4521,7 @@ resources:
     schema:
       const: 0
 - name: 'Windows Firewall: Public: Settings: Apply local connection security rules'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4533,7 +4533,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Public: Settings: Apply local firewall rules'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4545,7 +4545,7 @@ resources:
     schema:
       const: 1
 - name: 'Windows Firewall: Public: Settings: Display a notification'
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4557,7 +4557,7 @@ resources:
     schema:
       const: 1
 - name: WindowsNT MitigationOptions MitigationOptions FontBocking
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4569,7 +4569,7 @@ resources:
     schema:
       const: "1000000000000"
 - name: WinVerifyTrust Signature Validation vulnerability Mitigation 1
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
@@ -4581,7 +4581,7 @@ resources:
     schema:
       const: 1
 - name: WinVerifyTrust Signature Validation vulnerability Mitigation 2
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
