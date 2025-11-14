@@ -1,0 +1,14 @@
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+- name: "WSLv1 should be disabled"
+  type: Microsoft.OSConfig/Test
+  properties:
+    resource:                             ## Note: This is the same resources as before,
+      name: "Get WSLv1 allow policy"      ## now wrapped in a compliance test
+      type: Microsoft.Windows/Registry    ##
+      properties:                         ##          
+        key: HKLM:\SOFTWARE\Policies\WSL  ##
+        value: AllowWSL1                  ##
+        type: REG_DWORD                   ##
+    schema:
+      const: 0 ## Compliance logic goes here. const: 0 means the value should be zero
