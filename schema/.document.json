@@ -37,7 +37,7 @@
       "type": "object",
       "properties": {
         "type": {
-          "const": "Microsoft.OSConfig/Audit"
+          "const": "Microsoft.OSConfig/Test"
         },
         "properties": {
           "type": "object",

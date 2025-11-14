@@ -2,12 +2,12 @@
 $schema: https://aka.ms/osc/schemas/prerelease/document.json
 resources:
 - name: Ensure that UEFI Memory Attribute Table (MAT) is required
-  type: Microsoft.OSConfig/Audit
+  type: Microsoft.OSConfig/Test
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
         value: HVCIMATRequired
         type: REG_DWORD
         data: 1

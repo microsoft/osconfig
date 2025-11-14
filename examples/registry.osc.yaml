@@ -4,7 +4,7 @@ resources:
 - name: HVCIMATRequired
   type: Microsoft.Windows/Registry
   properties:
-    key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
+    key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
     value: HVCIMATRequired
     type: REG_DWORD
     data: 1
