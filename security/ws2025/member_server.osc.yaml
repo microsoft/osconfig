@@ -63,7 +63,7 @@ resources:
     schema:
       oneOf:
       - const: 1
-      - const: 
+      - const:
 - name: 'Accounts: Rename administrator account'
   type: Microsoft.OSConfig/Audit
   properties:
@@ -72,7 +72,7 @@ resources:
       properties:
         path: ./Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/Accounts_RenameAdministratorAccount
         type: string
-        value: 
+        value:
     schema:
       not:
         const: Administrator
@@ -84,7 +84,7 @@ resources:
       properties:
         path: ./Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/Accounts_RenameGuestAccount
         type: string
-        value: 
+        value:
     schema:
       not:
         const: Guest
@@ -120,7 +120,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\System
         value: AllowCustomSSPsAPs
         type: REG_DWORD
         data: 1
@@ -132,7 +132,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection
         value: AllowTelemetry
         type: REG_DWORD
         data: 1
@@ -145,14 +145,14 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search
         value: AllowIndexingEncryptedStoresOrItems
         type: REG_DWORD
         data: 0
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: Allow Input Personalization
   type: Microsoft.OSConfig/Audit
   properties:
@@ -197,7 +197,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
         value: MSAOptional
         type: REG_DWORD
         data: 1
@@ -209,7 +209,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service
         value: AllowAutoConfig
         type: REG_DWORD
         data: 1
@@ -221,7 +221,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service
         value: IPv4Filter
         type: REG_SZ
         data: '*'
@@ -233,7 +233,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service
         value: IPv6Filter
         type: REG_SZ
         data: '*'
@@ -251,7 +251,7 @@ resources:
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: Always install with elevated privileges
   type: Microsoft.OSConfig/Audit
   properties:
@@ -264,14 +264,14 @@ resources:
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: Always prompt for password upon connection
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
         value: fPromptForPassword
         type: REG_DWORD
         data: 1
@@ -283,7 +283,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\AppIDSvc
+        key: HKLM:\SYSTEM\CurrentControlSet\Services\AppIDSvc
         value: Start
         type: REG_DWORD
         data: 2
@@ -295,21 +295,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EventLog\Application
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\Application
         value: Retention
         type: REG_SZ
         data: "0"
     schema:
       oneOf:
       - const: "0"
-      - const: 
+      - const:
 - name: 'Application: Specify the maximum log file size (KB)'
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EventLog\Application
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\Application
         value: MaxSize
         type: REG_DWORD
         data: 32768
@@ -321,7 +321,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
         value: LocalAccountTokenFilterPolicy
         type: REG_DWORD
         data: 0
@@ -372,7 +372,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation
         value: AuditClientDoesNotSupportEncryption
         type: REG_DWORD
         data: 1
@@ -384,7 +384,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation
         value: AuditClientDoesNotSupportSigning
         type: REG_DWORD
         data: 1
@@ -468,7 +468,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LanmanServer
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanServer
         value: AuditInsecureGuestLogon
         type: REG_DWORD
         data: 1
@@ -633,7 +633,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LanmanServer
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanServer
         value: AuditServerDoesNotSupportEncryption
         type: REG_DWORD
         data: 1
@@ -645,7 +645,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LanmanServer
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanServer
         value: AuditServerDoesNotSupportSigning
         type: REG_DWORD
         data: 1
@@ -731,7 +731,7 @@ resources:
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: Back up files and directories
   type: Microsoft.OSConfig/Audit
   properties:
@@ -752,7 +752,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: 56a863a9-875e-4185-98a7-b882c64b5ce5
         type: REG_DWORD
         data: 1
@@ -764,7 +764,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c
         type: REG_DWORD
         data: 0
@@ -776,7 +776,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftAccount
+        key: HKLM:\SOFTWARE\Policies\Microsoft\MicrosoftAccount
         value: DisableUserAuth
         type: REG_DWORD
         data: 1
@@ -788,7 +788,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: d4f940ab-401b-4efc-aadc-ad5f3c50688a
         type: REG_DWORD
         data: 0
@@ -800,7 +800,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
         type: REG_DWORD
         data: 1
@@ -812,7 +812,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: be9ba2d9-53ea-4cdc-84e5-9b1eeee46550
         type: REG_DWORD
         data: 0
@@ -824,7 +824,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: 01443614-cd74-433a-b99e-2ecdc07bfc25
         type: REG_DWORD
         data: 1
@@ -836,7 +836,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: 5beb7efe-fd9a-4556-801d-275e5ffc04cc
         type: REG_DWORD
         data: 1
@@ -848,7 +848,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: d3e037e1-3eb8-44c8-a917-57927947596d
         type: REG_DWORD
         data: 1
@@ -860,7 +860,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Netlogon\Parameters
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Netlogon\Parameters
         value: BlockNetbiosDiscovery
         type: REG_DWORD
         data: 1
@@ -872,7 +872,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation
         value: BlockNTLM
         type: REG_DWORD
         data: 0
@@ -885,21 +885,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation
         value: BlockNTLMServerExceptionList
         type: REG_SZ
         data: ""
     schema:
       oneOf:
       - maxItems: 0
-      - const: 
+      - const:
 - name: Block Office applications from creating executable content
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: 3b576869-a4ec-4529-8536-b80a7769e899
         type: REG_DWORD
         data: 0
@@ -911,7 +911,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: 75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84
         type: REG_DWORD
         data: 0
@@ -923,7 +923,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: 26190899-1602-49e8-8b27-eb1d0a1ce869
         type: REG_DWORD
         data: 0
@@ -935,7 +935,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: e6db77e5-3df2-4cf1-b95a-636979351e5b
         type: REG_DWORD
         data: 2
@@ -947,7 +947,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: d1e49aac-8f56-4280-b9ba-993a6d77406c
         type: REG_DWORD
         data: 2
@@ -959,7 +959,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: 33ddedf1-c6e0-47cb-833e-de6133960387
         type: REG_DWORD
         data: 2
@@ -971,7 +971,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
         type: REG_DWORD
         data: 1
@@ -983,7 +983,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb
         type: REG_DWORD
         data: 2
@@ -995,7 +995,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\System
         value: BlockUserFromShowingAccountDetailsOnSignin
         type: REG_DWORD
         data: 1
@@ -1007,7 +1007,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: a8f5898e-1dc8-49a9-9878-85004b8a61e6
         type: REG_DWORD
         data: 1
@@ -1019,7 +1019,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: 92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b
         type: REG_DWORD
         data: 0
@@ -1031,7 +1031,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\EarlyLaunch
+        key: HKLM:\SYSTEM\CurrentControlSet\Policies\EarlyLaunch
         value: DriverLoadPolicy
         type: REG_DWORD
         data: 3
@@ -1040,7 +1040,7 @@ resources:
       - const: 8
       - const: 1
       - const: 3
-      - const: 
+      - const:
 - name: Bypass traverse checking
   type: Microsoft.OSConfig/Audit
   properties:
@@ -1093,7 +1093,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR
         value: ExploitGuard_ASR_Rules
         type: REG_DWORD
         data: 1
@@ -1105,7 +1105,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender
         value: PUAProtection
         type: REG_DWORD
         data: 2
@@ -1117,7 +1117,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Biometrics\FacialFeatures
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Biometrics\FacialFeatures
         value: EnhancedAntiSpoofing
         type: REG_DWORD
         data: 1
@@ -1129,7 +1129,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\KDC\Parameters
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\KDC\Parameters
         value: PKINITHashAlgorithmConfigurationEnabled
         type: REG_DWORD
         data: 1
@@ -1141,7 +1141,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\KDC\Parameters
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\KDC\Parameters
         value: PKINITSHA1
         type: REG_DWORD
         data: 1
@@ -1153,7 +1153,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\KDC\Parameters
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\KDC\Parameters
         value: PKINITSHA256
         type: REG_DWORD
         data: 1
@@ -1165,7 +1165,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\KDC\Parameters
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\KDC\Parameters
         value: PKINITSHA384
         type: REG_DWORD
         data: 1
@@ -1177,7 +1177,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\KDC\Parameters
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\KDC\Parameters
         value: PKINITSHA512
         type: REG_DWORD
         data: 1
@@ -1189,7 +1189,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
         value: PKINITHashAlgorithmConfigurationEnabled
         type: REG_DWORD
         data: 1
@@ -1201,7 +1201,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
         value: PKINITSHA1
         type: REG_DWORD
         data: 1
@@ -1213,7 +1213,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
         value: PKINITSHA256
         type: REG_DWORD
         data: 1
@@ -1225,7 +1225,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
         value: PKINITSHA384
         type: REG_DWORD
         data: 1
@@ -1237,7 +1237,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
         value: PKINITSHA512
         type: REG_DWORD
         data: 1
@@ -1249,7 +1249,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\SpyNet
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\SpyNet
         value: LocalSettingOverrideSpynetReporting
         type: REG_DWORD
         data: 0
@@ -1261,7 +1261,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient
         value: EnableNetbios
         type: REG_DWORD
         data: 0
@@ -1273,21 +1273,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
         value: fAllowUnsolicited
         type: REG_DWORD
         data: 0
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: Configure real-time protection and Security Intelligence Updates during OOBE
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection
         value: OobeEnableRtpAndSigUpdate
         type: REG_DWORD
         data: 1
@@ -1299,7 +1299,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}
         value: NoBackgroundPolicy
         type: REG_DWORD
         data: 0
@@ -1311,7 +1311,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}
         value: NoGPOListChanges
         type: REG_DWORD
         data: 0
@@ -1323,7 +1323,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\SAM
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\SAM
         value: SamrChangeUserPasswordApiPolicy
         type: REG_DWORD
         data: 1
@@ -1335,7 +1335,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender
         value: SchedulerRandomizationTime
         type: REG_DWORD
         data: 4
@@ -1348,7 +1348,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MrxSmb10
+        key: HKLM:\SYSTEM\CurrentControlSet\Services\MrxSmb10
         value: Start
         type: REG_DWORD
         data: 4
@@ -1360,7 +1360,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
         value: fAllowToGetHelp
         type: REG_DWORD
         data: 0
@@ -1372,7 +1372,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\SpyNet
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\SpyNet
         value: DisableBlockAtFirstSeen
         type: REG_DWORD
         data: 0
@@ -1384,7 +1384,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\System
         value: EnableSmartScreen
         type: REG_DWORD
         data: 1
@@ -1396,7 +1396,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\System
         value: ShellSmartScreenLevel
         type: REG_SZ
         data: Block
@@ -1408,7 +1408,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\System
         value: EnableCdp
         type: REG_DWORD
         data: 0
@@ -1420,7 +1420,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender
         value: HideExclusionsFromLocalUsers
         type: REG_DWORD
         data: 1
@@ -1432,7 +1432,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender
         value: HideExclusionsFromLocalAdmins
         type: REG_DWORD
         data: 1
@@ -1444,7 +1444,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\NIS
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\NIS
         value: EnableConvertWarnToBlock
         type: REG_DWORD
         data: 0
@@ -1536,7 +1536,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization
         value: DODownloadMode
         type: REG_DWORD
         data: 2
@@ -1618,7 +1618,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp
+        key: HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp
         value: PortNumber
         type: REG_DWORD
         data: 3389
@@ -1649,14 +1649,14 @@ resources:
     schema:
       oneOf:
       - const: 1
-      - const: 
+      - const:
 - name: Disable SMB v1 client (remove dependency on LanmanWorkstation)
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation
+        key: HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation
         value: DependOnService
         type: REG_SZ
         data: Bowser,MRxSmb20,NSI
@@ -1672,21 +1672,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters
+        key: HKLM:\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters
         value: SMB1
         type: REG_DWORD
         data: 0
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: Disable Windows Search Service
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Wsearch
+        key: HKLM:\SYSTEM\CurrentControlSet\Services\Wsearch
         value: Start
         type: REG_DWORD
         data: 4
@@ -1698,7 +1698,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Explorer
         value: NoAutoplayfornonVolume
         type: REG_DWORD
         data: 1
@@ -1710,7 +1710,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
         value: fDisableCdm
         type: REG_DWORD
         data: 1
@@ -1722,7 +1722,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
         value: DisablePasswordSaving
         type: REG_DWORD
         data: 1
@@ -1734,7 +1734,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
         value: DeleteTempDirsOnExit
         type: REG_DWORD
         data: 1
@@ -1746,7 +1746,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\System
         value: DontDisplayNetworkSelectionUI
         type: REG_DWORD
         data: 1
@@ -1758,7 +1758,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CredUI
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\CredUI
         value: DisablePasswordReveal
         type: REG_DWORD
         data: 1
@@ -1770,7 +1770,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\System
         value: DontEnumerateConnectedUsers
         type: REG_DWORD
         data: 1
@@ -1782,7 +1782,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection
         value: DoNotShowFeedbackNotifications
         type: REG_DWORD
         data: 1
@@ -1794,7 +1794,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
         value: PerSessionTempDir
         type: REG_DWORD
         data: 1
@@ -1872,21 +1872,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LanmanServer
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanServer
         value: EnableAuthRateLimiter
         type: REG_DWORD
         data: 1
     schema:
       oneOf:
       - const: 1
-      - const: 
+      - const:
 - name: Enable authentication rate limiter (Delay Timeout)
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters
+        key: HKLM:\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters
         value: InvalidAuthenticationDelayTimeInMs
         type: REG_DWORD
         data: 2000
@@ -1921,7 +1921,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa
+        key: HKLM:\SYSTEM\CurrentControlSet\Control\Lsa
         value: RunAsPPL
         type: REG_DWORD
         data: 2
@@ -1934,7 +1934,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Browser
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Browser
         value: EnableMailslots
         type: REG_DWORD
         data: 0
@@ -1946,7 +1946,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider
         value: EnableMailslots
         type: REG_DWORD
         data: 0
@@ -1958,7 +1958,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Rpc
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Rpc
         value: EnableAuthEpResolution
         type: REG_DWORD
         data: 1
@@ -1970,7 +1970,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel
+        key: HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\kernel
         value: DisableExceptionChainValidation
         type: REG_DWORD
         data: 0
@@ -1982,18 +1982,18 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
+        key: HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
         value: Enabled
         type: REG_DWORD
-        data: 
-    schema: 
+        data:
+    schema:
 - name: Encryption Oracle Remediation for CredSSP protocol
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters
         value: AllowEncryptionOracle
         type: REG_DWORD
         data: 0
@@ -2016,21 +2016,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\CredUI
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\CredUI
         value: EnumerateAdministrators
         type: REG_DWORD
         data: 0
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: Enumerate local users on domain-joined computers
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\System
         value: EnumerateLocalUsers
         type: REG_DWORD
         data: 0
@@ -2084,7 +2084,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths
         value: '\\*\NETLOGON'
         type: REG_SZ
         data: RequireMutualAuthentication=1,RequireIntegrity=1
@@ -2100,7 +2100,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths
         value: '\\*\SYSVOL'
         type: REG_SZ
         data: RequireMutualAuthentication=1,RequireIntegrity=1
@@ -2132,7 +2132,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit
         value: ProcessCreationIncludeCmdLine_Enabled
         type: REG_DWORD
         data: 1
@@ -2189,7 +2189,7 @@ resources:
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: 'Interactive logon: Machine inactivity limit'
   type: Microsoft.OSConfig/Audit
   properties:
@@ -2208,37 +2208,37 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
         value: LegalNoticeText
         type: REG_SZ
-        data: 
+        data:
     schema:
       not:
         oneOf:
         - const: ""
-        - const: 
+        - const:
 - name: 'Interactive logon: Message title for users attempting to log on'
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
         value: LegalNoticeCaption
         type: REG_SZ
-        data: 
+        data:
     schema:
       not:
         oneOf:
         - const: ""
-        - const: 
+        - const:
 - name: 'Interactive Logon: Number of previous logons to cache (in case Domain Controller is not available)'
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
+        key: HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
         value: CachedLogonsCount
         type: REG_SZ
         data: "4"
@@ -2274,7 +2274,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\SpyNet
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\SpyNet
         value: SpynetReporting
         type: REG_DWORD
         data: 2
@@ -2286,7 +2286,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers\PointAndPrint
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Printers\PointAndPrint
         value: RestrictDriverInstallationToAdministrators
         type: REG_DWORD
         data: 1
@@ -2336,7 +2336,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation
         value: MinSmb2Dialect
         type: REG_DWORD
         data: 768
@@ -2351,7 +2351,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LanmanServer
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanServer
         value: MinSmb2Dialect
         type: REG_DWORD
         data: 768
@@ -2406,7 +2406,7 @@ resources:
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: 'Microsoft network server: Amount of idle time required before suspending session'
   type: Microsoft.OSConfig/Audit
   properties:
@@ -2469,7 +2469,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WcmSvc\GroupPolicy
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WcmSvc\GroupPolicy
         value: fMinimizeConnections
         type: REG_DWORD
         data: 3
@@ -2528,7 +2528,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters
+        key: HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters
         value: DisableIPSourceRouting
         type: REG_DWORD
         data: 2
@@ -2540,7 +2540,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters
+        key: HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters
         value: DisableIPSourceRouting
         type: REG_DWORD
         data: 2
@@ -2552,7 +2552,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters
+        key: HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters
         value: EnableICMPRedirect
         type: REG_DWORD
         data: 0
@@ -2564,7 +2564,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetBT\Parameters
+        key: HKLM:\SYSTEM\CurrentControlSet\Services\NetBT\Parameters
         value: NoNameReleaseOnDemand
         type: REG_DWORD
         data: 1
@@ -2576,7 +2576,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager
+        key: HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager
         value: SafeDllSearchMode
         type: REG_DWORD
         data: 1
@@ -2588,7 +2588,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Security
+        key: HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security
         value: WarningLevel
         type: REG_DWORD
         data: 90
@@ -2601,7 +2601,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetBT\Parameters
+        key: HKLM:\SYSTEM\CurrentControlSet\Services\NetBT\Parameters
         value: NodeType
         type: REG_DWORD
         data: 2
@@ -2630,7 +2630,7 @@ resources:
     schema:
       oneOf:
       - const: 1
-      - const: 
+      - const:
 - name: 'Network access: Do not allow anonymous enumeration of SAM accounts and shares'
   type: Microsoft.OSConfig/Audit
   properties:
@@ -2654,7 +2654,7 @@ resources:
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: 'Network access: Remotely accessible registry paths'
   type: Microsoft.OSConfig/Audit
   properties:
@@ -2715,7 +2715,7 @@ resources:
     schema:
       oneOf:
       - const: 1
-      - const: 
+      - const:
 - name: 'Network access: Restrict clients allowed to make remote calls to SAM'
   type: Microsoft.OSConfig/Audit
   properties:
@@ -2741,7 +2741,7 @@ resources:
     schema:
       oneOf:
       - maxItems: 0
-      - const: 
+      - const:
 - name: 'Network access: Sharing and security model for local accounts'
   type: Microsoft.OSConfig/Audit
   properties:
@@ -2754,7 +2754,7 @@ resources:
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: 'Network security: Allow Local System to use computer identity for NTLM'
   type: Microsoft.OSConfig/Audit
   properties:
@@ -2778,14 +2778,14 @@ resources:
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: 'Network Security: Allow PKU2U authentication requests to this computer to use online identities'
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\pku2u
+        key: HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\pku2u
         value: AllowOnlineID
         type: REG_DWORD
         data: 1
@@ -2797,7 +2797,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
         value: SupportedEncryptionTypes
         type: REG_DWORD
         data: 2147483640
@@ -2941,7 +2941,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Device Metadata
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Device Metadata
         value: PreventDeviceMetadataFromNetwork
         type: REG_DWORD
         data: 1
@@ -2953,7 +2953,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Internet Explorer\Feeds
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Feeds
         value: DisableEnclosureDownload
         type: REG_DWORD
         data: 1
@@ -2965,7 +2965,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization
         value: NoLockScreenCamera
         type: REG_DWORD
         data: 1
@@ -2977,7 +2977,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization
         value: NoLockScreenSlideshow
         type: REG_DWORD
         data: 1
@@ -2989,7 +2989,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\App and Browser protection
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\App and Browser protection
         value: DisallowExploitProtectionOverride
         type: REG_DWORD
         data: 1
@@ -3029,7 +3029,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Network Connections
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Network Connections
         value: NC_AllowNetBridge_NLA
         type: REG_DWORD
         data: 0
@@ -3041,7 +3041,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Network Connections
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Network Connections
         value: NC_ShowSharedAccessUI
         type: REG_DWORD
         data: 0
@@ -3064,7 +3064,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation
         value: AllowProtectedCreds
         type: REG_DWORD
         data: 1
@@ -3076,21 +3076,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client
         value: AllowBasic
         type: REG_DWORD
         data: 0
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: Remote management (WinRM) Allow Basic authentication - Service
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service
         value: AllowBasic
         type: REG_DWORD
         data: 0
@@ -3102,21 +3102,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client
         value: AllowUnencryptedTraffic
         type: REG_DWORD
         data: 0
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: Remote management (WinRM) Allow unencrypted traffic - Service
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service
         value: AllowUnencryptedTraffic
         type: REG_DWORD
         data: 0
@@ -3128,7 +3128,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client
         value: AllowDigest
         type: REG_DWORD
         data: 0
@@ -3140,7 +3140,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service
         value: DisableRunAs
         type: REG_DWORD
         data: 1
@@ -3166,7 +3166,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation
         value: RequireEncryption
         type: REG_DWORD
         data: 0
@@ -3179,7 +3179,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
         value: fEncryptRPCTraffic
         type: REG_DWORD
         data: 1
@@ -3191,7 +3191,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
         value: UserAuthentication
         type: REG_DWORD
         data: 1
@@ -3217,7 +3217,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Rpc
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Rpc
         value: RestrictRemoteClients
         type: REG_DWORD
         data: 1
@@ -3229,7 +3229,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection
         value: DisableIOAVProtection
         type: REG_DWORD
         data: 0
@@ -3241,7 +3241,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Scan
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Scan
         value: QuickScanIncludeExclusions
         type: REG_DWORD
         data: 1
@@ -3253,7 +3253,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Scan
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Scan
         value: DisableRemovableDriveScanning
         type: REG_DWORD
         data: 0
@@ -3277,7 +3277,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard
+        key: HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard
         value: RequireMicrosoftSignedBootChain
         type: REG_DWORD
         data: 1
@@ -3302,7 +3302,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
         value: HVCIMATRequired
         type: REG_DWORD
         data: 1
@@ -3336,21 +3336,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EventLog\Security
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\Security
         value: Retention
         type: REG_SZ
         data: "0"
     schema:
       oneOf:
       - const: "0"
-      - const: 
+      - const:
 - name: 'Security: Specify the maximum log file size (KB)'
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EventLog\Security
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\Security
         value: MaxSize
         type: REG_DWORD
         data: 196608
@@ -3362,7 +3362,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\MpEngine
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\MpEngine
         value: MpCloudBlockLevel
         type: REG_DWORD
         data: 2
@@ -3377,7 +3377,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender
         value: SignaturesRing
         type: REG_DWORD
         data: 5
@@ -3389,7 +3389,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender
         value: EngineRing
         type: REG_DWORD
         data: 5
@@ -3403,7 +3403,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender
         value: PlatformRing
         type: REG_DWORD
         data: 5
@@ -3417,7 +3417,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\SpyNet
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\SpyNet
         value: SubmitSamplesConsent
         type: REG_DWORD
         data: 1
@@ -3431,7 +3431,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
         value: MinEncryptionLevel
         type: REG_DWORD
         data: 3
@@ -3444,7 +3444,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer
         value: NoAutorun
         type: REG_DWORD
         data: 1
@@ -3456,21 +3456,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup
         value: Retention
         type: REG_SZ
         data: "0"
     schema:
       oneOf:
       - const: "0"
-      - const: 
+      - const:
 - name: 'Setup: Specify the maximum log file size (KB)'
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup
         value: MaxSize
         type: REG_DWORD
         data: 32768
@@ -3502,7 +3502,7 @@ resources:
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: 'Shutdown: Clear virtual memory pagefile'
   type: Microsoft.OSConfig/Audit
   properties:
@@ -3515,14 +3515,14 @@ resources:
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: Sign-in and lock last interactive user automatically after a restart
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
         value: AutomaticRestartSignOnConfig
         type: REG_DWORD
         data: 1
@@ -3534,7 +3534,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
         value: DisableAutomaticRestartSignOn
         type: REG_DWORD
         data: 1
@@ -3546,7 +3546,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL\00010002
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL\00010002
         value: Functions
         type: REG_SZ
         data: TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
@@ -3569,7 +3569,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL\00010002
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL\00010002
         value: EccCurves
         type: REG_SZ
         data: NistP256,NistP384
@@ -3612,7 +3612,7 @@ resources:
     schema:
       oneOf:
       - const: 1
-      - const: 
+      - const:
 - name: 'System objects: Strengthen default permissions of internal system objects (e.g. Symbolic Links)'
   type: Microsoft.OSConfig/Audit
   properties:
@@ -3630,7 +3630,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies
+        key: HKLM:\SYSTEM\CurrentControlSet\Policies
         value: NtfsEncryptPagingFile
         type: REG_DWORD
         data: 1
@@ -3642,7 +3642,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Afd\Parameters
+        key: HKLM:\SYSTEM\CurrentControlSet\Services\Afd\Parameters
         value: DisableAddressSharing
         type: REG_DWORD
         data: 1
@@ -3654,7 +3654,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers
         value: AuthenticodeEnabled
         type: REG_DWORD
         data: 1
@@ -3666,21 +3666,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EventLog\System
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\System
         value: Retention
         type: REG_SZ
         data: "0"
     schema:
       oneOf:
       - const: "0"
-      - const: 
+      - const:
 - name: 'System: Specify the maximum log file size (KB)'
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EventLog\System
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\System
         value: MaxSize
         type: REG_DWORD
         data: 32768
@@ -3706,7 +3706,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\NIS\Consumers\IPS
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\NIS\Consumers\IPS
         value: AllowDatagramProcessingOnWinServer
         type: REG_DWORD
         data: 0
@@ -3718,7 +3718,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection
         value: AllowNetworkProtectionOnWinServer
         type: REG_DWORD
         data: 1
@@ -3730,7 +3730,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\System
         value: DisableLockScreenAppNotifications
         type: REG_DWORD
         data: 1
@@ -3742,7 +3742,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Exclusions
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Exclusions
         value: DisableAutoExclusions
         type: REG_DWORD
         data: 0
@@ -3754,7 +3754,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer
         value: NoDriveTypeAutoRun
         type: REG_DWORD
         data: 255
@@ -3766,7 +3766,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
         value: DisableBkGndGroupPolicy
         type: REG_DWORD
         data: 0
@@ -3789,21 +3789,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Explorer
         value: NoDataExecutionPrevention
         type: REG_DWORD
         data: 0
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: Turn off downloading of print drivers over HTTP
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Printers
         value: DisableWebPnPDownload
         type: REG_DWORD
         data: 1
@@ -3815,21 +3815,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Explorer
         value: NoHeapTerminationOnCorruption
         type: REG_DWORD
         data: 0
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Internet Connection Wizard
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Internet Connection Wizard
         value: ExitOnMSICW
         type: REG_DWORD
         data: 1
@@ -3841,7 +3841,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppCompat
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\AppCompat
         value: DisableInventory
         type: REG_DWORD
         data: 1
@@ -3859,14 +3859,14 @@ resources:
     schema:
       oneOf:
       - const: 1
-      - const: 
+      - const:
 - name: Turn off Microsoft Defender AntiVirus
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender
         value: DisableAntiSpyware
         type: REG_DWORD
         data: 0
@@ -3878,7 +3878,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient
         value: EnableMulticast
         type: REG_DWORD
         data: 0
@@ -3890,7 +3890,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Printers
         value: DisableHTTPPrinting
         type: REG_DWORD
         data: 1
@@ -3902,7 +3902,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection
         value: DisableRealtimeMonitoring
         type: REG_DWORD
         data: 0
@@ -3914,7 +3914,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender
         value: DisableRoutinelyTakingAction
         type: REG_DWORD
         data: 0
@@ -3926,21 +3926,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer
+        key: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer
         value: PreXPSP2ShellProtocolBehavior
         type: REG_DWORD
         data: 0
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: Turn on behavior monitoring
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection
         value: DisableBehaviorMonitoring
         type: REG_DWORD
         data: 0
@@ -3952,21 +3952,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\System
         value: AllowDomainPINLogon
         type: REG_DWORD
         data: 0
     schema:
       oneOf:
       - const: 0
-      - const: 
+      - const:
 - name: Turn on CredentialGuard
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa
+        key: HKLM:\SYSTEM\CurrentControlSet\Control\Lsa
         value: LsaCfgFlags
         type: REG_DWORD
         data: 2
@@ -3979,7 +3979,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Scan
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Scan
         value: DisableEmailScanning
         type: REG_DWORD
         data: 0
@@ -3991,7 +3991,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging
         value: EnableScriptBlockLogging
         type: REG_DWORD
         data: 1
@@ -4003,7 +4003,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription
         value: EnableTranscripting
         type: REG_DWORD
         data: 0
@@ -4015,7 +4015,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Signature Updates
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Signature Updates
         value: DisableScanOnUpdate
         type: REG_DWORD
         data: 0
@@ -4027,7 +4027,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection
         value: DisableScriptScanning
         type: REG_DWORD
         data: 0
@@ -4039,7 +4039,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
         value: ConfigureKernelShadowStacksLaunch
         type: REG_DWORD
         data: 2
@@ -4052,7 +4052,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
         value: c1db55ab-c21a-4637-bb3f-a12568109d35
         type: REG_DWORD
         data: 1
@@ -4164,7 +4164,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile
         value: DisableUnicastResponsesToMulticastBroadcast
         type: REG_DWORD
         data: 0
@@ -4176,7 +4176,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile
         value: EnableFirewall
         type: REG_DWORD
         data: 1
@@ -4188,7 +4188,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile
         value: DefaultInboundAction
         type: REG_DWORD
         data: 1
@@ -4200,7 +4200,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging
         value: LogDroppedPackets
         type: REG_DWORD
         data: 1
@@ -4212,7 +4212,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging
         value: LogSuccessfulConnections
         type: REG_DWORD
         data: 1
@@ -4224,7 +4224,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging
         value: LogFilePath
         type: REG_SZ
         data: '%SystemRoot%\System32\logfiles\firewall\domainfw.log'
@@ -4236,7 +4236,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging
         value: LogFileSize
         type: REG_DWORD
         data: 16384
@@ -4248,7 +4248,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile
         value: DefaultOutboundAction
         type: REG_DWORD
         data: 0
@@ -4260,7 +4260,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile
         value: AllowLocalIPsecPolicyMerge
         type: REG_DWORD
         data: 1
@@ -4272,21 +4272,21 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile
         value: AllowLocalPolicyMerge
         type: REG_DWORD
         data: 1
     schema:
       oneOf:
       - const: 1
-      - const: 
+      - const:
 - name: 'Windows Firewall: Domain: Settings: Display a notification'
   type: Microsoft.OSConfig/Audit
   properties:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile
         value: DisableNotifications
         type: REG_DWORD
         data: 1
@@ -4298,7 +4298,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile
         value: DisableUnicastResponsesToMulticastBroadcast
         type: REG_DWORD
         data: 0
@@ -4310,7 +4310,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile
         value: EnableFirewall
         type: REG_DWORD
         data: 1
@@ -4322,7 +4322,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile
         value: DefaultInboundAction
         type: REG_DWORD
         data: 1
@@ -4334,7 +4334,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging
         value: LogDroppedPackets
         type: REG_DWORD
         data: 1
@@ -4346,7 +4346,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging
         value: LogSuccessfulConnections
         type: REG_DWORD
         data: 1
@@ -4358,7 +4358,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging
         value: LogFilePath
         type: REG_SZ
         data: '%SystemRoot%\System32\logfiles\firewall\privatefw.log'
@@ -4370,7 +4370,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging
         value: LogFileSize
         type: REG_DWORD
         data: 16384
@@ -4382,7 +4382,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile
         value: DefaultOutboundAction
         type: REG_DWORD
         data: 0
@@ -4394,7 +4394,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile
         value: AllowLocalIPsecPolicyMerge
         type: REG_DWORD
         data: 1
@@ -4406,7 +4406,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile
         value: AllowLocalPolicyMerge
         type: REG_DWORD
         data: 1
@@ -4418,7 +4418,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile
         value: DisableNotifications
         type: REG_DWORD
         data: 1
@@ -4430,7 +4430,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
         value: DisableUnicastResponsesToMulticastBroadcast
         type: REG_DWORD
         data: 1
@@ -4442,7 +4442,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
         value: EnableFirewall
         type: REG_DWORD
         data: 1
@@ -4454,7 +4454,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
         value: DefaultInboundAction
         type: REG_DWORD
         data: 1
@@ -4466,7 +4466,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging
         value: LogDroppedPackets
         type: REG_DWORD
         data: 1
@@ -4478,7 +4478,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging
         value: LogSuccessfulConnections
         type: REG_DWORD
         data: 1
@@ -4490,7 +4490,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging
         value: LogFilePath
         type: REG_SZ
         data: '%SystemRoot%\System32\logfiles\firewall\publicfw.log'
@@ -4502,7 +4502,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging
         value: LogFileSize
         type: REG_DWORD
         data: 16384
@@ -4514,7 +4514,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
         value: DefaultOutboundAction
         type: REG_DWORD
         data: 0
@@ -4526,7 +4526,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
         value: AllowLocalIPsecPolicyMerge
         type: REG_DWORD
         data: 1
@@ -4538,7 +4538,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
         value: AllowLocalPolicyMerge
         type: REG_DWORD
         data: 1
@@ -4550,7 +4550,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
+        key: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
         value: DisableNotifications
         type: REG_DWORD
         data: 1
@@ -4562,7 +4562,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\MitigationOptions
+        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\MitigationOptions
         value: MitigationOptions_FontBocking
         type: REG_SZ
         data: "1000000000000"
@@ -4574,7 +4574,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Wintrust\Config
+        key: HKLM:\SOFTWARE\Microsoft\Cryptography\Wintrust\Config
         value: EnableCertPaddingCheck
         type: REG_SZ
         data: "1"
@@ -4586,7 +4586,7 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Cryptography\Wintrust\Config
+        key: HKLM:\SOFTWARE\Wow6432Node\Microsoft\Cryptography\Wintrust\Config
         value: EnableCertPaddingCheck
         type: REG_SZ
         data: "1"
