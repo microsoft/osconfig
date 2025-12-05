@@ -1,0 +1,14 @@
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+- name: "WSLv1 should not be allowed"
+  type: Microsoft.OSConfig/Test
+  properties:
+    resource:                             ## 
+      name: "Get AllowWSL1 setting"       ## <-- Same registry resource as previous example, but now wrapped in a compliance test.
+      type: Microsoft.Windows/Registry    ##     
+      properties:                         ##          
+        key: HKLM:\SOFTWARE\Policies\WSL  ##
+        value: AllowWSL1                  ##
+        type: REG_DWORD                   
+    expression: data == 0  ## <-- My compliance test. Registry data is returned in a field called data, and I'm asserting that it needs to be 0.
+    template: "Target value 0; found value {data}" ## <-- OPTIONAL: A template to fine tune the compliance message

@@ -1,9 +1,8 @@
 $schema: https://aka.ms/osc/schemas/prerelease/document.json
 resources:
-- name: "Enforce WSLv1 disablement"
+- name: "Get AllowWSL1 setting"
   type: Microsoft.Windows/Registry
   properties:
     key: HKLM:\SOFTWARE\Policies\WSL
     value: AllowWSL1
     type: REG_DWORD
-    data: 0
