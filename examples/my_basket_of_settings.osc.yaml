@@ -1,0 +1,27 @@
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+- name: DeviceGuard RPSF - Test compliance
+  type: Microsoft.OSConfig/Test
+  properties:
+    resource: 
+      name: DeviceGuard RPSF - Set
+      type: Microsoft.Windows/CSP
+      properties:
+        path: ./Vendor/MSFT/Policy/Config/DeviceGuard/RequirePlatformSecurityFeatures
+        type: integer
+        value: 1
+    expression: value >= 1
+    template: "Expected > 0, got {value}"
+- name: WSLv1 Not Allowed - Test compliance
+  type: Microsoft.OSConfig/Test
+  properties:
+    resource: 
+      name: WSLv1 Not Allowed - Set
+      type: Microsoft.Windows/Registry
+      properties:
+        key: HKLM:\SOFTWARE\Policies\WSL
+        value: AllowWSL1
+        type: REG_DWORD
+        data: 0
+    expression: data == 0
+    template: "Expected 0, got {data}"
