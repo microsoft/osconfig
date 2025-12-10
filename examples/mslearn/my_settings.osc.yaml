@@ -25,7 +25,7 @@ resources:
         value: 0
     expression: value < 1
     template: "Found \"{value}\"; expected \"< 1\"; Source {path}"
-- name: DeviceGuard RPSF level should be adequate
+- name: DeviceGuard RPSF level
   type: Microsoft.OSConfig/Test
   properties:
     resource: 
