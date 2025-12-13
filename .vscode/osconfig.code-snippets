@@ -39,7 +39,7 @@
 			"\t\"properties\": {",
 			"\t\t\"keyPath\": \"$2\",",
 			"\t\t\"valueName\": \"$3\",",
-			"\t\t\"valueType\": \"${4|REG_SZ,REG_BINARY,REG_DWORD,REG_MULTI_SZ|}\"",
+			"\t\t\"valueType\": \"${4|REG_SZ,REG_BINARY,REG_DWORD,REG_QWORD,REG_MULTI_SZ|}\"",
 			"\t}",
 			"}$0",
 		],
