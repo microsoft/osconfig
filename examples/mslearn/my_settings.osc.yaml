@@ -7,12 +7,12 @@ resources:
       name: GetSet | WSLv1 allow policy
       type: Microsoft.Windows/Registry
       properties:
-        key: HKLM:\SOFTWARE\Policies\WSL
-        value: AllowWSL1
-        type: REG_DWORD
-        data: 0
-    expression: data == 0
-    template: "Found \"{data}\"; expected \"0\"; Source {key} {value}"
+        keyPath: HKLM:\SOFTWARE\Policies\WSL
+        valueName: AllowWSL1
+        valueType: REG_DWORD
+        value: 0
+    expression: value == 0
+    template: "Found \"{value}\"; expected \"0\"; Source {keyPath} {valueName}"
 - name: GuestAcct should be disallowed
   type: Microsoft.OSConfig/Test
   properties:

@@ -7025,25 +7025,26 @@
         "properties": {
           "type": "object",
           "properties": {
-            "key": {
+            "keyPath": {
               "type": "string"
             },
-            "value": {
+            "valueName": {
               "type": "string"
             },
-            "type": {
+            "valueType": {
               "enum": [
                 "REG_SZ",
                 "REG_BINARY",
                 "REG_DWORD",
+                "REG_QWORD",
                 "REG_MULTI_SZ"
               ]
             }
           },
           "required": [
-            "key",
-            "value",
-            "type"
+            "keyPath",
+            "valueName",
+            "valueType"
           ]
         }
       }

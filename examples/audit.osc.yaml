@@ -7,9 +7,9 @@ resources:
     resource:
       type: Microsoft.Windows/Registry
       properties:
-        key: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
-        value: HVCIMATRequired
-        type: REG_DWORD
-        data: 1
+        keyPath: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
+        valueName: HVCIMATRequired
+        valueType: REG_DWORD
+        value: 1
     schema:
       const: 1
