@@ -1,0 +1,7 @@
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+- name: MinimumPasswordLength
+  type: Microsoft.Windows/AccountPolicy
+  properties:
+    name: MinimumPasswordLength
+    value: 14

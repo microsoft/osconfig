@@ -1,0 +1,8 @@
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+- name: SeDenyNetworkLogonRight
+  type: Microsoft.Windows/UserRightsAssignment
+  properties:
+    name: SeDenyNetworkLogonRight
+    value:
+      - "*S-1-5-32-546"

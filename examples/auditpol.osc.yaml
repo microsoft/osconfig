@@ -1,0 +1,7 @@
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+- name: AuditCredentialValidation
+  type: Microsoft.Windows/AuditPolicy
+  properties:
+    subcategory: "{0cce923f-69ae-11d9-bed3-505054503030}"
+    value: 3
