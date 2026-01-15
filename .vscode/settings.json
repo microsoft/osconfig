@@ -1,0 +1,17 @@
+{
+        "json.schemas": [
+            {
+                "url": "./schema/.document.json",
+                "fileMatch": [
+                    "**/examples/**/*.json",
+                    "**/security/**/*.json",
+                ]
+            }
+        ],
+        "yaml.schemas": {
+            "./schema/.document.json": [
+                "**/examples/**/*.yaml",
+                "**/security/**/*.yaml"
+            ]
+        }
+}
