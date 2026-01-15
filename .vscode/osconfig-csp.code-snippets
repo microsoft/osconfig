@@ -13,7 +13,7 @@
       "\t\t\t\"get\": \"Result/DeviceGuard/ConfigureSystemGuardLaunch\",",
       "\t\t\t\"set\": \"Config/DeviceGuard/ConfigureSystemGuardLaunch\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":2},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -33,7 +33,7 @@
       "\t\t\t\"get\": \"Result/DeviceGuard/EnableVirtualizationBasedSecurity\",",
       "\t\t\t\"set\": \"Config/DeviceGuard/EnableVirtualizationBasedSecurity\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -53,7 +53,7 @@
       "\t\t\t\"get\": \"Result/VirtualizationBasedTechnology/HypervisorEnforcedCodeIntegrity\",",
       "\t\t\t\"set\": \"Config/VirtualizationBasedTechnology/HypervisorEnforcedCodeIntegrity\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":2},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:2}",
       "\t}",
       "}$0"
@@ -73,7 +73,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_AllowAnonymousSIDOrNameTranslation\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_AllowAnonymousSIDOrNameTranslation\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -93,7 +93,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Devices_AllowedToFormatAndEjectRemovableMedia\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Devices_AllowedToFormatAndEjectRemovableMedia\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"0\"}",
       "\t}",
       "}$0"
@@ -113,7 +113,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkSecurity_AllowLocalSystemNULLSessionFallback\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkSecurity_AllowLocalSystemNULLSessionFallback\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -133,7 +133,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkSecurity_AllowLocalSystemToUseComputerIdentityForNTLM\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkSecurity_AllowLocalSystemToUseComputerIdentityForNTLM\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -153,7 +153,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Shutdown_AllowSystemToBeShutDownWithoutHavingToLogOn\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Shutdown_AllowSystemToBeShutDownWithoutHavingToLogOn\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -173,7 +173,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_AllowUIAccessApplicationsToPromptForElevation\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_AllowUIAccessApplicationsToPromptForElevation\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -193,7 +193,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_AmountOfIdleTimeRequiredBeforeSuspendingSession\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_AmountOfIdleTimeRequiredBeforeSuspendingSession\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":1,\"maximum\":15},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:15}",
       "\t}",
       "}$0"
@@ -213,7 +213,7 @@
       "\t\t\t\"get\": \"Result/ApplicationManagement/MSIAllowUserControlOverInstall\",",
       "\t\t\t\"set\": \"Config/ApplicationManagement/MSIAllowUserControlOverInstall\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -233,7 +233,7 @@
       "\t\t\t\"get\": \"Result/ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges\",",
       "\t\t\t\"set\": \"Config/ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -253,7 +253,7 @@
       "\t\t\t\"get\": \"Result/Audit/AccountLogonLogoff_AuditAccountLockout\",",
       "\t\t\t\"set\": \"Config/Audit/AccountLogonLogoff_AuditAccountLockout\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:2}",
       "\t}",
       "}$0"
@@ -273,7 +273,7 @@
       "\t\t\t\"get\": \"Result/Audit/PolicyChange_AuditAuthenticationPolicyChange\",",
       "\t\t\t\"set\": \"Config/Audit/PolicyChange_AuditAuthenticationPolicyChange\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -293,7 +293,7 @@
       "\t\t\t\"get\": \"Result/Audit/PolicyChange_AuditAuthorizationPolicyChange\",",
       "\t\t\t\"set\": \"Config/Audit/PolicyChange_AuditAuthorizationPolicyChange\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -313,7 +313,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Audit_AuditTheUseOfBackupAndRestoreprivilege\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Audit_AuditTheUseOfBackupAndRestoreprivilege\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\",\"metatype\":\"base64\",\"oneOf\":[{\"const\":\"MDA=\"},{\"const\":\"MQ==\"}]},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"MDA=\"}",
       "\t}",
       "}$0"
@@ -333,7 +333,7 @@
       "\t\t\t\"get\": \"Result/Audit/PolicyChange_AuditOtherPolicyChangeEvents\",",
       "\t\t\t\"set\": \"Config/Audit/PolicyChange_AuditOtherPolicyChangeEvents\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:2}",
       "\t}",
       "}$0"
@@ -353,7 +353,7 @@
       "\t\t\t\"get\": \"Result/Audit/AccountLogon_AuditCredentialValidation\",",
       "\t\t\t\"set\": \"Config/Audit/AccountLogon_AuditCredentialValidation\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:3}",
       "\t}",
       "}$0"
@@ -373,7 +373,7 @@
       "\t\t\t\"get\": \"Result/Audit/ObjectAccess_AuditDetailedFileShare\",",
       "\t\t\t\"set\": \"Config/Audit/ObjectAccess_AuditDetailedFileShare\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:2}",
       "\t}",
       "}$0"
@@ -393,7 +393,7 @@
       "\t\t\t\"get\": \"Result/Audit/ObjectAccess_AuditFileShare\",",
       "\t\t\t\"set\": \"Config/Audit/ObjectAccess_AuditFileShare\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:3}",
       "\t}",
       "}$0"
@@ -413,7 +413,7 @@
       "\t\t\t\"get\": \"Result/Audit/AccountLogonLogoff_AuditGroupMembership\",",
       "\t\t\t\"set\": \"Config/Audit/AccountLogonLogoff_AuditGroupMembership\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -433,7 +433,7 @@
       "\t\t\t\"get\": \"Result/Audit/System_AuditIPsecDriver\",",
       "\t\t\t\"set\": \"Config/Audit/System_AuditIPsecDriver\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:3}",
       "\t}",
       "}$0"
@@ -453,7 +453,7 @@
       "\t\t\t\"get\": \"Result/Audit/AccountLogonLogoff_AuditLogoff\",",
       "\t\t\t\"set\": \"Config/Audit/AccountLogonLogoff_AuditLogoff\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -473,7 +473,7 @@
       "\t\t\t\"get\": \"Result/Audit/AccountLogonLogoff_AuditLogon\",",
       "\t\t\t\"set\": \"Config/Audit/AccountLogonLogoff_AuditLogon\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:3}",
       "\t}",
       "}$0"
@@ -493,7 +493,7 @@
       "\t\t\t\"get\": \"Result/Audit/PolicyChange_AuditMPSSVCRuleLevelPolicyChange\",",
       "\t\t\t\"set\": \"Config/Audit/PolicyChange_AuditMPSSVCRuleLevelPolicyChange\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:3}",
       "\t}",
       "}$0"
@@ -513,7 +513,7 @@
       "\t\t\t\"get\": \"Result/Audit/AccountLogonLogoff_AuditOtherLogonLogoffEvents\",",
       "\t\t\t\"set\": \"Config/Audit/AccountLogonLogoff_AuditOtherLogonLogoffEvents\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:3}",
       "\t}",
       "}$0"
@@ -533,7 +533,7 @@
       "\t\t\t\"get\": \"Result/Audit/ObjectAccess_AuditOtherObjectAccessEvents\",",
       "\t\t\t\"set\": \"Config/Audit/ObjectAccess_AuditOtherObjectAccessEvents\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:3}",
       "\t}",
       "}$0"
@@ -553,7 +553,7 @@
       "\t\t\t\"get\": \"Result/Audit/System_AuditOtherSystemEvents\",",
       "\t\t\t\"set\": \"Config/Audit/System_AuditOtherSystemEvents\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:3}",
       "\t}",
       "}$0"
@@ -573,7 +573,7 @@
       "\t\t\t\"get\": \"Result/Audit/DetailedTracking_AuditPNPActivity\",",
       "\t\t\t\"set\": \"Config/Audit/DetailedTracking_AuditPNPActivity\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -593,7 +593,7 @@
       "\t\t\t\"get\": \"Result/Audit/PolicyChange_AuditPolicyChange\",",
       "\t\t\t\"set\": \"Config/Audit/PolicyChange_AuditPolicyChange\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:3}",
       "\t}",
       "}$0"
@@ -613,7 +613,7 @@
       "\t\t\t\"get\": \"Result/Audit/DetailedTracking_AuditProcessCreation\",",
       "\t\t\t\"set\": \"Config/Audit/DetailedTracking_AuditProcessCreation\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -633,7 +633,7 @@
       "\t\t\t\"get\": \"Result/Audit/ObjectAccess_AuditRemovableStorage\",",
       "\t\t\t\"set\": \"Config/Audit/ObjectAccess_AuditRemovableStorage\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:3}",
       "\t}",
       "}$0"
@@ -653,7 +653,7 @@
       "\t\t\t\"get\": \"Result/Audit/AccountManagement_AuditSecurityGroupManagement\",",
       "\t\t\t\"set\": \"Config/Audit/AccountManagement_AuditSecurityGroupManagement\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -673,7 +673,7 @@
       "\t\t\t\"get\": \"Result/Audit/System_AuditSecurityStateChange\",",
       "\t\t\t\"set\": \"Config/Audit/System_AuditSecurityStateChange\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -693,7 +693,7 @@
       "\t\t\t\"get\": \"Result/Audit/System_AuditSecuritySystemExtension\",",
       "\t\t\t\"set\": \"Config/Audit/System_AuditSecuritySystemExtension\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -713,7 +713,7 @@
       "\t\t\t\"get\": \"Result/Audit/PrivilegeUse_AuditSensitivePrivilegeUse\",",
       "\t\t\t\"set\": \"Config/Audit/PrivilegeUse_AuditSensitivePrivilegeUse\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:3}",
       "\t}",
       "}$0"
@@ -733,7 +733,7 @@
       "\t\t\t\"get\": \"Result/Audit/AccountLogonLogoff_AuditSpecialLogon\",",
       "\t\t\t\"set\": \"Config/Audit/AccountLogonLogoff_AuditSpecialLogon\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -753,7 +753,7 @@
       "\t\t\t\"get\": \"Result/Audit/System_AuditSystemIntegrity\",",
       "\t\t\t\"set\": \"Config/Audit/System_AuditSystemIntegrity\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:3}",
       "\t}",
       "}$0"
@@ -773,7 +773,7 @@
       "\t\t\t\"get\": \"Result/Audit/AccountManagement_AuditUserAccountManagement\",",
       "\t\t\t\"set\": \"Config/Audit/AccountManagement_AuditUserAccountManagement\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":3},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:3}",
       "\t}",
       "}$0"
@@ -793,7 +793,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForAdministrators\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForAdministrators\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":5},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:2}",
       "\t}",
       "}$0"
@@ -813,7 +813,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForStandardUsers\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForStandardUsers\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -833,7 +833,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Shutdown_ClearVirtualMemoryPageFile\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Shutdown_ClearVirtualMemoryPageFile\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -853,7 +853,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_DetectApplicationInstallationsAndPromptForElevation\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_DetectApplicationInstallationsAndPromptForElevation\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -873,7 +873,7 @@
       "\t\t\t\"get\": \"Result/DeviceGuard/RequirePlatformSecurityFeatures\",",
       "\t\t\t\"set\": \"Config/DeviceGuard/RequirePlatformSecurityFeatures\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"enum\":[1,3]},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -893,7 +893,7 @@
       "\t\t\t\"get\": \"Result/DeviceLock/AccountLockoutPolicy\",",
       "\t\t\t\"set\": \"Config/DeviceLock/AccountLockoutPolicy\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\",\"allOf\":[{\"pattern\":\"ResetAccountLockoutCounterAfter:[1][5-9]|[2-9]\\\\d|[1-9]\\\\d{2,}\"},{\"pattern\":\"AccountLockoutDuration:[1][5-9]|[2-9]\\\\d|[1-9]\\\\d{2,}\"},{\"pattern\":\"AccountLockoutThreshold:[1-3]\"}]},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"AccountLockoutDuration:15, AccountLockoutThreshold:3, ResetAccountLockoutCounterAfter:15\"}",
       "\t}",
       "}$0"
@@ -913,7 +913,7 @@
       "\t\t\t\"get\": \"Result/DeviceLock/ClearTextPassword\",",
       "\t\t\t\"set\": \"Config/DeviceLock/ClearTextPassword\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -933,7 +933,7 @@
       "\t\t\t\"get\": \"Result/DeviceLock/MaximumPasswordAge\",",
       "\t\t\t\"set\": \"Config/DeviceLock/MaximumPasswordAge\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":1,\"maximum\":999},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:42}",
       "\t}",
       "}$0"
@@ -953,7 +953,7 @@
       "\t\t\t\"get\": \"Result/DeviceLock/MinDevicePasswordLength\",",
       "\t\t\t\"set\": \"Config/DeviceLock/MinDevicePasswordLength\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":7,\"maximum\":99},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:14}",
       "\t}",
       "}$0"
@@ -973,7 +973,7 @@
       "\t\t\t\"get\": \"Result/DeviceLock/MinimumPasswordAge\",",
       "\t\t\t\"set\": \"Config/DeviceLock/MinimumPasswordAge\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":1,\"maximum\":998},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -993,7 +993,7 @@
       "\t\t\t\"get\": \"Result/DeviceLock/PasswordComplexity\",",
       "\t\t\t\"set\": \"Config/DeviceLock/PasswordComplexity\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1013,7 +1013,7 @@
       "\t\t\t\"get\": \"Result/DeviceLock/PasswordHistorySize\",",
       "\t\t\t\"set\": \"Config/DeviceLock/PasswordHistorySize\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":24},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:24}",
       "\t}",
       "}$0"
@@ -1033,7 +1033,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/DomainMember_DigitallyEncryptOrSignSecureChannelDataAlways\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/DomainMember_DigitallyEncryptOrSignSecureChannelDataAlways\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1053,7 +1053,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/DomainMember_DigitallyEncryptSecureChannelDataWhenPossible\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/DomainMember_DigitallyEncryptSecureChannelDataWhenPossible\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1073,7 +1073,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_DigitallySignCommunicationsAlways\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_DigitallySignCommunicationsAlways\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1093,7 +1093,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DigitallySignCommunicationsAlways\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DigitallySignCommunicationsAlways\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1113,7 +1113,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DigitallySignCommunicationsIfClientAgrees\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DigitallySignCommunicationsIfClientAgrees\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1133,7 +1133,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_DigitallySignCommunicationsIfServerAgrees\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_DigitallySignCommunicationsIfServerAgrees\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1153,7 +1153,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/DomainMember_DigitallySignSecureChannelDataWhenPossible\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/DomainMember_DigitallySignSecureChannelDataWhenPossible\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1173,7 +1173,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/DomainMember_DisableMachineAccountPasswordChanges\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/DomainMember_DisableMachineAccountPasswordChanges\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -1193,7 +1193,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DisconnectClientsWhenLogonHoursExpire\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DisconnectClientsWhenLogonHoursExpire\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1213,7 +1213,7 @@
       "\t\t\t\"get\": \"Result/DmaGuard/DeviceEnumerationPolicy\",",
       "\t\t\t\"set\": \"Config/DmaGuard/DeviceEnumerationPolicy\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":2},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -1233,7 +1233,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSAMAccounts\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSAMAccounts\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1253,7 +1253,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1273,7 +1273,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/InteractiveLogon_DoNotDisplayLastSignedIn\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/InteractiveLogon_DoNotDisplayLastSignedIn\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1293,7 +1293,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/InteractiveLogon_DoNotRequireCTRLALTDEL\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/InteractiveLogon_DoNotRequireCTRLALTDEL\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -1313,7 +1313,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Accounts_EnableGuestAccountStatus\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Accounts_EnableGuestAccountStatus\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -1333,7 +1333,7 @@
       "\t\t\t\"get\": \"Result/Experience/AllowWindowsConsumerFeatures\",",
       "\t\t\t\"set\": \"Config/Experience/AllowWindowsConsumerFeatures\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1353,7 +1353,7 @@
       "\t\t\t\"get\": \"Result/Experience/DisableConsumerAccountStateContent\",",
       "\t\t\t\"set\": \"Config/Experience/DisableConsumerAccountStateContent\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1373,7 +1373,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Audit_ForceAuditPolicySubcategorySettingsToOverrideAuditPolicyCategorySettings\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Audit_ForceAuditPolicySubcategorySettingsToOverrideAuditPolicyCategorySettings\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1393,7 +1393,7 @@
       "\t\t\t\"get\": \"Result/UserRights/ImpersonateClient\",",
       "\t\t\t\"set\": \"Config/UserRights/ImpersonateClient\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-6\",\"*S-1-5-19\",\"*S-1-5-20\"]}",
       "\t}",
       "}$0"
@@ -1413,7 +1413,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkSecurity_LANManagerAuthenticationLevel\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkSecurity_LANManagerAuthenticationLevel\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":5},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:5}",
       "\t}",
       "}$0"
@@ -1433,7 +1433,7 @@
       "\t\t\t\"get\": \"Result/LanmanWorkstation/EnableInsecureGuestLogons\",",
       "\t\t\t\"set\": \"Config/LanmanWorkstation/EnableInsecureGuestLogons\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -1453,7 +1453,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkSecurity_LDAPClientSigningRequirements\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkSecurity_LDAPClientSigningRequirements\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":2},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1473,7 +1473,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_LetEveryonePermissionsApplyToAnonymousUsers\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_LetEveryonePermissionsApplyToAnonymousUsers\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -1493,7 +1493,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1513,7 +1513,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/InteractiveLogon_MachineInactivityLimit\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/InteractiveLogon_MachineInactivityLimit\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":900},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:900}",
       "\t}",
       "}$0"
@@ -1533,7 +1533,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/DomainMember_MaximumMachineAccountPasswordAge\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/DomainMember_MaximumMachineAccountPasswordAge\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":30,\"maximum\":10000},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:30}",
       "\t}",
       "}$0"
@@ -1553,7 +1553,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedClients\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedClients\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\"},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:537395200}",
       "\t}",
       "}$0"
@@ -1573,7 +1573,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedServers\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedServers\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\"},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:537395200}",
       "\t}",
       "}$0"
@@ -1593,7 +1593,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkSecurity_ForceLogoffWhenLogonHoursExpire\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkSecurity_ForceLogoffWhenLogonHoursExpire\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1613,7 +1613,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1633,7 +1633,7 @@
       "\t\t\t\"get\": \"Result/Cryptography/OverrideMinimumEnabledDTLSVersionClient\",",
       "\t\t\t\"set\": \"Config/Cryptography/OverrideMinimumEnabledDTLSVersionClient\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\",\"oneOf\":[{\"const\":\"1.0\"},{\"const\":\"1.1\"},{\"const\":\"1.2\"}]},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"1.2\"}",
       "\t}",
       "}$0"
@@ -1653,7 +1653,7 @@
       "\t\t\t\"get\": \"Result/Cryptography/OverrideMinimumEnabledDTLSVersionServer\",",
       "\t\t\t\"set\": \"Config/Cryptography/OverrideMinimumEnabledDTLSVersionServer\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\",\"oneOf\":[{\"const\":\"1.0\"},{\"const\":\"1.1\"},{\"const\":\"1.2\"}]},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"1.2\"}",
       "\t}",
       "}$0"
@@ -1673,7 +1673,7 @@
       "\t\t\t\"get\": \"Result/Cryptography/OverrideMinimumEnabledTLSVersionClient\",",
       "\t\t\t\"set\": \"Config/Cryptography/OverrideMinimumEnabledTLSVersionClient\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\",\"oneOf\":[{\"const\":\"1.1\"},{\"const\":\"1.1\"},{\"const\":\"1.2\"},{\"const\":\"1.3\"}]},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"1.2\"}",
       "\t}",
       "}$0"
@@ -1693,7 +1693,7 @@
       "\t\t\t\"get\": \"Result/Cryptography/OverrideMinimumEnabledTLSVersionServer\",",
       "\t\t\t\"set\": \"Config/Cryptography/OverrideMinimumEnabledTLSVersionServer\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\",\"oneOf\":[{\"const\":\"1.1\"},{\"const\":\"1.1\"},{\"const\":\"1.2\"},{\"const\":\"1.3\"}]},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"1.2\"}",
       "\t}",
       "}$0"
@@ -1713,7 +1713,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Devices_PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Devices_PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1733,7 +1733,7 @@
       "\t\t\t\"get\": \"Result/Privacy/AllowInputPersonalization\",",
       "\t\t\t\"set\": \"Config/Privacy/AllowInputPersonalization\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -1753,7 +1753,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/InteractiveLogon_PromptUserToChangePasswordBeforeExpiration\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/InteractiveLogon_PromptUserToChangePasswordBeforeExpiration\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":5,\"maximum\":14},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:14}",
       "\t}",
       "}$0"
@@ -1773,7 +1773,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/RecoveryConsole_AllowFloppyCopyAndAccessToAllDrivesAndAllFolders\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/RecoveryConsole_AllowFloppyCopyAndAccessToAllDrivesAndAllFolders\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -1793,7 +1793,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_RemotelyAccessibleRegistryPaths\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_RemotelyAccessibleRegistryPaths\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"metatype\":\"multistring\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"System\\\\CurrentControlSet\\\\Control\\\\ProductOptions\",\"System\\\\CurrentControlSet\\\\Control\\\\Server Applications\",\"Software\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\"]}",
       "\t}",
       "}$0"
@@ -1813,7 +1813,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_RemotelyAccessibleRegistryPathsAndSubpaths\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_RemotelyAccessibleRegistryPathsAndSubpaths\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"metatype\":\"multistring\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"System\\\\CurrentControlSet\\\\Control\\\\Print\\\\Printers\",\"System\\\\CurrentControlSet\\\\Services\\\\Eventlog\",\"Software\\\\Microsoft\\\\OLAP Server\",\"Software\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Print\",\"Software\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Windows\",\"System\\\\CurrentControlSet\\\\Control\\\\ContentIndex\",\"System\\\\CurrentControlSet\\\\Control\\\\Terminal Server\",\"System\\\\CurrentControlSet\\\\Control\\\\Terminal Server\\\\UserConfig\",\"System\\\\CurrentControlSet\\\\Control\\\\Terminal Server\\\\DefaultUserConfiguration\",\"Software\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Perflib\",\"System\\\\CurrentControlSet\\\\Services\\\\SysmonLog\"]}",
       "\t}",
       "}$0"
@@ -1833,7 +1833,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Accounts_RenameAdministratorAccount\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Accounts_RenameAdministratorAccount\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": $2",
       "\t}",
       "}$0"
@@ -1853,7 +1853,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Accounts_RenameGuestAccount\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Accounts_RenameGuestAccount\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": $2",
       "\t}",
       "}$0"
@@ -1873,7 +1873,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/SystemObjects_RequireCaseInsensitivityForNonWindowsSubsystems\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/SystemObjects_RequireCaseInsensitivityForNonWindowsSubsystems\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1893,7 +1893,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/DomainMember_RequireStrongSessionKey\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/DomainMember_RequireStrongSessionKey\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1913,7 +1913,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_RestrictAnonymousAccessToNamedPipesAndShares\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_RestrictAnonymousAccessToNamedPipesAndShares\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1933,7 +1933,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"O:BAG:BAD:(A;;RC;;;BA)\"}",
       "\t}",
       "}$0"
@@ -1953,7 +1953,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_RunAllAdministratorsInAdminApprovalMode\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_RunAllAdministratorsInAdminApprovalMode\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -1973,7 +1973,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_SendUnencryptedPasswordToThirdPartySMBServers\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_SendUnencryptedPasswordToThirdPartySMBServers\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -1993,7 +1993,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_ServerSPNTargetNameValidationLevel\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_ServerSPNTargetNameValidationLevel\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -2013,7 +2013,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_SharesThatCanBeAccessedAnonymously\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_SharesThatCanBeAccessedAnonymously\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"metatype\":\"multistring\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:}",
       "\t}",
       "}$0"
@@ -2033,7 +2033,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/NetworkAccess_SharingAndSecurityModelForLocalAccounts\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/NetworkAccess_SharingAndSecurityModelForLocalAccounts\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -2053,7 +2053,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/Audit_ShutdownSystemImmediatelyIfUnableToLogSecurityAudits\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/Audit_ShutdownSystemImmediatelyIfUnableToLogSecurityAudits\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:0}",
       "\t}",
       "}$0"
@@ -2073,7 +2073,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/InteractiveLogon_SmartCardRemovalBehavior\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/InteractiveLogon_SmartCardRemovalBehavior\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\",\"minimum\":1,\"maximum\":2},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"1\"}",
       "\t}",
       "}$0"
@@ -2093,7 +2093,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/SystemObjects_StrengthenDefaultPermissionsOfInternalSystemObjects\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/SystemObjects_StrengthenDefaultPermissionsOfInternalSystemObjects\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -2113,7 +2113,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_SwitchToTheSecureDesktopWhenPromptingForElevation\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_SwitchToTheSecureDesktopWhenPromptingForElevation\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -2133,7 +2133,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_UseAdminApprovalMode\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_UseAdminApprovalMode\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -2153,7 +2153,7 @@
       "\t\t\t\"get\": \"Result/UserRights/AccessCredentialManagerAsTrustedCaller\",",
       "\t\t\t\"set\": \"Config/UserRights/AccessCredentialManagerAsTrustedCaller\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"\"}",
       "\t}",
       "}$0"
@@ -2173,7 +2173,7 @@
       "\t\t\t\"get\": \"Result/UserRights/AccessFromNetwork\",",
       "\t\t\t\"set\": \"Config/UserRights/AccessFromNetwork\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-11\"]}",
       "\t}",
       "}$0"
@@ -2193,7 +2193,7 @@
       "\t\t\t\"get\": \"Result/UserRights/ActAsPartOfTheOperatingSystem\",",
       "\t\t\t\"set\": \"Config/UserRights/ActAsPartOfTheOperatingSystem\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"\"}",
       "\t}",
       "}$0"
@@ -2213,7 +2213,7 @@
       "\t\t\t\"get\": \"Result/UserRights/AdjustMemoryQuotasForProcess\",",
       "\t\t\t\"set\": \"Config/UserRights/AdjustMemoryQuotasForProcess\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-19\",\"*S-1-5-20\"]}",
       "\t}",
       "}$0"
@@ -2233,7 +2233,7 @@
       "\t\t\t\"get\": \"Result/UserRights/AllowLocalLogOn\",",
       "\t\t\t\"set\": \"Config/UserRights/AllowLocalLogOn\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
       "\t}",
       "}$0"
@@ -2253,7 +2253,7 @@
       "\t\t\t\"get\": \"Result/UserRights/AllowLogOnThroughRemoteDesktop\",",
       "\t\t\t\"set\": \"Config/UserRights/AllowLogOnThroughRemoteDesktop\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-32-555\"]}",
       "\t}",
       "}$0"
@@ -2273,7 +2273,7 @@
       "\t\t\t\"get\": \"Result/UserRights/BackupFilesAndDirectories\",",
       "\t\t\t\"set\": \"Config/UserRights/BackupFilesAndDirectories\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
       "\t}",
       "}$0"
@@ -2293,7 +2293,7 @@
       "\t\t\t\"get\": \"Result/UserRights/BypassTraverseChecking\",",
       "\t\t\t\"set\": \"Config/UserRights/BypassTraverseChecking\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-11\",\"*S-1-5-32-551\",\"*S-1-5-19\",\"*S-1-5-20\"]}",
       "\t}",
       "}$0"
@@ -2313,7 +2313,7 @@
       "\t\t\t\"get\": \"Result/UserRights/ChangeSystemTime\",",
       "\t\t\t\"set\": \"Config/UserRights/ChangeSystemTime\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-19\"]}",
       "\t}",
       "}$0"
@@ -2333,7 +2333,7 @@
       "\t\t\t\"get\": \"Result/UserRights/ChangeTimeZone\",",
       "\t\t\t\"set\": \"Config/UserRights/ChangeTimeZone\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-19\"]}",
       "\t}",
       "}$0"
@@ -2353,7 +2353,7 @@
       "\t\t\t\"get\": \"Result/UserRights/CreateGlobalObjects\",",
       "\t\t\t\"set\": \"Config/UserRights/CreateGlobalObjects\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-6\",\"*S-1-5-19\",\"*S-1-5-20\"]}",
       "\t}",
       "}$0"
@@ -2373,7 +2373,7 @@
       "\t\t\t\"get\": \"Result/UserRights/CreatePageFile\",",
       "\t\t\t\"set\": \"Config/UserRights/CreatePageFile\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
       "\t}",
       "}$0"
@@ -2393,7 +2393,7 @@
       "\t\t\t\"get\": \"Result/UserRights/CreatePermanentSharedObjects\",",
       "\t\t\t\"set\": \"Config/UserRights/CreatePermanentSharedObjects\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"\"}",
       "\t}",
       "}$0"
@@ -2413,7 +2413,7 @@
       "\t\t\t\"get\": \"Result/UserRights/CreateSymbolicLinks\",",
       "\t\t\t\"set\": \"Config/UserRights/CreateSymbolicLinks\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-83-0\"]}",
       "\t}",
       "}$0"
@@ -2433,7 +2433,7 @@
       "\t\t\t\"get\": \"Result/UserRights/CreateToken\",",
       "\t\t\t\"set\": \"Config/UserRights/CreateToken\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"\"}",
       "\t}",
       "}$0"
@@ -2453,7 +2453,7 @@
       "\t\t\t\"get\": \"Result/UserRights/DebugPrograms\",",
       "\t\t\t\"set\": \"Config/UserRights/DebugPrograms\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
       "\t}",
       "}$0"
@@ -2473,7 +2473,7 @@
       "\t\t\t\"get\": \"Result/UserRights/DenyAccessFromNetwork\",",
       "\t\t\t\"set\": \"Config/UserRights/DenyAccessFromNetwork\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-546\"}",
       "\t}",
       "}$0"
@@ -2493,7 +2493,7 @@
       "\t\t\t\"get\": \"Result/UserRights/DenyLocalLogOn\",",
       "\t\t\t\"set\": \"Config/UserRights/DenyLocalLogOn\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-546\"}",
       "\t}",
       "}$0"
@@ -2513,7 +2513,7 @@
       "\t\t\t\"get\": \"Result/UserRights/DenyLogOnAsBatchJob\",",
       "\t\t\t\"set\": \"Config/UserRights/DenyLogOnAsBatchJob\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-546\"}",
       "\t}",
       "}$0"
@@ -2533,7 +2533,7 @@
       "\t\t\t\"get\": \"Result/UserRights/DenyLogOnAsService\",",
       "\t\t\t\"set\": \"Config/UserRights/DenyLogOnAsService\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-546\"}",
       "\t}",
       "}$0"
@@ -2553,7 +2553,7 @@
       "\t\t\t\"get\": \"Result/UserRights/DenyRemoteDesktopServicesLogOn\",",
       "\t\t\t\"set\": \"Config/UserRights/DenyRemoteDesktopServicesLogOn\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-546\"}",
       "\t}",
       "}$0"
@@ -2573,7 +2573,7 @@
       "\t\t\t\"get\": \"Result/UserRights/EnableDelegation\",",
       "\t\t\t\"set\": \"Config/UserRights/EnableDelegation\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"\"}",
       "\t}",
       "}$0"
@@ -2593,7 +2593,7 @@
       "\t\t\t\"get\": \"Result/UserRights/GenerateSecurityAudits\",",
       "\t\t\t\"set\": \"Config/UserRights/GenerateSecurityAudits\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"*S-1-5-19\",\"*S-1-5-20\",\"*S-1-5-82-3006700770-424185619-1745488364-794895919-4004696415\"]}",
       "\t}",
       "}$0"
@@ -2613,7 +2613,7 @@
       "\t\t\t\"get\": \"Result/UserRights/IncreaseProcessWorkingSet\",",
       "\t\t\t\"set\": \"Config/UserRights/IncreaseProcessWorkingSet\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-19\"]}",
       "\t}",
       "}$0"
@@ -2633,7 +2633,7 @@
       "\t\t\t\"get\": \"Result/UserRights/IncreaseSchedulingPriority\",",
       "\t\t\t\"set\": \"Config/UserRights/IncreaseSchedulingPriority\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
       "\t}",
       "}$0"
@@ -2653,7 +2653,7 @@
       "\t\t\t\"get\": \"Result/UserRights/LoadUnloadDeviceDrivers\",",
       "\t\t\t\"set\": \"Config/UserRights/LoadUnloadDeviceDrivers\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
       "\t}",
       "}$0"
@@ -2673,7 +2673,7 @@
       "\t\t\t\"get\": \"Result/UserRights/LockMemory\",",
       "\t\t\t\"set\": \"Config/UserRights/LockMemory\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"\"}",
       "\t}",
       "}$0"
@@ -2693,7 +2693,7 @@
       "\t\t\t\"get\": \"Result/UserRights/ManageAuditingAndSecurityLog\",",
       "\t\t\t\"set\": \"Config/UserRights/ManageAuditingAndSecurityLog\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
       "\t}",
       "}$0"
@@ -2713,7 +2713,7 @@
       "\t\t\t\"get\": \"Result/UserRights/ManageVolume\",",
       "\t\t\t\"set\": \"Config/UserRights/ManageVolume\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
       "\t}",
       "}$0"
@@ -2733,7 +2733,7 @@
       "\t\t\t\"get\": \"Result/UserRights/ModifyFirmwareEnvironment\",",
       "\t\t\t\"set\": \"Config/UserRights/ModifyFirmwareEnvironment\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
       "\t}",
       "}$0"
@@ -2753,7 +2753,7 @@
       "\t\t\t\"get\": \"Result/UserRights/ModifyObjectLabel\",",
       "\t\t\t\"set\": \"Config/UserRights/ModifyObjectLabel\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"string\"},",
+      "\t\t\"type\": \"string\",",
       "\t\t\"value\": ${2:\"\"}",
       "\t}",
       "}$0"
@@ -2773,7 +2773,7 @@
       "\t\t\t\"get\": \"Result/UserRights/ProfileSingleProcess\",",
       "\t\t\t\"set\": \"Config/UserRights/ProfileSingleProcess\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
       "\t}",
       "}$0"
@@ -2793,7 +2793,7 @@
       "\t\t\t\"get\": \"Result/UserRights/ProfileSystemPerformance\",",
       "\t\t\t\"set\": \"Config/UserRights/ProfileSystemPerformance\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"*S-1-5-32-544\",\"*S-1-5-80-3139157870-2983391045-3678747466-658725712-1809340420\"]}",
       "\t}",
       "}$0"
@@ -2813,7 +2813,7 @@
       "\t\t\t\"get\": \"Result/UserRights/RemoteShutdown\",",
       "\t\t\t\"set\": \"Config/UserRights/RemoteShutdown\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
       "\t}",
       "}$0"
@@ -2833,7 +2833,7 @@
       "\t\t\t\"get\": \"Result/UserRights/ReplaceProcessLevelToken\",",
       "\t\t\t\"set\": \"Config/UserRights/ReplaceProcessLevelToken\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:[\"*S-1-5-19\",\"*S-1-5-20\"]}",
       "\t}",
       "}$0"
@@ -2853,7 +2853,7 @@
       "\t\t\t\"get\": \"Result/UserRights/RestoreFilesAndDirectories\",",
       "\t\t\t\"set\": \"Config/UserRights/RestoreFilesAndDirectories\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
       "\t}",
       "}$0"
@@ -2873,7 +2873,7 @@
       "\t\t\t\"get\": \"Result/UserRights/ShutDownTheSystem\",",
       "\t\t\t\"set\": \"Config/UserRights/ShutDownTheSystem\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
       "\t}",
       "}$0"
@@ -2893,7 +2893,7 @@
       "\t\t\t\"get\": \"Result/UserRights/TakeOwnership\",",
       "\t\t\t\"set\": \"Config/UserRights/TakeOwnership\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"array\",\"delimiter\":\",\",\"items\":{\"type\":\"string\"}},",
+      "\t\t\"type\": \"array\",",
       "\t\t\"value\": ${2:\"*S-1-5-32-544\"}",
       "\t}",
       "}$0"
@@ -2913,7 +2913,7 @@
       "\t\t\t\"get\": \"Result/LocalPoliciesSecurityOptions/UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations\",",
       "\t\t\t\"set\": \"Config/LocalPoliciesSecurityOptions/UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":0,\"maximum\":1},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:1}",
       "\t}",
       "}$0"
@@ -2933,7 +2933,7 @@
       "\t\t\t\"get\": \"Result/Cryptography/ConfigureSystemCryptographyForceStrongKeyProtection\",",
       "\t\t\t\"set\": \"Config/Cryptography/ConfigureSystemCryptographyForceStrongKeyProtection\"",
       "\t\t},",
-      "\t\t\"schema\": {\"type\":\"integer\",\"minimum\":1,\"maximum\":2},",
+      "\t\t\"type\": \"integer\",",
       "\t\t\"value\": ${2:2}",
       "\t}",
       "}$0"
