@@ -1,0 +1,15 @@
+## test_compliance_example.osc.yaml
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+  - name: WSLv1 is not allowed
+    type: Microsoft.OSConfig/Test
+    properties:
+      resource:
+        name: Get WSLv1 allow policy             ##
+        type: Microsoft.Windows/Registry         ## <-- The same registry resource as seen in get_only_example.osc.yaml
+        properties:                              ##     Now wrapped in a Test resource
+          keyPath: HKLM:\SOFTWARE\Policies\WSL   ##
+          valueName: AllowWSL1                   ##
+          valueType: REG_DWORD                   ##
+      expression: value == 0  ## <-- Your compliance criteria.
+      template: Expected 0 at {valueName}; Found {value}  ## Optional template to fine-tune the compliance message.

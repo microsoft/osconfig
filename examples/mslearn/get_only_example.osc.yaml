@@ -1,0 +1,9 @@
+## Contents of get_only_example.osc.yaml
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+  - name: Get WSLv1 policy (AllowWSL1)
+    type: Microsoft.Windows/Registry
+    properties:
+      keyPath: HKLM:\SOFTWARE\Policies\WSL
+      valueName: AllowWSL1
+      valueType: REG_DWORD
