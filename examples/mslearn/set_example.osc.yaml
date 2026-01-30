@@ -1,4 +1,3 @@
-## Contents of get_set_example.osc.yaml
 $schema: https://aka.ms/osc/schemas/prerelease/document.json
 resources:
   - name: Get WSLv1 policy (AllowWSL1)
