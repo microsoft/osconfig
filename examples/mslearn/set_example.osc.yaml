@@ -6,4 +6,4 @@ resources:
       keyPath: HKLM:\SOFTWARE\Policies\WSL
       valueName: AllowWSL1
       valueType: REG_DWORD
-      value: 0
+      value: 0               ## <-- In Set context, this is the desired value to be set, not a value returned from a live machine
