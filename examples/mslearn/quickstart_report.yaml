@@ -4,7 +4,7 @@ resources:
   type: Microsoft.OSConfig/Test
   properties:
     resource: 
-      name: GetSet | WSLv1 allow policy
+      name: Get WSLv1 allow policy
       type: Microsoft.Windows/Registry
       properties:
         keyPath: HKLM:\SOFTWARE\Policies\WSL
@@ -16,7 +16,7 @@ resources:
   type: Microsoft.OSConfig/Test
   properties:
     resource: 
-      name: GetSet | GuestAcct Status
+      name: Get GuestAcct Status
       type: Microsoft.Windows/CSP
       properties:
         path: ./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/Accounts_EnableGuestAccountStatus
@@ -27,7 +27,7 @@ resources:
   type: Microsoft.OSConfig/Test
   properties:
     resource: 
-      name: GetSet | DeviceGuard RPSF
+      name: Get DeviceGuard RPSF
       type: Microsoft.Windows/CSP
       properties:
         path: ./Vendor/MSFT/Policy/Config/DeviceGuard/RequirePlatformSecurityFeatures
