@@ -1,0 +1,36 @@
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+- name: WSLv1 should not be allowed
+  type: Microsoft.OSConfig/Test
+  properties:
+    resource: 
+      name: GetSet | WSLv1 allow policy
+      type: Microsoft.Windows/Registry
+      properties:
+        keyPath: HKLM:\SOFTWARE\Policies\WSL
+        valueName: AllowWSL1
+        valueType: REG_DWORD
+    expression: value == 0
+    template: "Found \"{value}\"; expected \"0\"; Source {keyPath} {valueName}"
+- name: GuestAcct should be disallowed
+  type: Microsoft.OSConfig/Test
+  properties:
+    resource: 
+      name: GetSet | GuestAcct Status
+      type: Microsoft.Windows/CSP
+      properties:
+        path: ./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/Accounts_EnableGuestAccountStatus
+        type: integer
+    expression: value < 1
+    template: "Found \"{value}\"; expected \"< 1\"; Source {path}"
+- name: DeviceGuard RPSF level
+  type: Microsoft.OSConfig/Test
+  properties:
+    resource: 
+      name: GetSet | DeviceGuard RPSF
+      type: Microsoft.Windows/CSP
+      properties:
+        path: ./Vendor/MSFT/Policy/Config/DeviceGuard/RequirePlatformSecurityFeatures
+        type: integer
+    expression: value >= 1
+    template: "Found \"{value}\"; expected \">= 1\"; Source {path}"
