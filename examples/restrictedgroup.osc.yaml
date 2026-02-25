@@ -1,0 +1,15 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+resources:
+- name: Configure
+  type: Microsoft.Windows/CSP
+  properties:
+    path: ./Device/Vendor/MSFT/Policy/Config/LocalUsersAndGroups/Configure
+    type: string
+    value: |
+      <GroupConfiguration>
+        <accessgroup desc="Administrators">
+          <group action="R" />
+          <add member="Administrator"/>
+        </accessgroup>
+      </GroupConfiguration>
