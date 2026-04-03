@@ -23,9 +23,6 @@
               "$ref": "#/$defs/csp"
             },
             {
-              "$ref": "#/$defs/include"
-            },
-            {
               "$ref": "#/$defs/registry"
             },
             {
@@ -200,22 +197,14 @@
     "include": {
       "type": "object",
       "properties": {
-        "type": {
-          "const": "Microsoft.OSConfig/Include"
-        },
-        "properties": {
-          "type": "object",
-          "properties": {
-            "file": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "file"
-          ]
-        },
-        "additionalProperties": false
-      }
+        "include": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "include"
+      ],
+      "additionalProperties": false
     },
     "registry": {
       "type": "object",
@@ -369,15 +358,22 @@
       "items": {
         "oneOf": [
           {
-            "$ref": "#/$defs/resource"
+            "oneOf": [
+              {
+                "$ref": "#/$defs/resource"
+              },
+              {
+                "$ref": "#/$defs/test"
+              }
+            ],
+            "required": [
+              "type",
+              "properties"
+            ]
           },
           {
-            "$ref": "#/$defs/test"
+            "$ref": "#/$defs/include"
           }
-        ],
-        "required": [
-          "type",
-          "properties"
         ]
       }
     }
