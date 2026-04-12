@@ -52,8 +52,55 @@ Sets the registry value specified by the `keyPath` and `valueName` to the specif
 
 ## Examples
 
-### Set a registry value
+### Set a registry string value
+
+```yaml
+type: Microsoft.Windows/Registry
+properties:
+  keyPath: "HKLM:\\Software\\MyApp"
+  valueName: "ApplicationName"
+  valueType: "REG_SZ"
+  value: "My Application"
+```
+
+### Set a registry DWORD value
+
+```yaml
+type: Microsoft.Windows/Registry
+properties:
+  keyPath: "HKLM:\\Software\\MyApp"
+  valueName: "Version"
+  valueType: "REG_DWORD"
+  value: 123
+```
 
 ### Get a registry value
 
-### Check if a registry key exists
+```yaml
+type: Microsoft.Windows/Registry
+properties:
+  keyPath: "HKLM:\\Software\\MyApp"
+  valueName: "ApplicationName"
+```
+
+### Set a multi-string value
+
+```yaml
+type: Microsoft.Windows/Registry
+properties:
+  keyPath: "HKEY_CURRENT_USER:\\Software\\MyApp"
+  valueName: "RecentFiles"
+  valueType: "REG_MULTI_SZ"
+  value: ["file1.txt", "file2.txt", "file3.txt"]
+```
+
+### Set binary data
+
+```yaml
+type: Microsoft.Windows/Registry
+properties:
+  keyPath: "HKLM:\\Software\\MyApp"
+  valueName: "BinaryData"
+  valueType: "REG_BINARY"
+  value: "SGVsbG8gV29ybGQ="
+```

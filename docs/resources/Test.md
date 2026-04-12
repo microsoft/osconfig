@@ -52,5 +52,45 @@ properties:
       path: /etc/example.conf
       find: example_setting=true
   expression: "exists"
-  template: The file {path} must contain the line 'example_setting=true'
+  template: "The file {path} must contain the line 'example_setting=true'"
+```
+
+### Verify file permissions
+
+```yaml
+type: Test
+properties:
+  resource:
+    type: Linux/FilePermission
+    properties:
+      path: /etc/ssh/ssh_host_rsa_key
+  expression: "mode == '600'"
+  template: "SSH private key {path} permissions should be 600, found {mode}"
+```
+
+### Check registry value
+
+```yaml
+type: Test
+properties:
+  resource:
+    type: Microsoft.Windows/Registry
+    properties:
+      keyPath: "HKLM:\\System\\CurrentControlSet\\Services\\NtpClient\\Parameters"
+      valueName: "AutoTriggerTime"
+  expression: "value >= 604800"
+  template: "NTP synchronization interval should be weekly or greater, configured as {value} seconds"
+```
+
+### Validate account policy
+
+```yaml
+type: Test
+properties:
+  resource:
+    type: Microsoft.Windows/AccountPolicy
+    properties:
+      name: MinimumPasswordLength
+  expression: "value >= 14"
+  template: "Minimum password length must be at least 14 characters, currently set to {value}"
 ```

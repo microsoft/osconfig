@@ -6,7 +6,7 @@
 - [File](File.md) - File creation, modification, and deletion
 - [FileLine](Fileline.md) - Line-level find and replace in files
 - [Test](Test.md) - Compliance evaluation and reporting
-- [Firmware](Firmware.md) - Firmware resource information (ESRT)
+- [FirmwareResource](Firmware.md) - Firmware resource information (ESRT)
 
 ## Linux
 
@@ -18,6 +18,6 @@
 
 - [AccountPolicy](windows/AccountPolicy.md) - Local account policy settings
 - [AuditPolicy](windows/AuditPolicy.md) - Advanced audit policy subcategory settings
-- [CSP](windows/Csp.md) - Configuration Service Provider (OMA-URI) settings
+- [CSP](windows/Csp.md) - Configuration Service Provider (CSP) settings
 - [Registry](windows/Registry.md) - Registry key and value management
 - [UserRightsAssignment](windows/UserRights.md) - User rights and privilege assignments

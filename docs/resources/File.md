@@ -54,3 +54,22 @@ type: File
 properties:
   path: "/tmp/example.txt"
 ```
+
+### Delete a file
+
+```yaml
+type: File
+properties:
+  path: "/tmp/example.txt"
+  exists: false
+```
+
+### Update file content
+
+```yaml
+type: File
+properties:
+  path: "/etc/banner.txt"
+  content: "Authorized access only!"
+  exists: true
+```

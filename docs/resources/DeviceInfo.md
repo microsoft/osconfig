@@ -40,7 +40,6 @@ Lists all device information.
 ### Get device information
 
 ```yaml
-name: Get device information
 type: DeviceInfo
 properties:
   # Read-only properties, no input required

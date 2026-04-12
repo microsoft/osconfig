@@ -31,3 +31,13 @@ Gets the firmware resource information for a firmware resource with the specifie
 ### `list`
 
 Gets the firmware resource information for all firmware resources in the machine's ESRT table.
+
+## Examples
+
+### Get firmware information by class GUID
+
+```yaml
+type: FirmwareResource
+properties:
+  firmwareClass: "12345678-1234-1234-1234-123456789012"
+```
