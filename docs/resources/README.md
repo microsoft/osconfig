@@ -18,6 +18,5 @@
 
 - [AccountPolicy](windows/AccountPolicy.md) - Local account policy settings
 - [AuditPolicy](windows/AuditPolicy.md) - Advanced audit policy subcategory settings
-- [CSP](windows/Csp.md) - Configuration Service Provider (CSP) settings
 - [Registry](windows/Registry.md) - Registry key and value management
 - [UserRightsAssignment](windows/UserRights.md) - User rights and privilege assignments
