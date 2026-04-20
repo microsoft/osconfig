@@ -1,4 +1,4 @@
-$schema: "$schema: https://aka.ms/osc/schemas/prerelease/document.json"
+$schema: "$schema: https://aka.ms/osc/schemas/prerelease/manifest.json"
 resources:
   - name: Audit MPSSVC Rule-Level Policy Change
     type: Microsoft.Windows/AuditPolicy
