@@ -1,8 +1,8 @@
 # Microsoft.Windows/AppControl/Policy
 
-Specifies an App Control for Business (formerly WDAC) policy on the device. This resource allows you to deploy, query, and remove code integrity policies using CiTool.
+Specifies an [App Control for Business](https://learn.microsoft.com/windows/security/application-security/application-control/app-control-for-business/appcontrol) policy on the device. This resource allows you to deploy, query, and remove application control policies.
 
-Requires **Windows 11 22H2+** or **Windows Server 2025** (CiTool is not available on earlier versions).
+Requires Windows **build 22621** or later.
 
 ## Properties
 
@@ -17,9 +17,9 @@ The GUID that identifies the policy.
 The policy content to deploy. Can be either:
 
 - A **base64-encoded** compiled binary policy (`.cip` file content)
-- A **raw XML** policy string (the full `<SiPolicy>` document) — the resource detects XML by a leading `<` and compiles it to binary via `ConvertFrom-CIPolicy` before deployment.
+- A **raw XML** policy string
 
-Write-only: not returned by `get` or `list`.
+*(Write-only)* Not returned by `get` or `list`.
 
 ### `baseId`
 
@@ -79,14 +79,14 @@ Queries the system for a policy matching `id`. Returns the full policy metadata 
 
 ### `set`
 
-Deploys a policy to the system. Provide `id` and `content` (base64 binary or XML string). The resource writes the content to a temp file, calls `CiTool --update-policy`, and then refreshes all policies.
+Deploys a policy to the system.
 
 - `id` *(required)*
-- `content` *(required — base64 binary or XML string)*
+- `content` *(required)*
 
 ### `remove`
 
-Removes a policy from the system by its `id`. Idempotent — if the policy is already absent, this is a no-op. Calls `CiTool --remove-policy` followed by a policy refresh.
+Removes a policy from the system by its `id`. Idempotent — if the policy is already absent, this is a no-op.
 
 - `id` *(required)*
 
