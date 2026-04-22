@@ -19,55 +19,55 @@ The policy content to deploy. Can be either:
 - A **base64-encoded** compiled binary policy (`.cip` file content)
 - A **raw XML** policy string
 
-*(Write-only)* Not returned by `get` or `list`.
+Not returned by `get` or `list`.
 
 ### `baseId`
 
-*(Read-only)* The base policy ID. For a base policy this equals `id`; for a supplemental policy it points to the parent.
+The base policy ID. For a base policy this equals `id`; for a supplemental policy it points to the parent.
 
 ### `friendlyName`
 
-*(Read-only)* The display name of the policy as set in the policy metadata.
+The display name of the policy as set in the policy metadata.
 
 ### `version`
 
-*(Read-only)* The version of the policy.
+The version of the policy.
 
 ### `isBasePolicy`
 
-*(Read-only)* Whether this is a base policy (as opposed to a supplemental policy). Derived from `id == baseId`.
+Whether this is a base policy (as opposed to a supplemental policy). Derived from `id == baseId`.
 
 ### `isDeployed`
 
-*(Read-only)* Whether the policy file is currently present on disk.
+Whether the policy file is currently present on disk.
 
 ### `isEffective`
 
-*(Read-only)* Whether the policy is currently active and loaded by the kernel.
+Whether the policy is currently active and loaded by the kernel.
 
 ### `isEnforced`
 
-*(Read-only)* Whether the policy is in enforcement mode (i.e. it does **not** have the `Enabled:Audit Mode` option).
+Whether the policy is in enforcement mode (i.e. it does **not** have the `Enabled:Audit Mode` option).
 
 ### `isAuthorized`
 
-*(Read-only)* Whether the policy is authorized. If the policy requires a token, this reflects the token authorization state; otherwise it matches `isEffective`.
+Whether the policy is authorized. If the policy requires a token, this reflects the token authorization state; otherwise it matches `isEffective`.
 
 ### `isSigned`
 
-*(Read-only)* Whether the policy has a valid signature.
+Whether the policy has a valid signature.
 
 ### `isSystemPolicy`
 
-*(Read-only)* Whether this is a Microsoft-provided system policy (e.g. the vulnerable driver blocklist).
+Whether this is a Microsoft-provided system policy (e.g. the vulnerable driver blocklist).
 
 ### `options`
 
-*(Read-only)* An array of policy option strings (e.g. `["Enabled:Audit Mode", "Enabled:UMCI"]`).
+An array of policy option strings (e.g. `["Enabled:Audit Mode", "Enabled:UMCI"]`).
 
 ### `status`
 
-*(Read-only)* The policy status code (integer). `0` indicates OK.
+The policy status code (integer). `0` indicates OK.
 
 ## Operations
 
