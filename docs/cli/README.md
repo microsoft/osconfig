@@ -1,10 +1,141 @@
-# OSConfig CLI
+# OSConfig CLI (Preview)
 
 OSConfig command-line interface (CLI) is a cross-platform tool for managing system configuration using the OSConfig platform. Use the CLI to apply configurations, view resources, and manage namespaces across Windows and Linux systems.
 
 OSConfig manages configuration through **resources** (the actual configuration items like registry settings, file permissions, and policies) organized within **namespaces** (logical containers that group related configurations by purpose or system type). When no namespace is specified in commands, the `default` namespace is used automatically.
 
 See [Resources](../resources/README.md) for available configuration options.
+
+## Installation
+
+> **Note**: The following installation instructions are examples for some environments. You may need to adapt these steps based on your specific environment.
+
+### Windows (10.0.17763.0 or later)
+
+1. Install the OSConfig CLI:
+
+    1. For 10.0.17763.0 and later, use the [WinGet](https://learn.microsoft.com/en-us/windows/package-manager/winget/) package manager to install the OSConfig CLI:
+
+        ```pwsh
+        winget install Microsoft.OSConfig
+        ```
+
+### Red Hat Enterprise Linux (RHEL) and other variants
+
+1. Add the Microsoft package repository to your system:
+
+    1. For the `dnf` package manager, use the following command:
+
+        ```bash
+        sudo dnf config-manager --add-repo https://packages.microsoft.com/config/rhel/[VERSION]/insiders-fast.repo
+        ```
+
+    1. For the `yum` package manager, use the following command:
+
+        ```bash
+        sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/[VERSION]/insiders-fast.repo
+        ```
+
+1. Import the Microsoft GPG public key:
+
+    ```bash
+    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    ```
+
+1. Update the package index:
+
+    1. For the `dnf` package manager, use the following command:
+
+        ```bash
+        sudo dnf clean all
+        sudo dnf makecache
+        ```
+
+    1. For the `yum` package manager, use the following command:
+
+        ```bash
+        sudo yum clean all
+        sudo yum makecache
+        ```
+
+1. Install the OSConfig CLI:
+
+    1. For the `dnf` package manager, use the following command:
+
+        ```bash
+        sudo dnf install oscfg
+        ```
+
+    1. For the `yum` package manager, use the following command:
+
+        ```bash
+        sudo yum install oscfg
+        ```
+
+### Ubuntu
+
+1. Add the Microsoft package repository to your system:
+
+    ```bash
+    curl -o microsoft-insiders-fast https://packages.microsoft.com/config/ubuntu/[VERSION]/insiders-fast.list
+    sudo mv ./microsoft-insiders-fast /etc/apt/sources.list.d/microsoft-insiders-fast.list
+    ```
+
+1. Import the Microsoft GPG public key:
+
+    1. For Ubuntu 22.04 and earlier, use the following command:
+
+        ```bash
+        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft.gpg
+        sudo chmod o+r /etc/apt/trusted.gpg.d/microsoft.gpg
+        ```
+
+    1. For Ubuntu 24.04 and later, use the following command:
+
+        ```bash
+        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg     > /    dev/null
+        sudo chmod o+r /usr/share/keyrings/microsoft-prod.gpg
+        ```
+
+1. Update the package index:
+
+    ```bash
+    sudo apt update
+    ```
+
+1. Install the OSConfig CLI:
+
+    ```bash
+    sudo apt install oscfg
+    ```
+
+### Azure Linux
+
+1. Add the Microsoft repository configuration:
+
+    ```bash
+    sudo tee /etc/yum.repos.d/oscfg-preview.repo > /dev/null <<EOF
+    [oscfg-preview]
+    name=oscfg-preview
+    baseurl=https://packages.microsoft.com/yumrepos/oscfg-preview
+    enabled=1
+    gpgcheck=1
+    gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+    EOF
+    ```
+
+1. Update the package index:
+
+    ```bash
+    sudo tdnf clean all
+    sudo tdnf makecache
+    ```
+
+1. Install the OSConfig CLI:
+
+    ```bash
+    sudo tdnf install oscfg
+    ```
 
 ## Common commands
 
