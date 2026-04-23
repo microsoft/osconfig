@@ -22,7 +22,7 @@ See [Resources](../resources/README.md) for available configuration options.
 
 ### Red Hat Enterprise Linux (RHEL) and other variants
 
-1. Add the Microsoft package repository to your system:
+1. Add the Microsoft package repository to your system (replace `[VERSION]` with your RHEL version, e.g., 8 or 9):
 
     1. For the `dnf` package manager, use the following command:
 
@@ -74,11 +74,11 @@ See [Resources](../resources/README.md) for available configuration options.
 
 ### Ubuntu
 
-1. Add the Microsoft package repository to your system:
+1. Add the Microsoft package repository to your system (replace `[VERSION]` with your Ubuntu version, e.g., 20.04, 22.04, or 24.04):
 
     ```bash
-    curl -o microsoft-insiders-fast https://packages.microsoft.com/config/ubuntu/[VERSION]/insiders-fast.list
-    sudo mv ./microsoft-insiders-fast /etc/apt/sources.list.d/microsoft-insiders-fast.list
+    curl -o microsoft-insiders-fast.list https://packages.microsoft.com/config/ubuntu/[VERSION]/insiders-fast.list
+    sudo mv ./microsoft-insiders-fast.list /etc/apt/sources.list.d/microsoft-insiders-fast.list
     ```
 
 1. Import the Microsoft GPG public key:
@@ -86,14 +86,14 @@ See [Resources](../resources/README.md) for available configuration options.
     1. For Ubuntu 22.04 and earlier, use the following command:
 
         ```bash
-        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft.gpg
+        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
         sudo chmod o+r /etc/apt/trusted.gpg.d/microsoft.gpg
         ```
 
     1. For Ubuntu 24.04 and later, use the following command:
 
         ```bash
-        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg     > /    dev/null
+        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
         sudo chmod o+r /usr/share/keyrings/microsoft-prod.gpg
         ```
 
