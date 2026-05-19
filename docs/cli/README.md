@@ -239,6 +239,10 @@ Enable debug logging:
 oscfg get resource --debug
 ```
 
+## Pre-built Manifests
+
+Use pre-built configuration manifests to quickly configure your systems according to security best practices (e.g., Azure Security Baseline for Windows). See the [manifests](../../manifests/) directory for all available options.
+
 ## Getting help
 
 Get help for any command:
