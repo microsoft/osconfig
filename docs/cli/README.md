@@ -265,9 +265,9 @@ Each resource in the report is tagged with one of three statuses:
 
 | Status | Meaning |
 | ------ | ------- |
-| `selected` | This resource won over other conflicting resources and has been selected to be applied. |
-| `overridden` | This resource lost to a higher-priority resource in another namespace with the same identity and will not be applied. |
-| `indeterminate` | The resource could not compute an identity or does not support conflict resolution, so it cannot participate in conflict resolution and is reported as-is. Such resources are not re-applied during reconciliation. |
+| `winner` | This resource won over other conflicting resources and has been selected to be applied. |
+| `loser` | This resource lost to a higher-priority resource in another namespace with the same identity and will not be applied. |
+| `unknown` | The resource could not compute an identity or does not support conflict resolution, so it cannot participate in conflict resolution and is reported as-is. Such resources are not re-applied during reconciliation. |
 
 A duplicate resource identity *within* a single namespace is treated as a configuration error and causes `reconcile` to fail.
 
