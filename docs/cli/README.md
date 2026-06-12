@@ -146,6 +146,7 @@ See [Resources](../resources/README.md) for available configuration options.
 | `oscfg create` | Create new namespaces |
 | `oscfg delete` | Delete resources or namespaces |
 | `oscfg exec` | Execute resource operations directly |
+| `oscfg reconcile` | Resolve cross-namespace conflicts and re-apply the winning resources |
 
 ## Examples
 
@@ -225,6 +226,51 @@ Get file permissions:
 oscfg exec resource --mode get --type "Linux/FilePermission" --properties "path=/etc/shadow"
 ```
 
+### Conflict resolution
+
+The `oscfg reconcile` command detects and resolves conflicts that occur when the same resource (e.g., the same registry value or the same file path) is declared in more than one namespace. `reconcile` computes the *winning* set of resources and re-applies them to the system.
+
+Reconcile every namespace on the host:
+
+```bash
+oscfg reconcile
+```
+
+Preview the resolved configuration without changing system state (no resources are applied):
+
+```bash
+oscfg reconcile --dry-run
+```
+
+#### Configuration priority
+
+Any configuration document can specify an optional `priority` field which is used to determine the resource priority during reconciliation. By default, the priority is set to `0`.
+
+```yaml
+$schema: https://aka.ms/osc/schemas/prerelease/document.json
+priority: 200
+resources:
+  - name: MinimumPasswordLength
+    type: Microsoft.Windows/AccountPolicy
+    properties:
+      name: MinimumPasswordLength
+      value: 14
+```
+
+#### Priority evaluation
+
+Each resource instance resolves to a stable, unique *identity* based on its type and a selection of its properties. If two or more resource share the same identity, the *winner* is determined using the priority of the resource's namespace.
+
+Each resource in the report is tagged with one of three statuses:
+
+| Status | Meaning |
+| ------ | ------- |
+| `selected` | This resource won over other conflicting resources and has been selected to be applied. |
+| `overridden` | This resource lost to a higher-priority resource in another namespace with the same identity and will not be applied. |
+| `indeterminate` | The resource could not compute an identity or does not support conflict resolution, so it cannot participate in conflict resolution and is reported as-is. Such resources are not re-applied during reconciliation. |
+
+A duplicate resource identity *within* a single namespace is treated as a configuration error and causes `reconcile` to fail.
+
 ### Output formatting
 
 Get resources with JSON output:
@@ -238,6 +284,15 @@ Enable debug logging:
 ```bash
 oscfg get resource --debug
 ```
+
+## Logging
+
+| Platform | Path |
+| -------- | ---- |
+| Linux | `/var/log/oscfg.log` |
+| Windows | `%PROGRAMDATA%\Microsoft\OSConfig\log\oscfg.log` |
+
+Set the `OSCONFIG_LOG_DIR` environment variable to write the log to a different directory.
 
 ## Pre-built Manifests
 
