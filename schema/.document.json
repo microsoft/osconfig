@@ -353,6 +353,13 @@
   },
   "type": "object",
   "properties": {
+    "priority": {
+      "description": "Optional precedence value for this configuration. When multiple namespaces define the same resource, the document with the higher priority wins during reconciliation. Defaults to 0 when omitted.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295,
+      "default": 0
+    },
     "resources": {
       "type": "array",
       "items": {
