@@ -28,7 +28,7 @@ Making scripts visible required one change underneath: App Control links a scrip
 
 ### Upgrading from v1.x
 
-- **Deploy the updated data collection rule.** v2.0 collects a second log, `Microsoft-Windows-AppLocker/MSI and Script`, which must be enabled on the target machines. Without it the Script Enforcement tab stays empty.
+- **Deploy the updated data collection rule.** v2.0 also collects `Microsoft-Windows-AppLocker/MSI and Script`. App Control shares that log for script enforcement events; there is nothing to turn on for the log itself. Script enforcement is on by default for every App Control policy unless rule option **11 Disabled:Script Enforcement** is set, so if the Script Enforcement tab stays empty, check that option 11 is not set and that a policy with user mode code integrity is active.
 - **Existing history is preserved.** Events collected by v1.x remain queryable. The workbook reads both the older and the current tables and removes duplicates, so no history is lost and nothing is counted twice.
 - **Check for a second collector.** If another rule already collects these same logs, the events are ingested twice. The workbook deduplicates so numbers stay correct, but the duplicate ingestion is billable and worth a deliberate decision.
 - **Removing a duplicate collector loses data during the gap.** A data collection rule never backfills. The agent begins reading a log when the rule is attached and does not replay what is already on disk, so anything generated while nothing was collecting cannot be recovered afterwards.
