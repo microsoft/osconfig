@@ -9,6 +9,7 @@
 | v1.2 | 2025-01 | Upgraded workbook to handle SHA1 & SHA256 hashes |
 | v1.3 | 2025-06 | Updated workbook to align CSV export columns with App Control Policy Wizard |
 | v2.0 | 2026-08 | New **Script Enforcement** tab for PowerShell and MSI activity, including blocked COM classes. Improved publisher and issuer resolution on file events, with new summary views. Faster queries. CSV export for the App Control Policy Wizard. See [CHANGELOG.md](CHANGELOG.md) for details |
+| v2.1 | 2026-11 | Short time ranges no longer come up empty. Activity charts follow the selected time range, and dragging across a chart filters the views below it. See [CHANGELOG.md](CHANGELOG.md) for details |
 
 ## Description
 
