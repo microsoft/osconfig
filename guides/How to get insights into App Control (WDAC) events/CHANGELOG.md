@@ -1,5 +1,23 @@
 # App Control Insights Workbook — Changelog
 
+## v2.1 — November 2026
+
+### Summary
+
+v2.1 fixes how the workbook handles time and filters. Short time ranges no longer come up empty, and the activity charts now narrow the views below them.
+
+### What's fixed
+
+**Short time ranges show data again.** Choosing 7 or 14 days could leave every view on a tab empty, even when events existed in that window. The Publisher and Issuer filters produced an invalid query when nothing was selected, and several other filters opened with no value at all. Every filter now starts at All.
+
+**One time range for the whole workbook.** The activity charts on the File Events, Policy Events and Script Enforcement tabs used to show a fixed seven days and overwrite the time range you picked. They now follow the selected time range and leave it untouched.
+
+**Drag a chart to filter the views below it.** Drag across an activity chart to narrow every view under it on that tab to the selected window. Clear the selection to return to the full range. Chart titles say so: "(drag to filter the views below)".
+
+### Upgrading from v2.0
+
+Redeploy the workbook only. The data collection rule is unchanged.
+
 ## v2.0 — August 2026
 
 ### Summary
